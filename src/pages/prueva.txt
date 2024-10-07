@@ -1,1 +1,7 @@
 Maldito seas Estado de Israel
+<<<<<<< HEAD
+=======
+hola
+prueva de nuve
+prueva 5:53
+>>>>>>> 3eca989 (Update2 prueva.txt)

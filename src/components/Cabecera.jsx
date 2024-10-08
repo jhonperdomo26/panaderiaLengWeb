@@ -11,9 +11,10 @@ const Cabecera = () => {
         Panadería
       </div>
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']} style={{ lineHeight: '64px' }}>
-        <Menu.Item key="1">Inicio</Menu.Item>
-        <Menu.Item key="2">Sobre Nosotros</Menu.Item>
-        <Menu.Item key="3">Contáctanos</Menu.Item>
+        <Menu.Item key="1">Menú</Menu.Item>
+        <Menu.Item key="2">Nosotros</Menu.Item>
+        <Menu.Item key="3">Eventos</Menu.Item>
+        <Menu.Item key="3">API</Menu.Item>
       </Menu>
     </Header>
   )

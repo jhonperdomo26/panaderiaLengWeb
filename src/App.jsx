@@ -4,6 +4,7 @@ import Inicio from './pages/Inicio';
 import Nosotros from './pages/Nosotros';
 import Panaderia from "./pages/Panaderia";
 import Pasteleria from './pages/Pasteleria';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -15,8 +16,11 @@ function App() {
         <Route path="/panaderia" element={<Panaderia />} />
         <Route path="/pasteleria" element={<Pasteleria />} />
       </Routes>
+      <Footer />
     </Router>
+    
   );
+
 }
 
 export default App

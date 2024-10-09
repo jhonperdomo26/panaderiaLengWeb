@@ -8,7 +8,7 @@ const Cabecera = () => {
   return (
     <Header className='Cabeza'>
       <div className='Logo'>
-        Cambio
+        Panadería
       </div>
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']} style={{ lineHeight: '64px' }}>
         <Menu.Item key="1">Menú</Menu.Item>

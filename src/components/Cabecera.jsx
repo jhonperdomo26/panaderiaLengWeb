@@ -62,9 +62,13 @@ const Cabecera = () => {
             <Link to="/Nosotros">Nosotros</Link>
           </Menu.Item>
 
-          <Menu.Item key="3">Eventos</Menu.Item>
+          <Menu.Item key="3">
+          <Link to="/Eventos">Eventos</Link>
+          </Menu.Item>
 
-          <Menu.Item key="4">API</Menu.Item>
+          <Menu.Item key="4">
+          <Link to="/API">API</Link>
+          </Menu.Item>
         </Menu>
       </Header>
     </Layout>

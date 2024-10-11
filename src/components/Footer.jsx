@@ -41,18 +41,46 @@ const Footer = () => {
                     <Space> </Space>
                     <Texto>panhorneados@gmail.com</Texto>
                 </Col>
-                <Col span={8}>
-                    <Row>
+                <Col span={8} style={{alignContent:'center'}}>
+                    <Row style={{alignItems: 'center'}}>
                         <FacebookOutlined style={{ fontSize: '50px', transform: 'translateX(+60%)', margin:'15px' }}/>
-                        <Texto src= {'https://www.instagram.com/panaderiahorneados1/'}> @panaderiahorneados1 </Texto>
+                        <a 
+                            href='https://www.facebook.com/profile.php?id=61566846787614'
+                            target="_blank" 
+                            style={{transform: 'translateX(+9%)',
+                                color:'black'
+                            }}
+                        >
+                        <Texto > Panadería Horneados </Texto>
+                        </a>
+                        
                     </Row>
                     <Space> </Space>
-                    <Row>
+                    <Row style={{alignItems: 'center'}}>
                         <InstagramOutlined style={{ fontSize: '50px', transform: 'translateX(+60%)', margin:'15px' }}/>
+                        <a 
+                            href='https://www.instagram.com/panaderiahorneados1/'
+                            target="_blank" 
+                            style={{transform: 'translateX(+9%)',
+                                color:'black'
+                            }}
+                        >
+                            <Texto > @panaderiahorneados1 </Texto>
+                        </a>
+                        
                     </Row>
                     <Space> </Space>
-                    <Row>
-                        <WhatsAppOutlined style={{ fontSize: '50px', transform: 'translateX(+60%)', margin:'25px'  }}/>
+                    <Row style={{alignItems: 'center'}}>
+                        <WhatsAppOutlined style={{ fontSize: '45px', transform: 'translateX(+75%)', margin:'15px'  }}/>
+                        <a 
+                            href='https://api.whatsapp.com/send?phone=573125362118'
+                            target="_blank" 
+                            style={{transform: 'translateX(+15%)',
+                                color:'black'
+                            }}
+                        >
+                            <Texto >    (+57) 312 536 2218 </Texto>
+                        </a>
                     </Row>
                 </Col>
             </Row>

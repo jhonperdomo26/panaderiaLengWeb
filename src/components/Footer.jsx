@@ -20,7 +20,16 @@ const Texto = styled.h2`
   font-style: normal;
   margin-top: 10px;
 `
+const styleIcono = {
+fontSize: '50px', 
+transform: 'translateX(+60%)', 
+margin:'15px'
+}
 
+const styleTexto = {
+    transform: 'translateX(+9%)',
+    color:'black'
+}
 
 const Footer = () => {
     return (
@@ -43,13 +52,11 @@ const Footer = () => {
                 </Col>
                 <Col span={8} style={{alignContent:'center'}}>
                     <Row style={{alignItems: 'center'}}>
-                        <FacebookOutlined style={{ fontSize: '50px', transform: 'translateX(+60%)', margin:'15px' }}/>
+                        <FacebookOutlined style={styleIcono}/>
                         <a 
                             href='https://www.facebook.com/profile.php?id=61566846787614'
                             target="_blank" 
-                            style={{transform: 'translateX(+9%)',
-                                color:'black'
-                            }}
+                            style={styleTexto}
                         >
                         <Texto > Panadería Horneados </Texto>
                         </a>
@@ -57,13 +64,11 @@ const Footer = () => {
                     </Row>
                     <Space> </Space>
                     <Row style={{alignItems: 'center'}}>
-                        <InstagramOutlined style={{ fontSize: '50px', transform: 'translateX(+60%)', margin:'15px' }}/>
+                        <InstagramOutlined style={styleIcono}/>
                         <a 
                             href='https://www.instagram.com/panaderiahorneados1/'
                             target="_blank" 
-                            style={{transform: 'translateX(+9%)',
-                                color:'black'
-                            }}
+                            style={styleTexto}
                         >
                             <Texto > @panaderiahorneados1 </Texto>
                         </a>
@@ -71,7 +76,7 @@ const Footer = () => {
                     </Row>
                     <Space> </Space>
                     <Row style={{alignItems: 'center'}}>
-                        <WhatsAppOutlined style={{ fontSize: '45px', transform: 'translateX(+75%)', margin:'15px'  }}/>
+                        <WhatsAppOutlined style={{ fontSize: '45px', transform: 'translateX(+75%)', margin:'15px'}}/>
                         <a 
                             href='https://api.whatsapp.com/send?phone=573125362118'
                             target="_blank" 

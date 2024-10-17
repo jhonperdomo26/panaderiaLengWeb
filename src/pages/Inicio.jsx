@@ -1,18 +1,4 @@
 // src/pages/Inicio.js
-<<<<<<< HEAD
-import Cabecera from '../components/Cabecera.jsx'
-const Inicio = () => {
-  return (
-    
-    <div>
-      <Cabecera />
-      <h1>Bienvenido a Panadería</h1>
-      <p>Esta es la página principal.</p>
-      
-    </div>
-  );
-=======
-import React from 'react';
 import { Carousel } from 'antd';
 import Imagen1 from '../img/PanAlinado.jpg';
 import Imagen2 from '../img/Pan2.jpg';
@@ -25,7 +11,6 @@ const contentStyle = {
   lineHeight: '250px',
   textAlign: 'center',
   background: '#364d79',
->>>>>>> fe0f93c25d27f3b032f815012a09c5263a50a668
 };
 
 const Imagen = styled.img`

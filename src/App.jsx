@@ -7,11 +7,12 @@ import API from './pages/API'
 import Panaderia from "./pages/Panaderia";
 import Pasteleria from './pages/Pasteleria';
 import Footer from './components/Footer';
+import Cabecera from './components/Cabecera';
 
 function App() {
   return (
     <Router>
-      
+      <Cabecera />
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/Menu" element={<Menu />} />

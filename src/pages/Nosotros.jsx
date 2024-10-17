@@ -1,21 +1,7 @@
 import '../css/main.css/';
-<<<<<<< HEAD
-import Cabecera from '../components/Cabecera';
-
-const Nosotros = () => {
-  return (
-    <div>
-      <Cabecera />
-        <h1>Sobre Nosotros</h1>
-        <p>Bienvenido a la sección de Sobre Nosotros.</p>
-    </div>
-  )
-}
-=======
 import React from 'react';
 import { Divider } from 'antd';
 import styled from '@emotion/styled';
->>>>>>> fe0f93c25d27f3b032f815012a09c5263a50a668
 
 const H1 = styled.h1`
   text-align: center;

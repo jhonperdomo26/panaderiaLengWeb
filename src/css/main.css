@@ -2,6 +2,7 @@
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
+  font-family: "Sansita Swashed", sans-serif;
 }
 
 .Cabeza{
@@ -18,4 +19,16 @@
   height: 63px;
   color: white;
   cursor: pointer;
+}
+
+/* Footer */
+
+.ColFooter{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
 }

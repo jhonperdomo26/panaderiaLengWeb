@@ -1,6 +1,6 @@
 // src/pages/Inicio.js
 import React from 'react';
-import { Carousel } from 'antd';
+import { Carousel} from 'antd';
 import Imagen1 from '../img/PanAlinado.jpg';
 import Imagen2 from '../img/Pan2.jpg';
 import Imagen3 from '../img/Pan3.jpg';

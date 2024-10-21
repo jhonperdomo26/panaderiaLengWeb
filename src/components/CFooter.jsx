@@ -1,6 +1,6 @@
-import styled from '@emotion/styled'
-import '../css/main.css'
-import Logo from '../img/logoHorneados.png'
+import styled from '@emotion/styled';
+import '../css/main.css';
+import Logo from '../img/logoHorneados.png';
 import { Col, Row, Layout, Flex } from 'antd';
 import { FacebookOutlined, InstagramOutlined, WhatsAppOutlined } from '@ant-design/icons';
 
@@ -46,7 +46,7 @@ const Texto = styled.h2`
 const TextoFooter = styled.h2`
   font-size: 18px;
   display: flex;
-  margin: 1%;
+  margin: 1% 4%;
 `
 
 const FlexRow = styled.div`
@@ -66,7 +66,7 @@ const styleTexto = {
     fontSize: '18px',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'start',
     flexDirection: 'row',
     width: '60%'
 }

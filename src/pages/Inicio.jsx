@@ -2,8 +2,8 @@
 import React from 'react';
 import { Carousel} from 'antd';
 import Imagen1 from '../img/PanAlinado.jpg';
-import Imagen2 from '../img/Pan2.jpg';
-import Imagen3 from '../img/Pan3.jpg';
+import Imagen2 from '../img/Pan3.jpg';
+import Imagen3 from '../img/Pan2.jpg';
 import Imagen4 from '../img/Torta.avif';
 import styled from '@emotion/styled';
 const contentStyle = {

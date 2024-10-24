@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import '../css/main.css';
 import Logo from '../img/logoHorneados.png';
-import { Col, Row, Layout, Flex } from 'antd';
+import { Col, Row, Layout, Flex, Divider } from 'antd';
 import { FacebookOutlined, InstagramOutlined, WhatsAppOutlined } from '@ant-design/icons';
 
 const { Footer } = Layout;
@@ -17,7 +17,7 @@ const Imagen = styled.img`
 
 const Contenedor = styled.div`
   background: #D6C9A6;
-  height: 350px;
+  height: 300px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -26,13 +26,13 @@ const Contenedor = styled.div`
 `
 
 const Papu = styled.div`
-  height: 60px;
+  height: 10px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  background-color: black;
+  color: black;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
 `
 
@@ -132,6 +132,7 @@ const CFooter = () => {
                         </Col>
 
                     </Row>
+                    <Divider> </Divider>
                     <Papu>
                         &copy; 2024 Panadería Horneados
                     </Papu>

@@ -63,7 +63,8 @@ const Cabecera = () => {
             <Link to="/Eventos">Eventos</Link>
           </Menu.Item>
 
-          <Menu.Item key="4">API</Menu.Item>
+          <Menu.Item key="4">
+          <Link to="/Eventose">API</Link></Menu.Item>
         </Menu>
       </Header>
     </Layout>

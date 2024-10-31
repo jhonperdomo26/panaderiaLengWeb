@@ -1,8 +1,10 @@
 import styled from '@emotion/styled';
 import '../css/main.css/';
-import { Layout, Flex, Row, Col } from 'antd';
-import ComBeb from '../img/ComBeb.jpg';
-import PanOrigen from '../img/PanOrigen.jpg'
+import { Layout, Flex, Row, Col, Space } from 'antd';
+import PaqCom from '../img/ComBeb.jpg';
+import PanOrigen from '../img/PanOrigen.jpg';
+import MPostres from '../img/MPostres.jpg';
+import Bebi from '../img/Bebi.jpg';
 
 const { Content } = Layout;
 
@@ -22,9 +24,17 @@ const ContenedorImagen = styled.div`
   height: 100%;
 `
 
-const ImagenHistoria = styled.img`
+const ImagenCombeb = styled.img`
   width: 145%;
   margin-left: 100px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25); 
+`
+const ImagenPost = styled.img`
+  width: 145%;
+  margin-right: 100px;
+  margin-left: 45px;
   height: auto;
   border-radius: 10px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25); 
@@ -37,28 +47,34 @@ const H1 = styled.h1`
 `
 
 const H2 = styled.h2`
-  margin: 2%;
+
   font-size: 24px;
 `
-
 const P = styled.p`
   margin: 20px;
   font-size: 18px;
+  width: 100%;
+  line-height: 1.5;
 `
 
 const P1 = styled.p`
-  margin: 2%;
+  margin: 20px;
   font-size: 18px;
+  line-height: 1.5;
 `
-
-
+const P2 =styled.p`
+  font-size: 18px;
+  text-align: right;
+  line-height: 1.5;
+  margin-left: 60px;
+`
 
 const Eventose = () => (
   <>
     <Layout>
       <Content>
         <Pan>
-          <ImagenPan src={PanOrigen} alt="Imagen de unos panes al inicio de la pagina Nosotros" />
+          <ImagenPan src={PanOrigen}/>
         </Pan>
         <Row style={{ margin: '5px 0px' }}>
           <Col span={4}>
@@ -66,62 +82,86 @@ const Eventose = () => (
           <Col span={16}>
             <Flex justify='center' vertical>
               <H1>Eventos Especiales</H1>
-              <H2>Matrimonios | Baby Showers | Aniversarios | Cumpleaños</H2>
-              <Flex align='center' justify='space-evenly' text-align='justify'>
-                    <div style={{ width: '100%' }}>
-                    <P>
+              <Flex align='center' text-align='justify'>
+                <div style={{ width: '100%' }}>
+                  <P>
+                    <H2>Matrimonios | Baby Showers | Aniversarios | Cumpleaños</H2>
                     En nuestra panadería, sabemos que los momentos importantes merecen ser acompañados de lo mejor. Ya sea un matrimonio, un baby shower, un aniversario o un cumpleaños, nuestros productos artesanales están diseñados para agregar un toque de dulzura a tus celebraciones.
                     Desde elegantes tortas de bodas hasta delicados cupcakes personalizados, creamos con pasión para que cada bocado refleje la alegría de tus momentos especiales. ¡Deja que nuestros sabores formen parte de tus recuerdos inolvidables!
-                    </P>
-                    <P style={{ marginBottom: '20px'}}> </P>
-                    </div>
+                  </P>
+                  <P style={{ marginBottom: '20px'}}> </P>
+                </div>
               </Flex>
 
-              <H1>Comida & Bebida</H1>
-              <Flex align='center' justify='space-evenly' text-align='justify'>
-                    <div style={{ width: '60%' }}>
-                    <P>
-                        La Panadería Horneados se fundó en 2019 en la ciudad de Neiva, Huila, un lugar donde la cultura y la tradición culinaria se entrelazan con la calidez de su gente. La idea de abrir la panadería
-                        nació en la mente de Ana y Juan, una pareja de jóvenes emprendedores que, después de años de soñar con un negocio propio, decidieron dar el salto y compartir su amor por la cocina.
-                    </P>
-                    <P style={{ marginBottom: '20px'}}> </P>
-                    <P>
-                        Horneados comenzó con una pequeña selección de panes artesanales, que rápidamente ganaron popularidad entre los habitantes de la zona. La combinación de recetas tradicionales y un toque innovador
-                        en su preparación hizo que sus productos se destacaran. Con el tiempo, la panadería amplió su oferta, incluyendo tortas para celebraciones, desayunos variados y deliciosas bebidas, desde aromáticos
-                        cafés hasta refrescantes batidos.
-                    </P>
-                    </div>
-                    <ContenedorImagen>
+
+              <Flex align='center' justify='left' text-align='justify'>
+                <div style={{ width: '60%' }}>
+                  <P1><H2>Comida & Bebida</H2></P1>
+                  <P1>
+                    En nuestra panadería, no solo nos especializamos en postres; también ofrecemos una selección exquisita de comida salada y bebidas diseñadas para complementar cualquier celebración. Desde elegantes bocadillos hasta opciones refrescantes de bebidas, nuestro menú está 
+                    pensado para satisfacer todos los gustos.
+                  </P1>
+                  <P style={{ marginBottom: '20px'}}> </P>
+                  <P1>
+                    Cuéntanos más sobre tu evento y crearemos un menú que se adapte a tus necesidades. ¡Haz que tu ocasión especial sea deliciosa en todos los sentidos!
+                  </P1>
+                  <P style={{ marginBottom: '20px'}}> </P>
+                </div>
+                  <ContenedorImagen>
                     <Flex align='center' justify='center'>
-                        <ImagenHistoria src={ComBeb} alt="Juan preparando pan" />
+                      <ImagenCombeb src={Bebi} />
                     </Flex>
-                    </ContenedorImagen>
+                  </ContenedorImagen>
               </Flex>
+
+
+              <Flex align='center' justify='right' >
+                <ContenedorImagen>
+                  <Flex align='left' justify='center'>
+                    <ImagenPost src={MPostres} />
+                  </Flex>
+                </ContenedorImagen>
+                <div style={{ width: '60%' }}>
+                 <P2><H2>Mesa de postres</H2></P2>
+                  <P2>
+                    Haz que tu evento sea inolvidable con nuestra exclusiva Mesa de Postres Completa. En Panadería Horneados, creamos mesas personalizadas que combinan diseño y sabor, perfectas para complementar tus celebraciones.
+                  </P2>
+                  <P2>
+                    Sabemos que los detalles importan, y una mesa de postres puede ser el centro de atención en cualquier celebración. Para matrimonios, cumpleaños, aniversarios o cualquier evento especial, nuestras mesas de 
+                    postres están diseñadas para impresionar tanto visualmente como en sabor.
+                  </P2>
+                  <P style={{ marginBottom: '50px'}}> </P>
+                </div>
+                
+              </Flex>
+
+              
+              <Flex align='center' justify='left' text-align='justify'>
+                <div style={{ width: '60%' }}>
+                  <P1><H2>Paquete Completo</H2></P1>
+                  <P1>
+                    Con nuestro Paquete Completo, nos encargamos de cada detalle para que tu evento sea un éxito. Desde el pastel perfecto hasta una deliciosa selección de bocadillos y bebidas, ofrecemos una experiencia integral 
+                    que hará de tu celebración algo inolvidable. 
+                  </P1>
+                  <P1>Nuestro equipo personaliza cada paquete según tus necesidades, para que tengas todo lo que necesitas en un solo lugar. Ya sea un matrimonio, cumpleaños, baby shower 
+                  o aniversario, creamos un menú a medida, con productos frescos y de calidad, cuidando la presentación y el sabor en cada plato.</P1>
+                  <P style={{ marginBottom: '20px'}}> </P>
+                  </div>
+                  <ContenedorImagen>
+                    <P style={{ marginBottom: '20px'}}> </P>
+                    <Flex align='center' justify='center'>
+                      <ImagenCombeb src={PaqCom} />
+                    </Flex>
+                  </ContenedorImagen>
+              </Flex>
+              <P style={{ marginBottom: '40px'}}> </P>
 
             </Flex>
           </Col>
           <Col span={4}>
           </Col>
         </Row>
-
-        <Row style={{ margin: '10px 0px' }}>
-          <Col span={4}>
-          </Col>
-          <Col span={16}>
-          </Col>
-          <Col span={4}>
-          </Col>
-        </Row>
-
-        <Row style={{ height: '250px', width: '100%', margin: '10px 0px' }}>
-          <Col span={4}>
-          </Col>
-          <Col span={16}>
-
-          </Col>
-          <Col span={4}>
-          </Col>
-        </Row>
+        <Space> </Space>
       </Content>
     </Layout>
 

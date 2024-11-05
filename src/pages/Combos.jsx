@@ -1,11 +1,5 @@
-
-
 const Combos = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default Combos
+export default Combos;

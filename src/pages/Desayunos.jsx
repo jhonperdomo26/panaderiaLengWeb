@@ -1,11 +1,5 @@
-
-
 const Desayunos = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default Desayunos
+export default Desayunos;

@@ -1,11 +1,5 @@
-
-
 const Bebidas = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default Bebidas
+export default Bebidas;

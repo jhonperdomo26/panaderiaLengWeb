@@ -1,11 +1,9 @@
-import Cabecera from "../components/Cabecera"
-
 const API = () => {
   return (
     <div>
-      <Cabecera />
+      <h1>holas</h1>
     </div>
-  )
-}
+  );
+};
 
-export default API
+export default API;

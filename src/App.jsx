@@ -1,18 +1,14 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Inicio from './pages/Inicio';
-import Menu from './pages/Menu';
-import Nosotros from './pages/Nosotros';
-import Eventos from './pages/Eventos';
-import API from './pages/API'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Inicio from "./pages/Inicio";
+import Menu from "./pages/Menu";
+import Nosotros from "./pages/Nosotros";
+import Eventos from "./pages/Eventos";
+import API from "./pages/API";
 import Panaderia from "./pages/Panaderia";
-import Pasteleria from './pages/Pasteleria';
-<<<<<<< HEAD
-import Footer from './components/Footer';
-import Cabecera from './components/Cabecera';
-=======
-import CFooter from './components/CFooter';
-import Eventose from './pages/Eventose';
->>>>>>> origin/main
+import Pasteleria from "./pages/Pasteleria";
+import CFooter from "./components/CFooter";
+import Eventose from "./pages/Eventose";
+import Cabecera from "./components/Cabecera";
 
 function App() {
   return (
@@ -30,9 +26,7 @@ function App() {
       </Routes>
       <CFooter />
     </Router>
-    
   );
-
 }
 
-export default App
+export default App;

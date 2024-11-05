@@ -1,4 +1,4 @@
-import '../css/main.css/';
+import "../css/main.css/";
 
 const Pasteleria = () => {
   return (
@@ -9,4 +9,4 @@ const Pasteleria = () => {
   );
 };
 
-export default Pasteleria
+export default Pasteleria;

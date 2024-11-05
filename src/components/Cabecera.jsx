@@ -1,12 +1,8 @@
 import 'antd/dist/reset.css';
 import '../css/main.css';
 import { DownOutlined } from '@ant-design/icons';
-import { Layout, Menu, Dropdown, message, Space } from 'antd';
+import { Layout, Menu, Dropdown, Space } from 'antd';
 import { Link } from 'react-router-dom';
-
-const onClick = ({ key }) => {
-  message.info(`Click on item ${key}`);
-};
 
 const items = [
   {
@@ -29,6 +25,7 @@ const items = [
     label: 'Combos',
     key: '5',
   },
+
 ];
 
 const { Header } = Layout;
@@ -42,7 +39,7 @@ const Cabecera = () => {
           Panadería
         </Link>
 
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']} style={{ lineHeight: '64px' }}>
+        <Menu theme="dark" mode="horizontal" selectable={false} style={{ lineHeight: '64px' }}>
           <Menu.Item key="1">
             <Dropdown
               menu={{
@@ -52,7 +49,7 @@ const Cabecera = () => {
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
                   Menú
-                  <DownOutlined />
+                  <DownOutlined />  
                 </Space>
               </a>
             </Dropdown>
@@ -68,6 +65,11 @@ const Cabecera = () => {
 
           <Menu.Item key="4">
           <Link to="/API">API</Link>
+            <Link to="/Eventose">Eventos</Link>
+          </Menu.Item>
+
+          <Menu.Item key="4">
+          <Link>API</Link>
           </Menu.Item>
         </Menu>
       </Header>

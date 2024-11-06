@@ -1,18 +1,21 @@
-*{
+* {
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
-  font-family: "Sansita Swashed", sans-serif;
+  font-family: "Arima", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
-.Cabeza{
+.Cabeza {
   display: flex;
   width: 100%;
   z-index: 1;
   gap: 2%;
 }
 
-.Logo{
+.Logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +26,7 @@
 
 /* Footer */
 
-.ColFooter{
+.ColFooter {
   height: 100%;
   width: 100%;
   display: flex;
@@ -35,7 +38,7 @@
 
 /* Nosotros */
 
-.AnimValor:hover{
+.AnimValor:hover {
   box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);
   transform: translateY(-6px);
   transition: 0.5s ease;

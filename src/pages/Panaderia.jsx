@@ -1,4 +1,4 @@
-import '../css/main.css/';
+import "../css/main.css/";
 
 const Panaderia = () => {
   return (
@@ -9,4 +9,4 @@ const Panaderia = () => {
   );
 };
 
-export default Panaderia
+export default Panaderia;

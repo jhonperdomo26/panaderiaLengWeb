@@ -67,6 +67,7 @@ const P2 = styled.p`
   margin-left: 60px;
 `;
 
+
 const Eventose = () => (
   <>
     <Layout>

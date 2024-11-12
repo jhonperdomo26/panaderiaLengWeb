@@ -1,12 +1,17 @@
-*{
+* {
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
-  font-family: "Sansita Swashed", sans-serif;
+  font-family: "Arima", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .Cabeza{
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
   width: 100%;
   z-index: 1;
   gap: 2%;
@@ -30,7 +35,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2%;
+  padding: 1%;
 }
 
 /* Nosotros */
@@ -39,4 +44,116 @@
   box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);
   transform: translateY(-6px);
   transition: 0.5s ease;
+}
+
+.GrayContent{
+  background-color: rgb(232, 232, 232);
+}
+
+/* Eventos */
+
+.PanOrigen{
+  background-image: url(/src/img/PanOrigen.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CartaEvento{
+  transition: 0.5s ease-in-out;
+}
+
+.CartaEvento:hover{
+  transform: translateY(-6px);
+  transition: 0.5s ease;
+}
+
+/* Matrimonios */
+
+.Torta3Pisos{
+  background-image: url(/src/img/Torta3Pisos.webp);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CupcakesDecorados{
+  background-image: url(/src/img/CupcakesDecorados.webp);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PostresGourmet{
+  background-image: url(/src/img/PostresGourmet.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.GalletasPersonalizadas{
+  background-image: url(/src/img/GalletasPersonalizadas.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Decoracion{
+  background-image: url(/src/img/Decoracion.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.CajaDecoracion{
+  margin-right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 550px;
+  height: 350px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+}
+
+.tomaperro{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  font-size: 40px;
+  font-weight: bold;
 }

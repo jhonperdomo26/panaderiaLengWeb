@@ -10,7 +10,7 @@ const Imagen = styled.img`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  width: 220px;
   height: auto;
   cursor: pointer;
 `
@@ -26,7 +26,7 @@ const Contenedor = styled.div`
 `
 
 const Papu = styled.div`
-  height: 10px;
+  height: 30px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -76,7 +76,7 @@ const CFooter = () => {
         <Layout>
             <Footer style={{ padding: '0%'}}>
                 <Contenedor>
-                    <Row style={{ height: '225px', width:'100%' }}>
+                    <Row style={{ height: '225px', width:'100%', padding: '10px' }}>
 
                         <Col span={8} className='ColFooter'>
                             <Flex align='center' justify='center' vertical style={{ padding: '2%'}}>
@@ -86,15 +86,15 @@ const CFooter = () => {
 
                         <Col span={8} className='ColFooter'>
                             <Flex align='start' justify='center' vertical style={{ padding: '1%'}}>
-                                <Texto>Teléfonos</Texto>
-                                <Texto>(608) 863 3424 - (+57) 312 536 2218</Texto>
+                                <Texto><b>Teléfonos</b></Texto>
+                                <Texto>(608) 863 3424 - (+57) 312 536 2118</Texto>
                                 <br/>
-                                <Texto>Lunes - Domingo</Texto>
+                                <Texto><b>Lunes - Domingo</b></Texto>
                                 <Texto>5 a.m - 10 p.m</Texto>
                                 <br/>
-                                <Texto>Cra 7 #56-16</Texto>
+                                <Texto><b>Cra 7 #56-16</b></Texto>
                                 <br/>
-                                <Texto>panhorneados@gmail.com</Texto>
+                                <Texto><b>panhorneados@gmail.com</b></Texto>
                             </Flex>
                         </Col>
 
@@ -132,7 +132,8 @@ const CFooter = () => {
                         </Col>
 
                     </Row>
-                    <Divider> </Divider>
+                    <Divider style={{ margin: '10px'}}>
+                    </Divider>
                     <Papu>
                         &copy; 2024 Panadería Horneados
                     </Papu>

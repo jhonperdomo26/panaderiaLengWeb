@@ -27,8 +27,7 @@ const ContenedorImagen = styled.div`
 `
 
 const ImagenHistoria = styled.img`
-  width: 145%;
-  margin-left: 100px;
+  width: 120%;
   height: auto;
   border-radius: 10px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25); 
@@ -51,26 +50,33 @@ const ValorTexto = styled.h2`
   margin: 8% 2%;
   text-align: center;
   font-size: 20px;
+  font-weight: bold;
 `
 
 const H1 = styled.h1`
   margin: 1%;
   font-size: 26px;
+  font-weight: bold;
 `
 
 const H2 = styled.h2`
   margin: 2%;
   font-size: 24px;
+  font-weight: bold;
 `
 
 const P = styled.p`
   margin: 20px;
   font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
 `
 
 const P1 = styled.p`
   margin: 2%;
   font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
 `
 
 const ImagenLogo = styled.img`
@@ -100,7 +106,7 @@ const Nosotros = () => (
         <Pan>
           <ImagenPan src={PanOrigen} alt="Imagen de unos panes al inicio de la pagina Nosotros" />
         </Pan>
-        <Row style={{ margin: '5px 0px' }}>
+        <Row style={{ margin: '15px 0px' }}>
           <Col span={4}>
           </Col>
           <Col span={16}>
@@ -112,7 +118,6 @@ const Nosotros = () => (
                     La Panadería Horneados se fundó en 2019 en la ciudad de Neiva, Huila, un lugar donde la cultura y la tradición culinaria se entrelazan con la calidez de su gente. La idea de abrir la panadería
                     nació en la mente de Ana y Juan, una pareja de jóvenes emprendedores que, después de años de soñar con un negocio propio, decidieron dar el salto y compartir su amor por la cocina.
                   </P>
-                  <P style={{ marginBottom: '20px'}}> </P>
                   <P>
                     Horneados comenzó con una pequeña selección de panes artesanales, que rápidamente ganaron popularidad entre los habitantes de la zona. La combinación de recetas tradicionales y un toque innovador
                     en su preparación hizo que sus productos se destacaran. Con el tiempo, la panadería amplió su oferta, incluyendo tortas para celebraciones, desayunos variados y deliciosas bebidas, desde aromáticos
@@ -131,7 +136,7 @@ const Nosotros = () => (
           </Col>
         </Row>
 
-        <Row style={{ margin: '10px 0px' }}>
+        <Row style={{ margin: '15px 0px' }} className='GrayContent'>
           <Col span={4}>
           </Col>
           <Col span={16}>
@@ -173,7 +178,7 @@ const Nosotros = () => (
           </Col>
         </Row>
 
-        <Row style={{ height: '250px', width: '100%', margin: '10px 0px' }}>
+        <Row style={{ height: '250px', width: '100%', margin: '15px 0px' }}>
           <Col span={4}>
           </Col>
           <Col span={16}>

@@ -39,7 +39,7 @@ const Cabecera = () => {
           Panadería
         </Link>
 
-        <Menu theme="dark" mode="horizontal" selectable={false} style={{ lineHeight: '64px' }}>
+        <Menu theme='dark' mode="horizontal" selectable={false} style={{ lineHeight: '64px', width: '350px', alignItems: 'center', justifyContent: 'space-evenly' }}>
           <Menu.Item key="1">
             <Dropdown
               menu={{
@@ -60,7 +60,7 @@ const Cabecera = () => {
           </Menu.Item>
 
           <Menu.Item key="3">
-            <Link to="/Eventose">Eventos</Link>
+            <Link to="/Eventos">Eventos</Link>
           </Menu.Item>
 
           <Menu.Item key="4">

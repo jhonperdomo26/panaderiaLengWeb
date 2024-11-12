@@ -1,4 +1,3 @@
-// src/pages/Inicio.js
 import React from 'react';
 import { Carousel, Card, Col, Row } from 'antd';
 import Imagen1 from '../img/PanAlinado.jpg';
@@ -15,6 +14,7 @@ import Tartademanzana from '../img/tartademanzana.png';
 import Cheesecake from '../img/cheesecake.png';
 
 import styled from '@emotion/styled';
+
 const contentStyle = {
   height: '550px',
   color: '#fff',
@@ -29,7 +29,6 @@ const Imagen = styled.img`
   display: block;
 `
 
-// Lista de productos de pastelería
 const products = [
   { title: 'Croissant', img: Croissant },
   { title: 'Muffin de Chocolate', img: Muffin },
@@ -66,7 +65,6 @@ const Inicio = () => (
     </div>
   </Carousel>
 
-    {/* Sección de tarjetas de productos */}
     <div style={{ padding: '30px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
     <h2 style ={{ textAlign: 'left', marginBottom: '30px' }}>Productos Destacados</h2>
       <Row gutter={[16, 16]} justify="center">

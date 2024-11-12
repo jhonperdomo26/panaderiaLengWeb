@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import '../css/main.css/';
 import { Layout, Flex, Row, Col } from 'antd';
 import ImagenJuan from '../img/JuanPanaderia.jpg';
-import PanOrigen from '../img/PanOrigen.jpg'
+import PanOrigen from '../img/PanOrigen.webp'
 import Calidad from '../img/CalidadBlancoSVG.svg'
 import Cercania from '../img/CercaniaBlancoSVG.svg'
 import Innovacion from '../img/InnovacionBlancoSVG.svg'

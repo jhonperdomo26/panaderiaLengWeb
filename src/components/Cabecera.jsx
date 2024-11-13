@@ -1,8 +1,8 @@
-import "antd/dist/reset.css";
-import "../css/main.css";
-import { DownOutlined } from "@ant-design/icons";
-import { Layout, Menu, Dropdown, Space } from "antd";
-import { Link } from "react-router-dom";
+import 'antd/dist/reset.css';
+import '../css/main.css';
+import { DownOutlined } from '@ant-design/icons';
+import { Layout, Menu, Dropdown, Space } from 'antd';
+import { Link } from 'react-router-dom';
 
 const items = [
   {
@@ -37,12 +37,7 @@ const Cabecera = () => {
           Panadería
         </Link>
 
-        <Menu
-          theme="dark"
-          mode="horizontal"
-          selectable={false}
-          style={{ lineHeight: "64px" }}
-        >
+        <Menu theme='dark' mode="horizontal" selectable={false} style={{ lineHeight: '64px', width: '350px', alignItems: 'center', justifyContent: 'space-evenly' }}>
           <Menu.Item key="1">
             <Dropdown
               menu={{
@@ -67,10 +62,6 @@ const Cabecera = () => {
           </Menu.Item>
 
           <Menu.Item key="4">
-            <Link to="/Eventose">Eventos</Link>
-          </Menu.Item>
-
-          <Menu.Item key="5">
             <Link to="/API">API</Link>
           </Menu.Item>
         </Menu>

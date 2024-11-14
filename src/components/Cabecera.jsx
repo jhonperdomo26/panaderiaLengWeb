@@ -3,10 +3,21 @@ import '../css/main.css';
 import { DownOutlined } from '@ant-design/icons';
 import { Layout, Menu, Dropdown, Space } from 'antd';
 import { Link } from 'react-router-dom';
+import LogoSimple from '../img/LogoSimple.webp';
+import styled from '@emotion/styled';
+
+const Imagen = styled.img`
+  display: block;
+  margin: 0 auto;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+`
+
 
 const items = [
   {
-    label: <Link to="/Panaderia">Panadería</Link>,
+    label: <Link to="/Panaderia">Panaderia</Link>,
     key: "1",
   },
   {
@@ -32,12 +43,12 @@ const { Header } = Layout;
 const Cabecera = () => {
   return (
     <Layout>
-      <Header className="Cabeza">
+      <Header className="Cabeza" style={{backgroundColor: '#f0ca83'}}>
         <Link to="/" className="Logo">
-          Panadería
+        <Imagen src={LogoSimple}></Imagen>
         </Link>
 
-        <Menu theme='dark' mode="horizontal" selectable={false} style={{ lineHeight: '64px', width: '350px', alignItems: 'center', justifyContent: 'space-evenly' }}>
+        <Menu theme='#f0ca83' mode="horizontal" selectable={false} style={{ lineHeight: '64px', width: '350px', alignItems: 'center', justifyContent: 'space-evenly' }}>
           <Menu.Item key="1">
             <Dropdown
               menu={{

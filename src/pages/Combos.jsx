@@ -10,7 +10,7 @@ const { Content } = Layout;
 
 const products = [
   { title: "Combo Yaguareño", img: Croissant, description:"Tamal acompañado de quesillo y chocolate"},
-  { title: "Opita", img: PanBrioche, description:"Delicioso y recién horneado" },
+  { title: "Opita", img: PanBrioche, description:"Almojabana acompañada con chocolate" },
   { title: "Cumpleaños", img: PanQue, description:"Torta de chocolate con gaseosa 1.25lts" },
   { title: "Desayuno Sorpresa", img: PanGalleta, description:"Delicioso y recién horneado" },
   ];

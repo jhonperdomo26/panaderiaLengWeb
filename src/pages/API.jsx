@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import { GoogleMap, useLoadScript, MarkerF, InfoWindowF,} from "@react-google-maps/api";
-
+import { Flex } from "antd";
+import styled from "@emotion/styled";
 
 const markers = [
   {
@@ -20,6 +21,11 @@ const markers = [
   },
 ];
 
+const H1 = styled.h1`
+  margin: 1%;
+  font-size: 26px;
+`;
+
 const API = () => {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAP_API_KEY,
@@ -37,8 +43,13 @@ const API = () => {
   return (
     <Fragment>
       <div>
-        <h1>mapa melo</h1>
-        <div style={{ width: "100%", height: "90vh" }}>
+        <Flex align="center" justify="space-evenly">
+         <H1>Ubicaciones de nuestras panaderias</H1>
+        </Flex>
+        <Flex align="center" justify="space-evenly">
+         
+        
+        <div style={{ width: "98%", height: "93vh" }}>
           {isLoaded ? (
             <GoogleMap
               center={{ lat: 2.9289, lng: -75.28189 }}
@@ -63,6 +74,7 @@ const API = () => {
             </GoogleMap>
           ) : null}
         </div>
+        </Flex>
       </div>
     </Fragment>
   );

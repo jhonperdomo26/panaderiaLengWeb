@@ -32,7 +32,10 @@ function App() {
         <Route path="/API" element={<API />} />
         <Route path="/Panaderia" element={<Panaderia />} />
         <Route path="/Pasteleria" element={<Pasteleria />} />
-
+        <Route path="/Desayunos" element={<Desayunos />} />
+        <Route path="/Bebidas" element={<Bebidas />} />
+        <Route path="/Combos" element={<Combos />} />
+        
       </Routes>
       <CFooter />
     </Router>

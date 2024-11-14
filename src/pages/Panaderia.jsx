@@ -1,6 +1,5 @@
 import "../css/main.css";
 import { Card, Col, Layout, Row } from 'antd';
-import Caballito from '../img/Caballito.png'
 import Croissant from '../img/croissant.png'
 import PanQue from '../img/pandequeso.png'
 import Brownie from '../img/brownie.png'
@@ -19,7 +18,6 @@ import MojiconQueso from '../img/mojiconconqueso.png'
 import PanBatido from '../img/panbatido.png'
 
 
-const { Meta } = Card;
 const { Content } = Layout;
 
 const products = [

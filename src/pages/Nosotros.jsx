@@ -1,5 +1,6 @@
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import '../css/main.css/';
+import '../css/main.css';
 import { Layout, Flex, Row, Col } from 'antd';
 import ImagenJuan from '../img/JuanPanaderia.jpg';
 import Calidad from '../img/CalidadBlancoSVG.svg'
@@ -7,17 +8,16 @@ import Cercania from '../img/CercaniaBlancoSVG.svg'
 import Innovacion from '../img/InnovacionBlancoSVG.svg'
 import Responsabilidad from '../img/ResponsabilidadBlancoSVG.svg'
 
+
+
 const { Content } = Layout;
+
+
 
 const Pan = styled.div`
   width: 100%;
   height: 400px;
   overflow: hidden;
-`
-
-const ImagenPan = styled.img`
-  width: 100%;
-  height: auto;
 `
 
 const ContenedorImagen = styled.div`
@@ -33,7 +33,7 @@ const ImagenHistoria = styled.img`
 `
 
 const ValorIcono = styled.div`
-  background-color: black;
+  background-color: #725D42;
   color: white;
   width: 150px;
   height: 150px;
@@ -85,20 +85,68 @@ const ImagenLogo = styled.img`
 const MisionVision = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   width: 48%;
   height: 250px;
   border: solid black 2px;
   border-radius: 15px;
-  padding: 2%;
+  
+
+`
+const TarjetaCircular = styled.div`
+  display: ${({ visible }) => (visible ? 'flex' : 'none')};
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-color: #C29F70;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  z-index: 10;
+  
+  p {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+  }
+`
+const DIV = styled.div`
+  border-bottom: 2px solid #000;
+  width: 100%;
+  background-color: #D5A254;
+  border-radius: 13px 13px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
-const styleIcono = {
-  fontSize: '60px',
-}
+const DIV2 = styled.div`
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+`
 
-const Nosotros = () => (
+const Nosotros = () => {
+  const [valorSeleccionado, setValorSeleccionado] = useState(null);
+  const [mostrarTarjeta, setMostrarTarjeta] = useState(false);
+
+  const handleMouseEnter = (valor) => {
+    setValorSeleccionado(valor);
+    setMostrarTarjeta(true);
+  };
+
+  const handleMouseLeave = () => {
+    setMostrarTarjeta(false);
+  };
+  return (
   <>
     <Layout>
       <Content>
@@ -106,7 +154,7 @@ const Nosotros = () => (
           <div className='PanOrigen'></div>
         </Pan>
         <Row style={{ margin: '15px 0px' }}>
-          <Col span={4}>
+          <Col span={4}> 
           </Col>
           <Col span={16}>
             <Flex align='center' justify='center' vertical>
@@ -135,7 +183,7 @@ const Nosotros = () => (
           </Col>
         </Row>
 
-        <Row style={{ margin: '15px 0px' }} className='GrayContent'>
+        <Row style={{ margin: '20px 0px', padding:'30px' }} className='GrayContent'>
           <Col span={4}>
           </Col>
           <Col span={16}>
@@ -143,18 +191,34 @@ const Nosotros = () => (
 
               <H1>Valores</H1>
               <Flex align='center' justify='space-evenly' style={{ width: '100%', padding: '5px' }}>
-                <ValorIcono className='AnimValor'>
+                <ValorIcono onMouseEnter={() => handleMouseEnter('Calidad')} onMouseLeave={handleMouseLeave} className='AnimValor'>
                   <ImagenLogo src={Calidad} alt="Logo del valor de la calidad" />
+                  <TarjetaCircular visible={mostrarTarjeta && valorSeleccionado === 'Calidad'}>
+                    <p>Garantizamos productos frescos elaborados con los mejores ingredientes.</p>
+                  </TarjetaCircular>
                 </ValorIcono>
-                <ValorIcono className='AnimValor'>
+
+                <ValorIcono onMouseEnter={() => handleMouseEnter('Cercanía')} onMouseLeave={handleMouseLeave} className='AnimValor'>
                   <ImagenLogo src={Cercania} alt="Logo del valor de la cercanía" />
+                  <TarjetaCircular visible={mostrarTarjeta && valorSeleccionado === 'Cercanía'} >
+                    <p> Queremos que cada cliente se sienta como en casa.</p>
+                  </TarjetaCircular>
                 </ValorIcono>
-                <ValorIcono className='AnimValor'>
+
+                <ValorIcono onMouseEnter={() => handleMouseEnter('Innovación')} onMouseLeave={handleMouseLeave} className='AnimValor'>
                   <ImagenLogo src={Innovacion} alt="Logo del valor de la innovación" />
+                  <TarjetaCircular visible={mostrarTarjeta && valorSeleccionado === 'Innovación'} >
+                    <p>Creamos nuevos sabores y productos que combinan tradición y modernidad</p>
+                  </TarjetaCircular>
                 </ValorIcono>
-                <ValorIcono className='AnimValor'>
-                  <ImagenLogo src={Responsabilidad} alt="Logo del valor de la responsabilidad" />
+
+                <ValorIcono onMouseEnter={() => handleMouseEnter('Responsabilidad')} onMouseLeave={handleMouseLeave} className='AnimValor'>
+                  <ImagenLogo src={Responsabilidad} alt="Logo del valor de la Responsabilidad" />
+                  <TarjetaCircular visible={mostrarTarjeta && valorSeleccionado === 'Responsabilidad'}>
+                    <p>Creamos productos con los más altos estándares, actuando de forma ética y sostenible</p>
+                  </TarjetaCircular>
                 </ValorIcono>
+
               </Flex>
               <Flex align='center' justify='space-evenly' style={{ width: '100%' }}>
                 <Col span={4}>
@@ -177,24 +241,35 @@ const Nosotros = () => (
           </Col>
         </Row>
 
-        <Row style={{ height: '250px', width: '100%', margin: '15px 0px' }}>
+        <Row style={{ height: '250px', width: '100%', margin: '40px 0px' }}>
           <Col span={4}>
           </Col>
           <Col span={16}>
 
             <Flex align='center' justify='space-evenly'>
+              
               <MisionVision>
-                <H2>Misión</H2>
-                <P1>
-                  Crear momentos de felicidad y sabor a través de productos artesanales elaborados con dedicación y amor.
-                </P1>
+                <DIV>
+                  <H2 style={{color:'white'}}>Misión</H2> 
+                </DIV>
+                <DIV2>
+                  <P1>
+                    Crear momentos de felicidad y sabor a través de productos artesanales elaborados con dedicación y amor.
+                  </P1>
+                </DIV2>
+                
               </MisionVision>
               <MisionVision>
-                <H2>Visión</H2>
-                <div ></div>
-                <P1>
-                  Convertirnos en la panadería de referencia en la región, reconocida por nuestra calidad, innovación y el toque artesanal de nuestros productos.
-                </P1>
+                
+                <DIV>
+                <H2 style={{color:'white'}}>Visión</H2>
+                </DIV>
+                <DIV2> 
+                  <P1>
+                    Convertirnos en la panadería de referencia en la región, reconocida por nuestra calidad, innovación y el toque artesanal de nuestros productos.
+                  </P1>
+                </DIV2>
+                
               </MisionVision>
             </Flex>
 
@@ -206,5 +281,7 @@ const Nosotros = () => (
     </Layout>
 
   </>
-);
+  );
+};
+
 export default Nosotros;

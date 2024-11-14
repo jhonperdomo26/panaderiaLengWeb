@@ -92,31 +92,49 @@ const Matrimonios = () => (
           <div>
             <h3 style={contentStyle}>
               <div className='Torta3Pisos'>
+                <div className='CajaDecoracion'>
+                  <span className='TextoEvento'>DECORAMOS TUS</span>
+                  <span className='TextoEvento'>EVENTOS ESPECIALES</span>
+                </div>                
               </div>
             </h3>
           </div>
           <div>
             <h3 style={contentStyle}>
               <div className='CupcakesDecorados'>
+                <div className='CajaDecoracion'>
+                  <span className='TextoEvento'>DECORAMOS TUS</span>
+                  <span className='TextoEvento'>EVENTOS ESPECIALES</span>
+                </div>                
               </div>
             </h3>
           </div>
           <div>
             <h3 style={contentStyle}>
-              <div className='PostresGourmet'></div>
+              <div className='PostresGourmet'>
+                <div className='CajaDecoracion'>
+                  <span className='TextoEvento'>DECORAMOS TUS</span>
+                  <span className='TextoEvento'>EVENTOS ESPECIALES</span>
+                </div>                
+              </div>
             </h3>
           </div>
           <div>
             <h3 style={contentStyle}>
-              <div className='GalletasPersonalizadas'></div>
+              <div className='GalletasPersonalizadas'>
+                <div className='CajaDecoracion'>
+                  <span className='TextoEvento'>DECORAMOS TUS</span>
+                  <span className='TextoEvento'>EVENTOS ESPECIALES</span>
+                </div>
+              </div>
             </h3>
           </div>
           <div>
             <h3 style={contentStyle}>
               <div className='Decoracion'>
                 <div className='CajaDecoracion'>
-                  <span className='tomaperro'>DECORAMOS TUS</span>
-                  <span className='tomaperro'>EVENTOS ESPECIALES</span>
+                  <span className='TextoEvento'>DECORAMOS TUS</span>
+                  <span className='TextoEvento'>EVENTOS ESPECIALES</span>
                 </div>
               </div>
             </h3>
@@ -161,6 +179,7 @@ const Matrimonios = () => (
           </Col>
 
           <Col span={16}>
+            <H1>Tortas</H1>
             <div style={{ padding: '30px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
                 <Row gutter={[16, 16]} justify="center">
                   {products.slice(0, 4).map((product, index) => (

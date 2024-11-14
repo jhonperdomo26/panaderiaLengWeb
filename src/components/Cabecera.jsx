@@ -43,7 +43,7 @@ const { Header } = Layout;
 const Cabecera = () => {
   return (
     <Layout>
-      <Header className="Cabeza" style={{backgroundColor: '#f0ca83'}}>
+      <Header className="Cabeza" style={{ backgroundColor: '#f0ca83' }}>
         <Link to="/" className="Logo">
         <Imagen src={LogoSimple}></Imagen>
         </Link>

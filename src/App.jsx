@@ -10,6 +10,9 @@ import Cumpleaños from './pages/Cumpleaños';
 import API from "./pages/API";
 import Panaderia from "./pages/Panaderia";
 import Pasteleria from "./pages/Pasteleria";
+import Desayunos from "./pages/Desayunos";
+import Bebidas from "./pages/Bebidas";
+import Combos from "./pages/Combos";
 import CFooter from "./components/CFooter";
 import Cabecera from "./components/Cabecera";
 

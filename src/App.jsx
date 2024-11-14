@@ -6,6 +6,9 @@ import Eventos from "./pages/Eventos";
 import API from "./pages/API";
 import Panaderia from "./pages/Panaderia";
 import Pasteleria from "./pages/Pasteleria";
+import Desayunos from "./pages/Desayunos";
+import Bebidas from "./pages/Bebidas";
+import Combos from "./pages/Combos";
 import CFooter from "./components/CFooter";
 import Cabecera from "./components/Cabecera";
 
@@ -21,6 +24,10 @@ function App() {
         <Route path="/API" element={<API />} />
         <Route path="/Panaderia" element={<Panaderia />} />
         <Route path="/Pasteleria" element={<Pasteleria />} />
+        <Route path="/Desayunos" element={<Desayunos />} />
+        <Route path="/Bebidas" element={<Bebidas />} />
+        <Route path="/Combos" element={<Combos />} />
+        
       </Routes>
       <CFooter />
     </Router>

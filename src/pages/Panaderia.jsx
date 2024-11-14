@@ -1,5 +1,4 @@
 import "../css/main.css";
-import React from "react";
 import { Card, Col, Layout, Row } from 'antd';
 import Caballito from '../img/Caballito.png'
 import Croissant from '../img/croissant.png'

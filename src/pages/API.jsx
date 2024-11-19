@@ -2,6 +2,8 @@ import { Fragment, useState } from "react";
 import { GoogleMap, useLoadScript, MarkerF, InfoWindowF,} from "@react-google-maps/api";
 import { Flex } from "antd";
 import styled from "@emotion/styled";
+import { useTranslation } from "react-i18next";
+import Languageselector from "../components/language-selector";
 
 const markers = [
   {
@@ -27,6 +29,9 @@ const H1 = styled.h1`
 `;
 
 const API = () => {
+  const {t} = useTranslation();
+
+
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAP_API_KEY,
   });
@@ -39,12 +44,13 @@ const API = () => {
     }
     setActiveMarker(marker);
   };
-
-  return (
+  
+  return (  
     <Fragment>
       <div>
         <Flex align="center" justify="space-evenly">
-         <H1>Ubicaciones de nuestras panaderias</H1>
+          <Languageselector />
+         <H1>{t("greeting")}</H1>
         </Flex>
         <Flex align="center" justify="space-evenly">
          

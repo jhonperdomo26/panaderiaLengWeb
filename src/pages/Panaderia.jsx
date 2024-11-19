@@ -1,5 +1,5 @@
 import "../css/main.css";
-import { Card, Col, Layout, Row } from 'antd';
+import { Card, Col, Layout, Row, Flex } from 'antd';
 import Croissant from '../img/croissant.png'
 import PanQue from '../img/pandequeso.png'
 import Brownie from '../img/brownie.png'
@@ -17,6 +17,23 @@ import PanAliñado from '../img/panaliñado.png'
 import MojiconQueso from '../img/mojiconconqueso.png'
 import PanBatido from '../img/panbatido.png'
 
+
+const cajaDecoracion = {
+  display:'flex',
+  alignItems:'center',
+  justifyContent: 'center',
+  width: '100%',
+  height: '150px',
+  backgroundColor: 'rgba(114, 93, 66, 1)',
+  borderRadius: '20px'
+};
+
+const texto = {
+  fontSize: '50px',
+  fontWeight: 'bold',
+  color:'white',
+  textAlign: 'center'
+};
 
 const { Content } = Layout;
 
@@ -43,74 +60,28 @@ const Panaderia = () => {
   return (
     <>
     <Layout>
-      <Content>
-      <h1>Panadería</h1>
-      <p>Bienvenido a la sección de panadería.</p>
-      
-      <Row gutter={[16, 16]} justify="center" style={{ marginTop: "30px" }}>
-        {products.slice(0, 4).map((product, index) => (
-          <Col span={4} key={index}>
-            <Card
-              hoverable
-              cover={<img alt={product.title} src={product.img} />}
-            >
-              <Card.Meta
-                title={product.title}
-                description={product.description}
-              />
-            </Card>
-          </Col>
-        ))}
-      </Row>
+      <Content style={{ minHeight: '150vh' }}>
 
-      <Row gutter={[16, 16]} justify="center" style={{ marginTop: "30px" }}>
-        {products.slice(4, 8).map((product, index) => (
-          <Col span={4} key={index}>
-            <Card
-              hoverable
-              cover={<img alt={product.title} src={product.img} />}
-            >
-              <Card.Meta
-                title={product.title}
-                description={product.description}
-              />
-            </Card>
+      <Row justify="center" align="middle" style={{ marginTop: "30px", height: "150px" }}>
+          <Col span={16}>
+              <div style={cajaDecoracion}>
+                <span style={texto}>PANADERÍA</span>
+              </div>  
           </Col>
-        ))}
-      </Row>
+      </Row>  
 
-      <Row gutter={[16, 16]} justify="center" style={{ marginTop: "30px" }}>
-        {products.slice(8, 12).map((product, index) => (
-          <Col span={4} key={index}>
-            <Card
-              hoverable
-              cover={<img alt={product.title} src={product.img} />}
-            >
-              <Card.Meta
-                title={product.title}
-                description={product.description}
-              />
-            </Card>
-          </Col>
+        {Array.from({ length: 4 }, (_, i) => (
+          <Row key={i} gutter={[16, 16]} justify="center" style={{ marginTop: "30px" }}>
+            {products.slice(i * 4, (i + 1) * 4).map((product, index) => (
+              <Col span={4} key={index}>
+                <Card hoverable cover={<img alt={product.title} src={product.img} />}>
+                  <Card.Meta title={product.title} description={product.description} />
+                </Card>
+              </Col>
+            ))}
+          </Row>
         ))}
-      </Row>
-
-      <Row gutter={[16, 16]} justify="center" style={{ marginTop: "30px" }}>
-        {products.slice(12, 16).map((product, index) => (
-          <Col span={4} key={index}>
-            <Card
-              hoverable
-              cover={<img alt={product.title} src={product.img} />}
-            >
-              <Card.Meta
-                title={product.title}
-                description={product.description}
-              />
-            </Card>
-          </Col>
-        ))}
-      </Row>
-
+        
       <Row gutter={[16, 16]} justify="center" style={{ marginTop: "30px" }}> </Row>
 
       </Content>

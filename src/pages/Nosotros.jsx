@@ -91,8 +91,6 @@ const MisionVision = styled.div`
   height: 250px;
   border: solid black 2px;
   border-radius: 15px;
-  
-
 `
 const TarjetaCircular = styled.div`
   display: ${({ visible }) => (visible ? 'flex' : 'none')};

@@ -17,6 +17,22 @@ import EmpanadaPollo from '../img/empanadapollo.png'
 import EmpanadaCarne from '../img/empanadacarne.png'
 import TortaMilky from '../img/tortamilky.png'
 
+const cajaDecoracion = {
+  display:'flex',
+  alignItems:'center',
+  justifyContent: 'center',
+  width: '100%',
+  height: '150px',
+  backgroundColor: 'rgba(114, 93, 66, 1)',
+  borderRadius: '20px'
+};
+
+const texto = {
+  fontSize: '50px',
+  fontWeight: 'bold',
+  color:'white',
+  textAlign: 'center'
+};
 
 const { Content } = Layout;
 
@@ -43,12 +59,14 @@ const Pasteleria = () => {
   return (
     <>
     <Layout>
-      <Content>
-
-      <div gutter={[16, 16]} justify="center" style={{ marginTop: "30px", textAlign: "center" }}>
-        <h1>Pastelería</h1>
-        <p>Bienvenido a la sección de pastelería.</p>
-      </div>
+    <Content style={{ minHeight: '150vh' }}>
+      <Row justify="center" align="middle" style={{ marginTop: "30px", height: "150px" }}>
+          <Col span={16}>
+              <div style={cajaDecoracion}>
+                <span style={texto}>PASTELERÍA</span>
+              </div>  
+          </Col>
+      </Row>  
       
       <Row gutter={[16, 16]} justify="center" style={{ marginTop: "30px" }}>
         {products.slice(0, 4).map((product, index) => (

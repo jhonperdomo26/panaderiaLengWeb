@@ -16,6 +16,7 @@ import Mogollas from '../img/mogolla.png'
 import PanAliñado from '../img/panaliñado.png'
 import MojiconQueso from '../img/mojiconconqueso.png'
 import PanBatido from '../img/panbatido.png'
+import FondoPan from '../img/FondoPan.webp'
 
 
 const cajaDecoracion = {
@@ -34,6 +35,35 @@ const texto = {
   color:'white',
   textAlign: 'center'
 };
+
+const fondoPagina = {
+  position: 'relative',           // Necesario para la superposición
+  minHeight: '100vh',
+  width: '100%',
+  overflow: 'hidden',             // Asegura que no haya contenido fuera de límites
+};
+
+const fondoImagen = {
+  backgroundImage: `url(${FondoPan})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  opacity: 0.3,                  // Controla la transparencia
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  zIndex: 1,
+};
+
+const contenido = {
+  position: 'relative',
+  zIndex: 2,                     // Asegura que el contenido esté encima del fondo
+  padding: '20px',
+};
+
+
 
 const { Content } = Layout;
 
@@ -59,31 +89,33 @@ const products = [
 const Panaderia = () => {
   return (
     <>
-    <Layout>
-      <Content style={{ minHeight: '150vh' }}>
+    <Layout style={{ minHeight: '100vh' }}>
 
-      <Row justify="center" align="middle" style={{ marginTop: "30px", height: "150px" }}>
-          <Col span={16}>
-              <div style={cajaDecoracion}>
-                <span style={texto}>PANADERÍA</span>
-              </div>  
-          </Col>
-      </Row>  
-
-        {Array.from({ length: 4 }, (_, i) => (
-          <Row key={i} gutter={[16, 16]} justify="center" style={{ marginTop: "30px" }}>
-            {products.slice(i * 4, (i + 1) * 4).map((product, index) => (
-              <Col span={4} key={index}>
-                <Card hoverable cover={<img alt={product.title} src={product.img} />}>
-                  <Card.Meta title={product.title} description={product.description} />
-                </Card>
+      <Content style={fondoPagina}>
+        <div style={fondoImagen}></div>
+        <div style={contenido}>
+          <Row justify="center" align="middle" style={{ marginTop: "30px", height: "150px" }}>
+              <Col span={16}>
+                  <div style={cajaDecoracion}>
+                    <span style={texto}>PANADERÍA</span>
+                  </div>  
               </Col>
-            ))}
-          </Row>
-        ))}
-        
-      <Row gutter={[16, 16]} justify="center" style={{ marginTop: "30px" }}> </Row>
+          </Row>  
 
+            {Array.from({ length: 4 }, (_, i) => (
+              <Row key={i} gutter={[16, 16]} justify="center" style={{ marginTop: "30px" }}>
+                {products.slice(i * 4, (i + 1) * 4).map((product, index) => (
+                  <Col span={4} key={index}>
+                    <Card hoverable cover={<img alt={product.title} src={product.img} />}>
+                      <Card.Meta title={product.title} description={product.description} />
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
+            ))}
+            
+          <Row gutter={[16, 16]} justify="center" style={{ marginTop: "30px" }}> </Row>
+        </div>
       </Content>
     </Layout>
 

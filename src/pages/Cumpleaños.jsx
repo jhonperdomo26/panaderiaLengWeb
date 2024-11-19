@@ -1,8 +1,9 @@
-import React from 'react'
+import { useTranslation } from "react-i18next";
 
 const Cumpleaños = () => {
+  const {t} = useTranslation();
   return (
-    <div>Cumpleaños</div>
+    <div><h1>{t("prueva")}</h1></div>
   )
 }
 

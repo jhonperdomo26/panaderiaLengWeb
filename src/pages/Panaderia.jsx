@@ -37,10 +37,10 @@ const texto = {
 };
 
 const fondoPagina = {
-  position: 'relative',           // Necesario para la superposición
+  position: 'relative',           
   minHeight: '100vh',
   width: '100%',
-  overflow: 'hidden',             // Asegura que no haya contenido fuera de límites
+  overflow: 'hidden',            
 };
 
 const fondoImagen = {
@@ -48,7 +48,7 @@ const fondoImagen = {
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
-  opacity: 0.3,                  // Controla la transparencia
+  opacity: 0.2,              
   position: 'absolute',
   top: 0,
   left: 0,

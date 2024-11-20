@@ -7,7 +7,7 @@ import Calidad from '../img/CalidadBlancoSVG.svg'
 import Cercania from '../img/CercaniaBlancoSVG.svg'
 import Innovacion from '../img/InnovacionBlancoSVG.svg'
 import Responsabilidad from '../img/ResponsabilidadBlancoSVG.svg'
-
+import { useTranslation } from "react-i18next";
 
 
 const { Content } = Layout;
@@ -133,6 +133,7 @@ const DIV2 = styled.div`
 `
 
 const Nosotros = () => {
+  const {t} = useTranslation();
   const [valorSeleccionado, setValorSeleccionado] = useState(null);
   const [mostrarTarjeta, setMostrarTarjeta] = useState(false);
 
@@ -156,17 +157,14 @@ const Nosotros = () => {
           </Col>
           <Col span={16}>
             <Flex align='center' justify='center' vertical>
-              <H1>Historia y Origen</H1>
+              <H1>{t("TituloN1")}</H1>
               <Flex align='center' justify='space-evenly'>
                 <div style={{ width: '60%' }}>
                   <P>
-                    La Panadería Horneados se fundó en 2019 en la ciudad de Neiva, Huila, un lugar donde la cultura y la tradición culinaria se entrelazan con la calidez de su gente. La idea de abrir la panadería
-                    nació en la mente de Ana y Juan, una pareja de jóvenes emprendedores que, después de años de soñar con un negocio propio, decidieron dar el salto y compartir su amor por la cocina.
+                    {t("PN1")}
                   </P>
                   <P>
-                    Horneados comenzó con una pequeña selección de panes artesanales, que rápidamente ganaron popularidad entre los habitantes de la zona. La combinación de recetas tradicionales y un toque innovador
-                    en su preparación hizo que sus productos se destacaran. Con el tiempo, la panadería amplió su oferta, incluyendo tortas para celebraciones, desayunos variados y deliciosas bebidas, desde aromáticos
-                    cafés hasta refrescantes batidos.
+                    {t("PN2")}
                   </P>
                 </div>
                 <ContenedorImagen>
@@ -187,49 +185,49 @@ const Nosotros = () => {
           <Col span={16}>
             <Flex align='center' justify='center' vertical style={{ width: '100%' }}>
 
-              <H1>Valores</H1>
+              <H1>{t("TituloN2")}</H1>
               <Flex align='center' justify='space-evenly' style={{ width: '100%', padding: '5px' }}>
                 <ValorIcono onMouseEnter={() => handleMouseEnter('Calidad')} onMouseLeave={handleMouseLeave} className='AnimValor'>
                   <ImagenLogo src={Calidad} alt="Logo del valor de la calidad" />
                   <TarjetaCircular visible={mostrarTarjeta && valorSeleccionado === 'Calidad'}>
-                    <p>Garantizamos productos frescos elaborados con los mejores ingredientes.</p>
-                  </TarjetaCircular>
+                    <p>{t("PCa")}</p>
+                  </TarjetaCircular>  
                 </ValorIcono>
 
                 <ValorIcono onMouseEnter={() => handleMouseEnter('Cercanía')} onMouseLeave={handleMouseLeave} className='AnimValor'>
                   <ImagenLogo src={Cercania} alt="Logo del valor de la cercanía" />
                   <TarjetaCircular visible={mostrarTarjeta && valorSeleccionado === 'Cercanía'} >
-                    <p> Queremos que cada cliente se sienta como en casa.</p>
+                    <p>{t("PCe")}</p>
                   </TarjetaCircular>
                 </ValorIcono>
 
                 <ValorIcono onMouseEnter={() => handleMouseEnter('Innovación')} onMouseLeave={handleMouseLeave} className='AnimValor'>
                   <ImagenLogo src={Innovacion} alt="Logo del valor de la innovación" />
                   <TarjetaCircular visible={mostrarTarjeta && valorSeleccionado === 'Innovación'} >
-                    <p>Creamos nuevos sabores y productos que combinan tradición y modernidad</p>
+                    <p>{t("PI")}</p>
                   </TarjetaCircular>
                 </ValorIcono>
 
                 <ValorIcono onMouseEnter={() => handleMouseEnter('Responsabilidad')} onMouseLeave={handleMouseLeave} className='AnimValor'>
                   <ImagenLogo src={Responsabilidad} alt="Logo del valor de la Responsabilidad" />
                   <TarjetaCircular visible={mostrarTarjeta && valorSeleccionado === 'Responsabilidad'}>
-                    <p>Creamos productos con los más altos estándares, actuando de forma ética y sostenible</p>
+                    <p>{t("PR")}</p>
                   </TarjetaCircular>
                 </ValorIcono>
 
               </Flex>
               <Flex align='center' justify='space-evenly' style={{ width: '100%' }}>
                 <Col span={4}>
-                  <ValorTexto>Calidad</ValorTexto>
+                  <ValorTexto>{t("Calidad")}</ValorTexto>
                 </Col>
                 <Col span={4}>
-                  <ValorTexto>Cercanía</ValorTexto>
+                  <ValorTexto>{t("Cercanía")}</ValorTexto>
                 </Col>
                 <Col span={4}>
-                  <ValorTexto>Innovación</ValorTexto>
+                  <ValorTexto>{t("Innovación")}</ValorTexto>
                 </Col>
                 <Col span={4}>
-                  <ValorTexto>Responsabilidad</ValorTexto>
+                  <ValorTexto>{t("Responsabilidad")}</ValorTexto>
                 </Col>
               </Flex>
 
@@ -248,11 +246,11 @@ const Nosotros = () => {
               
               <MisionVision>
                 <DIV>
-                  <H2 style={{color:'white'}}>Misión</H2> 
+                  <H2 style={{color:'white'}}>{t("Misión")}</H2> 
                 </DIV>
                 <DIV2>
                   <P1>
-                    Crear momentos de felicidad y sabor a través de productos artesanales elaborados con dedicación y amor.
+                    {t("PNM")}
                   </P1>
                 </DIV2>
                 
@@ -260,11 +258,11 @@ const Nosotros = () => {
               <MisionVision>
                 
                 <DIV>
-                <H2 style={{color:'white'}}>Visión</H2>
+                <H2 style={{color:'white'}}>{t("Visión")}</H2>
                 </DIV>
                 <DIV2> 
                   <P1>
-                    Convertirnos en la panadería de referencia en la región, reconocida por nuestra calidad, innovación y el toque artesanal de nuestros productos.
+                    {t("PNV")}
                   </P1>
                 </DIV2>
                 

@@ -116,7 +116,7 @@ const eventos = [
 const Eventos = () => (
   <>
     <Layout>
-      <Content>
+      <Content className='FondoPan'>
         <Pan>
           <div className='PanOrigen'>
           </div>
@@ -135,9 +135,9 @@ const Eventos = () => (
                         <Link to={eventos.link} style={{ display: 'block' }}>
                           <Card
                             hoverable
-                            cover={<img alt={eventos.title} src={eventos.img} style={{ width: '100%', height: '275px', borderRadius: '10px' }} />}
+                            cover={<img alt={eventos.title} src={eventos.img} style={{ width: '100%', height: '300px'}} />}
                           >
-                            <Card.Meta title={eventos.title} description={eventos.description} />
+                            <Card.Meta title={eventos.title} description={eventos.description} style={{ width: '100%', height: '175px'}}/>
                           </Card>
                         </Link>
                       </Col>

@@ -58,6 +58,7 @@ a:hover{
   background-color: rgb(232, 232, 232);
 }
 
+
 /* Eventos */
 
 .PanOrigen{
@@ -188,6 +189,7 @@ a:hover{
   height: 100%;
 }
 
+
 /* Baby Showers */
 
 .MacaronTonosPastel{
@@ -250,8 +252,8 @@ a:hover{
   justify-content: flex-start;
 }
 
-/* No sé */
 
+/* Menu */
 .custom-card-container {
   padding: 20px;
   text-align: center;

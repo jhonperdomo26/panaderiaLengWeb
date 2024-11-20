@@ -16,7 +16,11 @@ import Mogollas from '../img/mogolla.png'
 import PanAliñado from '../img/panaliñado.png'
 import MojiconQueso from '../img/mojiconconqueso.png'
 import PanBatido from '../img/panbatido.png'
+<<<<<<< HEAD
 import FondoPan from '../img/FondoPan.webp'
+=======
+import { useTranslation } from "react-i18next";
+>>>>>>> 5fc70b2 (avances)
 
 
 const cajaDecoracion = {
@@ -87,6 +91,7 @@ const products = [
 ];
 
 const Panaderia = () => {
+  const {t} = useTranslation();
   return (
     <>
     <Layout style={{ minHeight: '100vh' }}>

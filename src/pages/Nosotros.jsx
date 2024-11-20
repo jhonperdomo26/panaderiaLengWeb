@@ -8,11 +8,7 @@ import Cercania from '../img/CercaniaBlancoSVG.svg'
 import Innovacion from '../img/InnovacionBlancoSVG.svg'
 import Responsabilidad from '../img/ResponsabilidadBlancoSVG.svg'
 
-
-
 const { Content } = Layout;
-
-
 
 const Pan = styled.div`
   width: 100%;
@@ -147,7 +143,7 @@ const Nosotros = () => {
   return (
   <>
     <Layout>
-      <Content>
+      <Content className='FondoPan'>
         <Pan>
           <div className='PanOrigen'></div>
         </Pan>

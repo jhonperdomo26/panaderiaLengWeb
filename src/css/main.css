@@ -92,7 +92,7 @@ a:hover{
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .CupcakesDecorados{
@@ -116,7 +116,7 @@ a:hover{
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .GalletasPersonalizadas{
@@ -131,8 +131,8 @@ a:hover{
   justify-content: flex-end;
 }
 
-.Decoracion{
-  background-image: url(/src/img/Decoracion.webp);
+.MesaPostres{
+  background-image: url(/src/img/MesaPostres.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -140,10 +140,10 @@ a:hover{
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
-.CajaDecoracion{
+.CajaRight{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,7 +153,20 @@ a:hover{
   height: 375px;
   background-color: rgba(114, 93, 66, 0.6);
   border-radius: 20px;
-  box-shadow: 0px 0px 40px rgba(114, 93, 66, 0.5);
+  box-shadow: 0px 0px 40px rgba(114, 93, 66, 0.7);
+}
+
+.CajaLeft{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 10%;
+  width: 600px;
+  height: 375px;
+  background-color: rgba(114, 93, 66, 0.6);
+  border-radius: 20px;
+  box-shadow: 0px 0px 40px rgba(114, 93, 66, 0.7);
 }
 
 .TextoEvento{
@@ -166,4 +179,11 @@ a:hover{
   font-weight: bold;
 }
 
-
+.FondoPan{
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(/src/img/FondoPan.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}

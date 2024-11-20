@@ -159,12 +159,12 @@ const Eventos = () => {
 
               <Flex align='center' justify='space-evenly'>
                 <div style={{ width: '50%' }}>
-                  <HImpar>Comida & Bebida</HImpar>
+                  <HImpar>{t("Comida & Bebida")}</HImpar>
                   <P1>
-                    
+                    {t("D1Comida & Bebida")}
                   </P1>
                   <P1>
-                    
+                    {t("D2Comida & Bebida")} 
                   </P1>
                 </div>
                 <ContenedorImagen>
@@ -185,13 +185,12 @@ const Eventos = () => {
                 </ContenedorImagen>
 
                 <div style={{ width: '50%' }}>
-                  <HPar>Mesa de postres</HPar>
+                  <HPar>{t("Mesa de postres")}</HPar>
                   <P2>
-                    Haz que tu evento sea inolvidable con nuestra exclusiva Mesa de Postres Completa. En Panadería Horneados, creamos mesas personalizadas que combinan diseño y sabor, perfectas para complementar tus celebraciones.
+                     {t("D1Mesa de postres")}
                   </P2>
                   <P2>
-                    Sabemos que los detalles importan, y una mesa de postres puede ser el centro de atención en cualquier celebración. Para matrimonios, cumpleaños, aniversarios o cualquier evento especial, nuestras mesas de 
-                    postres están diseñadas para impresionar tanto visualmente como en sabor.
+                    {t("D2Mesa de postres")}
                   </P2>
                 </div>
                 
@@ -201,13 +200,13 @@ const Eventos = () => {
 
               <Flex align='center' text-align='justify' style={{ justifyContent: 'space-evenly'}}>
                 <div style={{ width: '50%' }}>
-                  <HImpar>Paquete Completo</HImpar>
+                  <HImpar>{t("Paquete Completo")}</HImpar>
                   <P1>
-                    Con nuestro Paquete Completo, nos encargamos de cada detalle para que tu evento sea un éxito. Desde el pastel perfecto hasta una deliciosa selección de bocadillos y bebidas, ofrecemos una experiencia integral 
-                    que hará de tu celebración algo inolvidable. 
+                    {t("D1Paquete Completo")}
                   </P1>
-                  <P1>Nuestro equipo personaliza cada paquete según tus necesidades, para que tengas todo lo que necesitas en un solo lugar. Ya sea un matrimonio, cumpleaños, baby shower 
-                  o aniversario, creamos un menú a medida, con productos frescos y de calidad, cuidando la presentación y el sabor en cada plato.</P1>
+                  <P1>
+                   {t("D2Paquete Completo")}
+                  </P1>
                   </div>
                   <ContenedorImagen>
                     <Flex align='center' justify='center'>

@@ -61,7 +61,7 @@ const styleIcono = {
 const { Content } = Layout;
 
 const products = [
-  { title: "Combo Yaguareño", img: Yaguara, description: "Tamal acompañado de quesillo y chocolate", button:"Agregar" },
+  { title: "Combo Yaguareño", img: Yaguara, description: "Tamal acompañado de quesillo y chocolate" },
   { title: "Delicombo el Opita", img: Opita, description: "Almojabana acompañada con chocolate" },
   { title: "Combo Cumpleañero", img: Cumple, description: "Torta de chocolate con gaseosa 1.25lts" },
   { title: "Desayuno Sorpresa", img: Sorpresa, description: "Desayuno para Celebrar tus fechas especiales" },

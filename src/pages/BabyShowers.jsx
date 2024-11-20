@@ -137,40 +137,40 @@ const BabyShowers = () => (
           </div>
           <div>
             <h3 style={contentStyle}>
-              <div className='CupcakesDecorados'>
+              <div className='CupcakesBabyShower'>
                 <div className='CajaRight'>
-                  <span className='TextoEvento'>CUPCAKES</span>
-                  <span className='TextoEvento'>DECORADOS</span>
+                  <span className='TextoEvento'>CUPCAKES PARA</span>
+                  <span className='TextoEvento'>BABY SHOWERS</span>
                 </div>                
               </div>
             </h3>
           </div>
           <div>
             <h3 style={contentStyle}>
-              <div className='PostresGourmet'>
+              <div className='MacaronTonosPastel'>
                 <div className='CajaLeft'>
-                  <span className='TextoEvento'>POSTRES</span>
-                  <span className='TextoEvento'>GOURMET</span>
+                  <span className='TextoEvento'>MACARONS EN</span>
+                  <span className='TextoEvento'>TONOS PASTEL</span>
                 </div>                
               </div>
             </h3>
           </div>
           <div>
             <h3 style={contentStyle}>
-              <div className='GalletasPersonalizadas'>
+              <div className='GalletasBabyShower'>
                 <div className='CajaRight'>
-                  <span className='TextoEvento'>GALLETAS</span>
-                  <span className='TextoEvento'>PERSONALIZADAS</span>
+                  <span className='TextoEvento'>GALLETAS PARA</span>
+                  <span className='TextoEvento'>BABY SHOWERS</span>
                 </div>
               </div>
             </h3>
           </div>
           <div>
             <h3 style={contentStyle}>
-              <div className='MesaPostres'>
+              <div className='Tartaletas'>
                 <div className='CajaLeft'>
-                  <span className='TextoEvento'>MESA DE</span>
-                  <span className='TextoEvento'>POSTRES</span>
+                  <span className='TextoEvento'>MINI TARTALETAS</span>
+                  <span className='TextoEvento'>DE FRUTA</span>
                 </div>
               </div>
             </h3>

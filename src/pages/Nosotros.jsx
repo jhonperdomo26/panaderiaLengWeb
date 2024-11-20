@@ -12,8 +12,6 @@ import { useTranslation } from "react-i18next";
 
 const { Content } = Layout;
 
-
-
 const Pan = styled.div`
   width: 100%;
   height: 400px;
@@ -148,7 +146,7 @@ const Nosotros = () => {
   return (
   <>
     <Layout>
-      <Content>
+      <Content className='FondoPan'>
         <Pan>
           <div className='PanOrigen'></div>
         </Pan>

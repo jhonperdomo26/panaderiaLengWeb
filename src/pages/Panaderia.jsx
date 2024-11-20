@@ -19,7 +19,7 @@ import MojiconQueso from '../img/mojiconconqueso.png';
 import PanBatido from '../img/panbatido.png';
 import { useTranslation } from "react-i18next";
 import FondoPan from '../img/FondoPan.webp'
-
+import { useTranslation } from "react-i18next";
 
 
 const cajaDecoracion = {

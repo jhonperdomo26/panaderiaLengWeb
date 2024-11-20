@@ -1,4 +1,66 @@
-{
+{   
+    "Teléfonos": "Teléfonos",
+    "Dias": "Lunes - Domingo",
+
+
+
     "greeting": "Ubicaciones de nuestras panaderias español",
-    "prueva": "cumpleaños español"
+    "prueva": "cumpleaños español",
+    
+    "Menú": "Menú",
+    "Panadería": "Panadería",
+    "Pastelería": "Pastelería",
+    "Desayunos": "Desayunos",
+    "Bebidas": "Bebidas",
+    "Combos": "Combos",
+
+    
+
+    "Nosotros": "Nosotros",
+    "TituloN1": "Historia y Origen",
+    "PN1": "La La Panadería Horneados se fundó en 2019 en la ciudad de Neiva, Huila, un lugar donde la cultura y la tradición culinaria se entrelazan con la calidez de su gente. La idea de abrir la panadería nació en la mente de Ana y Juan, una pareja de jóvenes emprendedores que, después de años de soñar con un negocio propio, decidieron dar el salto y compartir su amor por la cocina.",
+    "PN2":"Horneados comenzó con una pequeña selección de panes artesanales, que rápidamente ganaron popularidad entre los habitantes de la zona. La combinación de recetas tradicionales y un toque innovador en su preparación hizo que sus productos se destacaran. Con el tiempo, la panadería amplió su oferta, incluyendo tortas para celebraciones, desayunos variados y deliciosas bebidas, desde aromáticos cafés hasta refrescantes batidos.",
+    "TituloN2": "Valores",
+    "Calidad": "Calidad",
+    "PCa": "Garantizamos productos frescos elaborados con los mejores ingredientes.",
+    "Cercanía": "Cercanía",
+    "PCe": "Queremos que cada cliente se sienta como en casa.",
+    "Innovación": "Innovación",
+    "PI": "Creamos nuevos sabores y productos que combinan tradición y modernidad",
+    "Responsabilidad": "Responsabilidad",
+    "PR": "Creamos productos con los más altos estándares, actuando de forma ética y sostenible",
+    "Misión": "Misión",
+    "PNM" : "Crear momentos de felicidad y sabor a través de productos artesanales elaborados con dedicación y amor.",
+    "Visión": "Visión",
+    "PNV": "Convertirnos en la panadería de referencia en la región, reconocida por nuestra calidad, innovación y el toque artesanal de nuestros productos.",
+
+
+    "Eventos": "Eventos",
+    "Eventos Especiales": "Eventos Especiales",
+    "Matrimonios": "Matrimonios",
+    "DMatrimonios": "Celebra el amor con nuestros pasteles y decoraciones únicas para matrimonios, para hacer de tu día especial un momento inolvidable.",
+    "Baby Showers": "Baby Showers",
+    "DBaby Showers": "Dale la bienvenida a tu bebé con una mesa de dulces adorable y personalizada, diseñada para llenar de ternura y sabor este momento especial.",
+    "Aniversarios": "Aniversarios",
+    "DAniversarios": "Conmemora un año más de amor con una celebración dulce y elegante. Nuestros pasteles de aniversario están hechos para reflejar la historia que celebran.",
+    "Cumpleaño": "Cumpleaños",
+    "DCumpleaño": "Haz de tu cumpleaños una celebración memorable con pasteles y postres personalizados, ideales para compartir y disfrutar en grande.",
+    "PE1": "En nuestra panadería, sabemos que los momentos importantes merecen ser acompañados de lo mejor. Ya sea un matrimonio, un baby shower, un aniversario o un cumpleaños, nuestros productos artesanales están diseñados para agregar un toque de dulzura a tus celebraciones. Desde elegantes tortas de bodas hasta delicados cupcakes personalizados, creamos con pasión para que cada bocado refleje la alegría de tus momentos especiales. ¡Deja que nuestros sabores formen parte de tus recuerdos inolvidables!",
+    "Comida & Bebida": "Comida & Bebida",
+    "D1Comida & Bebida": "En nuestra panadería, no solo nos especializamos en postres; también ofrecemos una selección exquisita de comida salada y bebidas diseñadas para complementar cualquier celebración. Desde elegantes bocadillos hasta opciones refrescantes de bebidas, nuestro menú está pensado para satisfacer todos los gustos.",
+    "D2Comida & Bebida": "Cuéntanos más sobre tu evento y crearemos un menú que se adapte a tus necesidades. ¡Haz que tu ocasión especial sea deliciosa en todos los sentidos!",
+    "Mesa de postres": "Mesa de postres",
+    "D1Mesa de postres": " Haz que tu evento sea inolvidable con nuestra exclusiva Mesa de Postres Completa. En Panadería Horneados, creamos mesas personalizadas que combinan diseño y sabor, perfectas para complementar tus celebraciones.",
+    "D2Mesa de postres": "Sabemos que los detalles importan, y una mesa de postres puede ser el centro de atención en cualquier celebración. Para matrimonios, cumpleaños, aniversarios o cualquier evento especial, nuestras mesas de postres están diseñadas para impresionar tanto visualmente como en sabor.",
+    "Paquete Completo":"Paquete Completo",
+    "D1Paquete Completo":"Con nuestro Paquete Completo, nos encargamos de cada detalle para que tu evento sea un éxito. Desde el pastel perfecto hasta una deliciosa selección de bocadillos y bebidas, ofrecemos una experiencia integral que hará de tu celebración algo inolvidable. ",
+    "D2Paquete Completo":"Nuestro equipo personaliza cada paquete según tus necesidades, para que tengas todo lo que necesitas en un solo lugar. Ya sea un matrimonio, cumpleaños, baby shower o aniversario, creamos un menú a medida, con productos frescos y de calidad, cuidando la presentación y el sabor en cada plato.",
+
+
+
+
+
+
+
+    "API": "API"
 }

@@ -1,4 +1,66 @@
-{
+{   
+    "Teléfonos": "Phones",
+    "Dias": "Monday - Sunday",
+
+
+
     "greeting": "Ubicaciones de nuestras panaderias ingles",
-    "prueva": "cumpleaños ingles"
+    "prueva": "cumpleaños ingles",
+    
+    "Menú": "Menu",
+    "Panadería": "baker's",
+    "Pastelería": "Bakery",
+    "Desayunos": "Breakfasts",
+    "Bebidas": "Drinks",
+    "Combos": "Combos",
+
+    
+
+    "Nosotros": "About us",
+    "TituloN1": "History and Origin",
+    "PN1": "La Panadería Horneados was founded in 2019 in the city of Neiva, Huila, a place where culture and culinary tradition intertwine with the warmth of its people. The idea of ​​opening the bakery was born in the minds of Ana and Juan, a couple of young entrepreneurs who, after years of dreaming of their own business, decided to take the leap and share their love for cooking.",
+    "PN2":"Horneados started with a small selection of artisan breads, which quickly gained popularity among local residents. The combination of traditional recipes and an innovative touch in their preparation made their products stand out. Over time, the bakery expanded its offering, including cakes for celebrations, varied breakfasts and delicious drinks, from aromatic coffees to refreshing milkshakes.",
+    "TituloN2": "Valores",
+    "Calidad": "Quality",
+    "PCa": "We guarantee fresh products made with the best ingredients.",
+    "Cercanía": "Closeness",
+    "PCe": "We want every customer to feel at home.",
+    "Innovación": "Innovation",
+    "PI": "We create new flavors and products that combine tradition and modernity",
+    "Responsabilidad": "Responsibility",
+    "PR": "We create products with the highest standards, acting in an ethical and sustainable manner.",
+    "Misión": "Mission",
+    "PNM" : "Creating moments of happiness and flavour through artisanal products made with dedication and love.",
+    "Visión": "Vision",
+    "PNV": "To become the benchmark bakery in the region, recognized for our quality, innovation and the artisanal touch of our products.",
+
+
+    "Eventos": "Events",
+    "Eventos Especiales": "Special Events",
+    "Matrimonios": "Marriages",
+    "DMatrimonios": "Celebrate love with our unique wedding cakes and decorations to make your special day unforgettable.",
+    "Baby Showers": "Baby Showers",
+    "DBaby Showers": "Welcome your baby with an adorable and personalized dessert table, designed to fill this special moment with tenderness and flavor.",
+    "Aniversarios": "Anniversaries",
+    "DAniversarios": "Commemorate another year of love with a sweet and elegant celebration. Our anniversary cakes are made to reflect the story you celebrate.",
+    "Cumpleaño": "birthday",
+    "DCumpleaño": "Make your birthday a memorable celebration with personalized cakes and desserts, ideal for sharing and enjoying.",
+    "PE1": "At our bakery, we know that important moments deserve to be accompanied by the best. Whether it's a wedding, a baby shower, an anniversary or a birthday, our artisanal products are designed to add a touch of sweetness to your celebrations. From elegant wedding cakes to delicate personalized cupcakes, we create with passion so that every bite reflects the joy of your special moments. Let our flavors be part of your unforgettable memories!",
+    "Comida & Bebida": "Food & Drink",
+    "D1Comida & Bebida": "At our bakery, we don't just specialize in desserts; we also offer an exquisite selection of savory food and beverages designed to complement any celebration. From elegant snacks to refreshing drink options, our menu is designed to satisfy every taste.",
+    "D2Comida & Bebida": "Tell us more about your event and we will create a menu that suits your needs. Make your special occasion delicious in every way!",
+    "Mesa de postres": "Dessert table",
+    "D1Mesa de postres": "Make your event unforgettable with our exclusive Complete Dessert Table. At Panadería Horneados, we create personalized tables that combine design and flavor, perfect to complement your celebrations.",
+    "D2Mesa de postres": "We know that details matter, and a dessert table can be the center of attention at any celebration. For weddings, birthdays, anniversaries or any special event, our dessert tables are designed to impress both visually and in taste.",
+    "Paquete Completo":"Complete Package",
+    "D1Paquete Completo":"With our Complete Package, we take care of every detail to make your event a success. From the perfect cake to a delicious selection of snacks and drinks, we offer a comprehensive experience that will make your celebration unforgettable.",
+    "D2Paquete Completo":"Our team customizes each package to your needs, so you have everything you need in one place. Whether it's a wedding, birthday, baby shower or anniversary, we create a custom menu, with fresh, quality products, taking care of the presentation and flavor of each dish.",
+
+
+
+
+
+
+
+    "API": "API"
 }

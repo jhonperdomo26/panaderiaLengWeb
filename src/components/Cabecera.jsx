@@ -5,6 +5,7 @@ import { Layout, Menu, Dropdown, Space } from 'antd';
 import { Link } from 'react-router-dom';
 import LogoSimple from '../img/LogoSimple.webp';
 import styled from '@emotion/styled';
+import { useTranslation } from "react-i18next";
 
 const Imagen = styled.img`
   display: block;
@@ -14,33 +15,35 @@ const Imagen = styled.img`
   cursor: pointer;
 `
 
-
-const items = [
-  {
-    label: <Link to="/Panaderia">Panaderia</Link>,
-    key: "1",
-  },
-  {
-    label: <Link to="/Pasteleria">Pastelería</Link>,
-    key: "2",
-  },
-  {
-    label: <Link to="/Desayunos">Desayunos</Link>,
-    key: "3",
-  },
-  {
-    label: <Link to="/Bebidas">Bebidas</Link>,
-    key: "4",
-  },
-  {
-    label: <Link to="/Combos">Combos</Link>,
-    key: "5",
-  },
-];
-
 const { Header } = Layout;
 
 const Cabecera = () => {
+  const {t} = useTranslation();
+
+  const items = [
+    {
+      label: <Link to="/Panaderia">{t("Panadería")}</Link>,
+      key: "1",
+    },
+    {
+      label: <Link to="/Pasteleria">{t("Pastelería")}</Link>,
+      key: "2",
+    },
+    {
+      label: <Link to="/Desayunos">{t("Desayunos")}</Link>,
+      key: "3",
+    },
+    {
+      label: <Link to="/Bebidas">{t("Bebidas")}</Link>,
+      key: "4",
+    },
+    {
+      label: <Link to="/Combos">{t("Combos")}</Link>,
+      key: "5",
+    },
+  ];
+
+  
   return (
     <Layout>
       <Header className="Cabeza" style={{ backgroundColor: '#f0ca83', display: 'flex', justifyContent: 'space-between', alignItems: 'center'  }}>
@@ -57,7 +60,7 @@ const Cabecera = () => {
               >
                 <a onClick={(e) => e.preventDefault()}>
                   <Space style={{color:'#541e12'}}>
-                    Menú
+                    {t("Menú")}
                     <DownOutlined />
                   </Space>
                 </a>
@@ -65,15 +68,15 @@ const Cabecera = () => {
             </Menu.Item>
 
             <Menu.Item key="2">
-              <Link to="/Nosotros" style={{color:'#541e12'}}>Nosotros</Link>
+              <Link to="/Nosotros" style={{color:'#541e12'}}>{t("Nosotros")}</Link>
             </Menu.Item>
 
             <Menu.Item key="3">
-              <Link to="/Eventos" style={{color:'#541e12'}}>Eventos</Link>
+              <Link to="/Eventos" style={{color:'#541e12'}}>{t("Eventos")}</Link>
             </Menu.Item>
 
             <Menu.Item key="4">
-              <Link to="/API" style={{color:'#541e12'}}>API</Link>
+              <Link to="/API" style={{color:'#541e12'}}>{t("API")}</Link>
             </Menu.Item>
           </Menu>
         </div>

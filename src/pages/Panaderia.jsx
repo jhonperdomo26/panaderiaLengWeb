@@ -16,6 +16,7 @@ import Mogollas from '../img/mogolla.png'
 import PanAliñado from '../img/panaliñado.png'
 import MojiconQueso from '../img/mojiconconqueso.png'
 import PanBatido from '../img/panbatido.png'
+import { useTranslation } from "react-i18next";
 import FondoPan from '../img/FondoPan.webp'
 
 
@@ -87,6 +88,7 @@ const products = [
 ];
 
 const Panaderia = () => {
+  const {t} = useTranslation();
   return (
     <>
     <Layout style={{ minHeight: '100vh' }}>

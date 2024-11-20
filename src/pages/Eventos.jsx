@@ -9,6 +9,7 @@ import PaqCom from '../img/ComBeb.webp';
 import MPostres from '../img/MPostres.webp';
 import Bebidas from '../img/Bebidas.webp';
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 const { Content } = Layout;
 
@@ -86,34 +87,39 @@ const P2 =styled.p`
   font-weight: 400;
 `
 
-const eventos = [
-  { 
-    title: 'Matrimonios', 
-    img: Matrimonio, 
-    description: "Celebra el amor con nuestros pasteles y decoraciones únicas para matrimonios, para hacer de tu día especial un momento inolvidable.", 
-    link: "/Matrimonios" 
-  },
-  { 
-    title: 'Baby Showers', 
-    img: BabyShower, 
-    description: "Dale la bienvenida a tu bebé con una mesa de dulces adorable y personalizada, diseñada para llenar de ternura y sabor este momento especial.", 
-    link: "/BabyShowers" 
-  },
-  { 
-    title: 'Aniversarios', 
-    img: Aniversario, 
-    description: "Conmemora un año más de amor con una celebración dulce y elegante. Nuestros pasteles de aniversario están hechos para reflejar la historia que celebran.", 
-    link: "/Aniversarios" 
-  },
-  { 
-    title: 'Cumpleaños', 
-    img: Cumpleanos, 
-    description: "Haz de tu cumpleaños una celebración memorable con pasteles y postres personalizados, ideales para compartir y disfrutar en grande.", 
-    link: "/Cumpleaños" 
-  }
-];
+const Eventos = () => {
+  const {t} = useTranslation();
 
-const Eventos = () => (
+  const eventos = [
+    { 
+      title: [t("Matrimonios")], 
+      img: Matrimonio, 
+      description: [t("DMatrimonios")], 
+      link: "/Matrimonios" 
+    },
+    { 
+      title: [t("Baby Showers")], 
+      img: BabyShower, 
+      description: [t("DBaby Showers")], 
+      link: "/BabyShowers" 
+    },
+    { 
+      title: [t("Aniversarios")], 
+      img: Aniversario, 
+      description: [t("DAniversarios")], 
+      link: "/Aniversarios" 
+    },
+    { 
+      title: [t("Cumpleaño")], 
+      img: Cumpleanos, 
+      description: [t("DCumpleaño")], 
+      link: "/Cumpleaños" 
+    }
+  ];
+
+
+  return(
+
   <>
     <Layout>
       <Content className='FondoPan'>
@@ -126,7 +132,7 @@ const Eventos = () => (
           </Col>
           <Col span={16}>
             <Flex justify='center' vertical>
-            <HEventosEspeciales>Eventos Especiales</HEventosEspeciales>
+            <HEventosEspeciales>{t("Eventos Especiales")}</HEventosEspeciales>
               <Flex align="right" text-align="justify" vertical>
                 <div style={{ padding: '20px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
                   <Row gutter={[16, 16]} justify="center">
@@ -145,8 +151,7 @@ const Eventos = () => (
                   </Row>
                 </div>
                 <P1>
-                  En nuestra panadería, sabemos que los momentos importantes merecen ser acompañados de lo mejor. Ya sea un matrimonio, un baby shower, un aniversario o un cumpleaños, nuestros productos artesanales están diseñados para agregar un toque de dulzura a tus celebraciones.
-                  Desde elegantes tortas de bodas hasta delicados cupcakes personalizados, creamos con pasión para que cada bocado refleje la alegría de tus momentos especiales. ¡Deja que nuestros sabores formen parte de tus recuerdos inolvidables!
+                  {t("PE1")}
                 </P1>
               </Flex>
 
@@ -154,13 +159,12 @@ const Eventos = () => (
 
               <Flex align='center' justify='space-evenly'>
                 <div style={{ width: '50%' }}>
-                  <HImpar>Comida & Bebida</HImpar>
+                  <HImpar>{t("Comida & Bebida")}</HImpar>
                   <P1>
-                    En nuestra panadería, no solo nos especializamos en postres; también ofrecemos una selección exquisita de comida salada y bebidas diseñadas para complementar cualquier celebración. Desde elegantes bocadillos hasta opciones refrescantes de bebidas, nuestro menú está 
-                    pensado para satisfacer todos los gustos.
+                    {t("D1Comida & Bebida")}
                   </P1>
                   <P1>
-                    Cuéntanos más sobre tu evento y crearemos un menú que se adapte a tus necesidades. ¡Haz que tu ocasión especial sea deliciosa en todos los sentidos!
+                    {t("D2Comida & Bebida")} 
                   </P1>
                 </div>
                 <ContenedorImagen>
@@ -181,13 +185,12 @@ const Eventos = () => (
                 </ContenedorImagen>
 
                 <div style={{ width: '50%' }}>
-                  <HPar>Mesa de postres</HPar>
+                  <HPar>{t("Mesa de postres")}</HPar>
                   <P2>
-                    Haz que tu evento sea inolvidable con nuestra exclusiva Mesa de Postres Completa. En Panadería Horneados, creamos mesas personalizadas que combinan diseño y sabor, perfectas para complementar tus celebraciones.
+                     {t("D1Mesa de postres")}
                   </P2>
                   <P2>
-                    Sabemos que los detalles importan, y una mesa de postres puede ser el centro de atención en cualquier celebración. Para matrimonios, cumpleaños, aniversarios o cualquier evento especial, nuestras mesas de 
-                    postres están diseñadas para impresionar tanto visualmente como en sabor.
+                    {t("D2Mesa de postres")}
                   </P2>
                 </div>
                 
@@ -197,13 +200,13 @@ const Eventos = () => (
 
               <Flex align='center' text-align='justify' style={{ justifyContent: 'space-evenly'}}>
                 <div style={{ width: '50%' }}>
-                  <HImpar>Paquete Completo</HImpar>
+                  <HImpar>{t("Paquete Completo")}</HImpar>
                   <P1>
-                    Con nuestro Paquete Completo, nos encargamos de cada detalle para que tu evento sea un éxito. Desde el pastel perfecto hasta una deliciosa selección de bocadillos y bebidas, ofrecemos una experiencia integral 
-                    que hará de tu celebración algo inolvidable. 
+                    {t("D1Paquete Completo")}
                   </P1>
-                  <P1>Nuestro equipo personaliza cada paquete según tus necesidades, para que tengas todo lo que necesitas en un solo lugar. Ya sea un matrimonio, cumpleaños, baby shower 
-                  o aniversario, creamos un menú a medida, con productos frescos y de calidad, cuidando la presentación y el sabor en cada plato.</P1>
+                  <P1>
+                   {t("D2Paquete Completo")}
+                  </P1>
                   </div>
                   <ContenedorImagen>
                     <Flex align='center' justify='center'>
@@ -222,5 +225,6 @@ const Eventos = () => (
     </Layout>
 
   </>
-);
+  )
+};
 export default Eventos;

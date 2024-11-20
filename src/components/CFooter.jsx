@@ -3,6 +3,7 @@ import '../css/main.css';
 import Logo from '../img/logoHorneados.png';
 import { Col, Row, Layout, Flex, Divider } from 'antd';
 import { FacebookOutlined, InstagramOutlined, WhatsAppOutlined } from '@ant-design/icons';
+import { useTranslation } from "react-i18next";
 
 const { Footer } = Layout;
 
@@ -72,6 +73,7 @@ const styleTexto = {
 }
 
 const CFooter = () => {
+    const {t} = useTranslation();
   return (
       <Layout>
           <Footer style={{ padding: '0%'}}>
@@ -86,10 +88,10 @@ const CFooter = () => {
 
                       <Col span={8} className='ColFooter'>
                           <Flex align='start' justify='center' vertical style={{ padding: '1%'}}>
-                              <Texto><b>Teléfonos</b></Texto>
+                              <Texto><b>{t("Teléfonos")}</b></Texto>
                               <Texto>(608) 863 3424 - (+57) 312 536 2118</Texto>
                               <br/>
-                              <Texto><b>Lunes - Domingo</b></Texto>
+                              <Texto><b>{t("Dias")}</b></Texto>
                               <Texto>5 a.m - 10 p.m</Texto>
                               <br/>
                               <Texto><b>Cra 7 #56-16</b></Texto>

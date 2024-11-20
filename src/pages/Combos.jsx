@@ -67,7 +67,7 @@ const products = [
   { title: "Desayuno Sorpresa", img: Sorpresa, description: "Desayuno para Celebrar tus fechas especiales" },
 ];
 
-const CustomCards = ({ addToCart }) => {
+const Combos = ({ addToCart }) => {
   const [isFlipped, setIsFlipped] = useState(Array(products.length).fill(false));
   const [quantities, setQuantities] = useState(Array(products.length).fill(0));
 
@@ -172,4 +172,4 @@ const CustomCards = ({ addToCart }) => {
   );
 };
 
-export default CustomCards;
+export default Combos;

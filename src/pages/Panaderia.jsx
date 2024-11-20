@@ -18,6 +18,9 @@ import PanAliñado from '../img/panaliñado.png';
 import MojiconQueso from '../img/mojiconconqueso.png';
 import PanBatido from '../img/panbatido.png';
 import FondoPan from '../img/FondoPan.webp'
+import { useTranslation } from "react-i18next";
+
+
 
 
 const cajaDecoracion = {

@@ -1,4 +1,8 @@
 {   
+    "Teléfonos": "Teléfonos",
+    "Dias": "Lunes - Domingo",
+
+
 
     "greeting": "Ubicaciones de nuestras panaderias español",
     "prueva": "cumpleaños español",
@@ -46,7 +50,11 @@
     "D1Comida & Bebida": "En nuestra panadería, no solo nos especializamos en postres; también ofrecemos una selección exquisita de comida salada y bebidas diseñadas para complementar cualquier celebración. Desde elegantes bocadillos hasta opciones refrescantes de bebidas, nuestro menú está pensado para satisfacer todos los gustos.",
     "D2Comida & Bebida": "Cuéntanos más sobre tu evento y crearemos un menú que se adapte a tus necesidades. ¡Haz que tu ocasión especial sea deliciosa en todos los sentidos!",
     "Mesa de postres": "Mesa de postres",
-    "D1Mesa de postres": "",
+    "D1Mesa de postres": " Haz que tu evento sea inolvidable con nuestra exclusiva Mesa de Postres Completa. En Panadería Horneados, creamos mesas personalizadas que combinan diseño y sabor, perfectas para complementar tus celebraciones.",
+    "D2Mesa de postres": "Sabemos que los detalles importan, y una mesa de postres puede ser el centro de atención en cualquier celebración. Para matrimonios, cumpleaños, aniversarios o cualquier evento especial, nuestras mesas de postres están diseñadas para impresionar tanto visualmente como en sabor.",
+    "Paquete Completo":"Paquete Completo",
+    "D1Paquete Completo":"Con nuestro Paquete Completo, nos encargamos de cada detalle para que tu evento sea un éxito. Desde el pastel perfecto hasta una deliciosa selección de bocadillos y bebidas, ofrecemos una experiencia integral que hará de tu celebración algo inolvidable. ",
+    "D2Paquete Completo":"Nuestro equipo personaliza cada paquete según tus necesidades, para que tengas todo lo que necesitas en un solo lugar. Ya sea un matrimonio, cumpleaños, baby shower o aniversario, creamos un menú a medida, con productos frescos y de calidad, cuidando la presentación y el sabor en cada plato.",
 
 
 

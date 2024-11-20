@@ -21,6 +21,7 @@ import FondoPan from '../img/FondoPan.webp'
 import { useTranslation } from "react-i18next";
 
 
+
 const cajaDecoracion = {
   display:'flex',
   alignItems:'center',

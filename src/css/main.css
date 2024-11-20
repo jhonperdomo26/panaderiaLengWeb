@@ -189,7 +189,7 @@ a:hover{
   height: 100%;
 }
 
-/* Menu */
+
 /* Baby Showers */
 
 .MacaronTonosPastel{
@@ -252,7 +252,6 @@ a:hover{
   justify-content: flex-start;
 }
 
-/* No sé */
 
 /* Menu */
 .custom-card-container {
@@ -277,7 +276,7 @@ a:hover{
   cursor: pointer;
   z-index: 1;
   width: 300px;
-  height: 320px;
+  height: 440px;
 }
 
 .custom-card:hover {

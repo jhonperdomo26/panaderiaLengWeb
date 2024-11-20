@@ -166,6 +166,103 @@ const CustomCards = ({ addToCart }) => {
             </div>
           </Col>
         </Row>
+=======
+  { title: "Opita", img: Opita, description: "Almojabana acompañada con chocolate" },
+  { title: "Cumpleaños", img: Cumple, description: "Torta de chocolate con gaseosa 1.25lts" },
+  { title: "Desayuno Sorpresa", img: Sorpresa, description: "Desayuno para Celebrar tus fechas especiales" },
+];
+
+const CustomCards = ({ addToCart }) => {
+  const [isFlipped, setIsFlipped] = useState(Array(products.length).fill(false));
+  const [quantities, setQuantities] = useState(Array(products.length).fill(0));
+
+  const handleCardClick = (index) => {
+    setIsFlipped((prevFlipped) => {
+      const newFlipped = [...prevFlipped];
+      newFlipped[index] = !prevFlipped[index];
+      return newFlipped;
+    });
+  };
+
+  const handleQuantityChange = (index, change, event) => {
+    event.stopPropagation();
+    const newQuantities = [...quantities];
+    newQuantities[index] = Math.max(newQuantities[index] + change, 0);
+    setQuantities(newQuantities);
+  };
+
+  const addToCartHandler = (index, event) => {
+    event.stopPropagation();
+    if (quantities[index] > 0) {
+      addToCart(products[index], quantities[index]);
+      setQuantities([...quantities.slice(0, index), 0, ...quantities.slice(index + 1)]);
+    }
+  };
+
+  return (
+    <Layout>
+      <Content style={{ minHeight: '150vh' }}>
+        {/* Contenedor del título alineado con las tarjetas */}
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: "30px", marginBottom: "30px" }}>
+          <div style={{ ...cajaDecoracion, width: 'calc(100% - 32px)' }}>
+            <span style={texto}>COMBOS</span>
+          </div>
+        </div>
+
+        {/* Contenedor de las tarjetas */}
+        <div className="custom-card-container">
+          <div className="card-grid" style={{ width: '100%' }}>
+            {products.map((product, index) => (
+              <div
+                key={index}
+                className={`custom-card ${isFlipped[index] ? "flipped" : ""}`}
+                onClick={() => handleCardClick(index)}
+                style={{ marginBottom: '20px' }} // Para separar las tarjetas
+              >
+                <div className="card-inner">
+                  <div className="card-front">
+                    <div className="card-header">
+                      <div className="card-image-wrapper">
+                        <img src={product.img} alt={product.title} className="card-image" />
+                      </div>
+                    </div>
+                    <h3 style={{ padding: '15px', fontWeight: 900 }}>{product.title}</h3>
+                  </div>
+                  <div className="card-back">
+                    <div className="background-image" style={{ backgroundImage: `url(${product.img})` }} />
+                    <div className="card-content">
+                      <h3 className="product-name">{product.title}</h3>
+                      <p>{product.description}</p>
+
+                      <div className="quantity-controls">
+                        <div className="arrow-buttons">
+                          <button
+                            className="quantity-button up"
+                            onClick={(e) => handleQuantityChange(index, 1, e)}
+                          >
+                            ▲
+                          </button>
+                          <button
+                            className="quantity-button down"
+                            onClick={(e) => handleQuantityChange(index, -1, e)}
+                          >
+                            ▼
+                          </button>
+                        </div>
+                        <span className="quantity">{quantities[index]}</span>
+                      </div>
+                      <button
+                        className="add-to-cart"
+                        onClick={(e) => { e.stopPropagation(); addToCartHandler(index, e); }}
+                      >
+                        Añadir al carrito
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </Content>
     </Layout>

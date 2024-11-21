@@ -1,6 +1,6 @@
 import "../css/main.css";
 import React, { useState } from "react"; // Importa useState correctamente
-import { Col, Layout, Row } from "antd";
+import { Layout, Row, Col, Modal, Button } from "antd";
 import BrazoReina from "../img/brazodereina.png";
 import Tresleches from "../img/tresleches.png";
 import Ponque from "../img/ponque.png";
@@ -66,27 +66,29 @@ const contenido = {
 const { Content } = Layout;
 
 const products = [
-  { title: "Brazo de Reina", img: BrazoReina, description: "Delicioso y recién horneado" },
-  { title: "Torta de Tres Leches", img: Tresleches, description: "Delicioso y recién horneado" },
-  { title: "Ponqué Tradicional", img: Ponque, description: "Delicioso y recién horneado" },
-  { title: "Torta de Red Velvet", img: TortaRed, description: "Delicioso y recién horneado" },
-  { title: "Torta de Zanahoria", img: TortaZana, description: "Delicioso y recién horneado" },
-  { title: "Torta de Chocolate", img: TortaChoco, description: "Brownies melcochudos" },
-  { title: "Torta de Naranja con Amapola", img: TortaAmapola, description: "Delicioso y recién horneado" },
-  { title: "Milhoja de Arequipe", img: Milhojas, description: "Delicioso y recién horneado" },
-  { title: "Cheesecake de Frutos Rojos", img: CheesecakeFrutos, description: "Delicioso y recién horneado" },
-  { title: "Caja Cupcakes x4", img: Cupcakes, description: "Delicioso y recién horneado" },
-  { title: "Torta Almojabana", img: TortaAlmojabana, description: "Delicioso y recién horneado" },
-  { title: "Torta Frutos Rojos", img: TortaFrutRojos, description: "Delicioso y recién horneado" },
-  { title: "Torta Milky Way", img: TortaMilky, description: "Delicioso y recién horneado" },
-  { title: "Hojaldre de Pollo", img: HojaldrePollo, description: "Delicioso y recién horneado" },
-  { title: "Empanada Pollo", img: EmpanadaPollo, description: "Delicioso y recién horneado" },
-  { title: "Empanada Carne", img: EmpanadaCarne, description: "Delicioso y recién horneado" },
+  { title: "Brazo de Reina", img: BrazoReina, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Torta de Tres Leches", img: Tresleches, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Ponqué Tradicional", img: Ponque, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Torta de Red Velvet", img: TortaRed, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Torta de Zanahoria", img: TortaZana, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Torta de Chocolate", img: TortaChoco, description: "Brownies melcochudos", price: 10 },
+  { title: "Torta de Naranja con Amapola", img: TortaAmapola, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Milhoja de Arequipe", img: Milhojas, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Cheesecake de Frutos Rojos", img: CheesecakeFrutos, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Caja Cupcakes x4", img: Cupcakes, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Torta Almojabana", img: TortaAlmojabana, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Torta Frutos Rojos", img: TortaFrutRojos, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Torta Milky Way", img: TortaMilky, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Hojaldre de Pollo", img: HojaldrePollo, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Empanada Pollo", img: EmpanadaPollo, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Empanada Carne", img: EmpanadaCarne, description: "Delicioso y recién horneado", price: 10 },
 ];
 
-const Pasteleria = ({ addToCart }) => {
+const Pasteleria = () => {
   const [isFlipped, setIsFlipped] = useState(Array(products.length).fill(false));
   const [quantities, setQuantities] = useState(Array(products.length).fill(0));
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [cart, setCart] = useState([]);
 
   const handleCardClick = (index) => {
     setIsFlipped((prevFlipped) => {
@@ -106,9 +108,15 @@ const Pasteleria = ({ addToCart }) => {
   const addToCartHandler = (index, event) => {
     event.stopPropagation();
     if (quantities[index] > 0) {
-      addToCart(products[index], quantities[index]);
+      const newItem = { ...products[index], quantity: quantities[index] };
+      setCart((prevCart) => [...prevCart, newItem]);
       setQuantities([...quantities.slice(0, index), 0, ...quantities.slice(index + 1)]);
+      setIsModalVisible(true); // Mostrar el modal al agregar el producto
     }
+  };
+
+  const handleCloseModal = () => {
+    setIsModalVisible(false);
   };
 
   return (
@@ -149,6 +157,7 @@ const Pasteleria = ({ addToCart }) => {
                         <div className="card-content">
                           <h3 className="product-name">{product.title}</h3>
                           <p>{product.description}</p>
+                          <p><strong>${product.price}</strong></p>
                           <div className="quantity-controls">
                             <div className="arrow-buttons">
                               <button
@@ -181,6 +190,36 @@ const Pasteleria = ({ addToCart }) => {
             </Row>
           ))}
         </div>
+        {/* Modal para mostrar el carrito */}
+      <Modal
+        title="Tu Carrito"
+        visible={isModalVisible}
+        onCancel={handleCloseModal}
+        footer={[
+          <Button key="back" onClick={handleCloseModal}>
+            Cerrar
+          </Button>,
+        ]}
+        width={500}
+        style={{ top: 20 }}
+      >
+        {cart.length === 0 ? (
+          <p>El carrito está vacío.</p>
+        ) : (
+          <div>
+            {cart.map((item, index) => (
+              <div key={index} className="carrito-item" style={{ display: "flex", marginBottom: "15px" }}>
+                <img src={item.img} alt={item.title} style={{ width: "50px", marginRight: "10px" }} />
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{`Precio: $${item.price}`}</p>
+                  <p>{`Cantidad: ${item.quantity}`}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </Modal>
       </Content>
     </Layout>
   );

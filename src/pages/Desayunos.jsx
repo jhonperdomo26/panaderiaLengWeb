@@ -1,6 +1,6 @@
-import "../css/main.css";
 import React, { useState } from "react";
-import { Card, Col, Layout, Row } from "antd";
+import "../css/main.css";
+import { Layout, Row, Col, Modal, Button } from "antd";
 import Pericos from "../img/Pericos.webp";
 import Rancheros from "../img/Rancheros.webp";
 import OmelettePollo from "../img/OmelettePollo.webp";
@@ -62,23 +62,25 @@ const contenido = {
 const { Content } = Layout;
 
 const products = [
-  { title: "Huevos Pericos", img: Pericos, description: "Huevos con Cebolla y Tomate" },
-  { title: "Huevos Rancheros", img: Rancheros, description: "Huevos batidos con Salchicha" },
-  { title: "Omelette de Pollo", img: OmelettePollo, description: "Delicioso Omelette con Pollo" },
-  { title: "Omelette Ranchero", img: OmeletteRanch, description: "Delicioso Omelette con Jamón y Queso" },
-  { title: "Calentado", img: Calentado, description: "Calentado de Arroz con Frijoles" },
-  { title: "Crepe de Pollo", img: CrepePollo, description: "Tortilla Delgada de Trigo con Pollo" },
-  { title: "Waffles de Buñuelo", img: Waffle, description: "Deliciosos Waffles de Mezcla de Buñuelos" },
-  { title: "Tostadas Francesas", img: TostadasFra, description: "Pan Dorado con Miel y Frutas" },
-  { title: "Carne al Bistec", img: Bistec, description: "Delicioso y recién horneado" },
-  { title: "Sandwich de Pollo", img: SanPollo, description: "Delicioso y recién horneado" },
-  { title: "Tamal", img: Tamal, description: "Delicioso y recién horneado" },
-  { title: "Ensalada de Frutas", img: Fruta, description: "Delicioso y recién horneado" },
+  { title: "Huevos Pericos", img: Pericos, description: "Huevos con Cebolla y Tomate", price: 10 },
+  { title: "Huevos Rancheros", img: Rancheros, description: "Huevos batidos con Salchicha", price: 10 },
+  { title: "Omelette de Pollo", img: OmelettePollo, description: "Delicioso Omelette con Pollo", price: 10 },
+  { title: "Omelette Ranchero", img: OmeletteRanch, description: "Delicioso Omelette con Jamón y Queso", price: 10 },
+  { title: "Calentado", img: Calentado, description: "Calentado de Arroz con Frijoles", price: 10 },
+  { title: "Crepe de Pollo", img: CrepePollo, description: "Tortilla Delgada de Trigo con Pollo", price: 10 },
+  { title: "Waffles de Buñuelo", img: Waffle, description: "Deliciosos Waffles de Mezcla de Buñuelos", price: 10 },
+  { title: "Tostadas Francesas", img: TostadasFra, description: "Pan Dorado con Miel y Frutas", price: 10 },
+  { title: "Carne al Bistec", img: Bistec, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Sandwich de Pollo", img: SanPollo, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Tamal", img: Tamal, description: "Delicioso y recién horneado", price: 10 },
+  { title: "Ensalada de Frutas", img: Fruta, description: "Delicioso y recién horneado", price: 10 },
 ];
 
-const Desayunos = ({ addToCart }) => {
+const Desayunos = () => {
   const [isFlipped, setIsFlipped] = useState(Array(products.length).fill(false));
   const [quantities, setQuantities] = useState(Array(products.length).fill(0));
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [cart, setCart] = useState([]);
 
   const handleCardClick = (index) => {
     setIsFlipped((prevFlipped) => {
@@ -98,9 +100,15 @@ const Desayunos = ({ addToCart }) => {
   const addToCartHandler = (index, event) => {
     event.stopPropagation();
     if (quantities[index] > 0) {
-      addToCart(products[index], quantities[index]);
+      const newItem = { ...products[index], quantity: quantities[index] };
+      setCart((prevCart) => [...prevCart, newItem]);
       setQuantities([...quantities.slice(0, index), 0, ...quantities.slice(index + 1)]);
+      setIsModalVisible(true); // Mostrar el modal al agregar el producto
     }
+  };
+
+  const handleCloseModal = () => {
+    setIsModalVisible(false);
   };
 
   return (
@@ -116,7 +124,7 @@ const Desayunos = ({ addToCart }) => {
             </Col>
           </Row>
           {Array.from({ length: Math.ceil(products.length / 4) }, (_, i) => (
-            <Row key={i} gutter={[16, 16]} justify="center" style={{ margin: "30px 200px" }}>
+            <Row key={i} gutter={[16, 16]} justify="center" style={{ margin: "30px 200px " }}>
               {products.slice(i * 4, (i + 1) * 4).map((product, index) => (
                 <Col key={index} span={6}>
                   <div
@@ -141,6 +149,9 @@ const Desayunos = ({ addToCart }) => {
                         <div className="card-content">
                           <h3 className="product-name">{product.title}</h3>
                           <p>{product.description}</p>
+                          <p>
+                            <strong>${product.price}</strong>
+                          </p>
                           <div className="quantity-controls">
                             <div className="arrow-buttons">
                               <button
@@ -160,7 +171,10 @@ const Desayunos = ({ addToCart }) => {
                           </div>
                           <button
                             className="add-to-cart"
-                            onClick={(e) => addToCartHandler(i * 4 + index, e)}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              addToCartHandler(i * 4 + index, e);
+                            }}
                           >
                             Agregar
                           </button>
@@ -174,9 +188,39 @@ const Desayunos = ({ addToCart }) => {
           ))}
         </div>
       </Content>
+
+      {/* Modal para mostrar el carrito */}
+      <Modal
+        title="Tu Carrito"
+        visible={isModalVisible}
+        onCancel={handleCloseModal}
+        footer={[
+          <Button key="back" onClick={handleCloseModal}>
+            Cerrar
+          </Button>,
+        ]}
+        width={500}
+        style={{ top: 20 }}
+      >
+        {cart.length === 0 ? (
+          <p>El carrito está vacío.</p>
+        ) : (
+          <div>
+            {cart.map((item, index) => (
+              <div key={index} className="carrito-item" style={{ display: "flex", marginBottom: "15px" }}>
+                <img src={item.img} alt={item.title} style={{ width: "50px", marginRight: "10px" }} />
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{`Precio: $${item.price}`}</p>
+                  <p>{`Cantidad: ${item.quantity}`}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </Modal>
     </Layout>
   );
 };
 
 export default Desayunos;
-

@@ -7,8 +7,6 @@ import Opita from '../img/Opita.webp'
 import Sorpresa from '../img/Sorpresa.webp'
 import FondoPan from '../img/FondoPan.webp'
 
-
-
 const cajaDecoracion = {
   display: 'flex',
   alignItems: 'center',
@@ -172,4 +170,6 @@ const Combos = ({ addToCart }) => {
   );
 };
 
+
 export default Combos;
+

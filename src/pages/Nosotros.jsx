@@ -145,12 +145,12 @@ const Nosotros = () => {
   };
   return (
   <>
-    <Layout>
-      <Content className='FondoPan'>
+    <Layout style={{backgroundColor:'#e8e8e8'}}>
+      <Content>
         <Pan>
           <div className='PanOrigen'></div>
         </Pan>
-        <Row style={{ margin: '15px 0px' }}>
+        <Row style={{ margin: '15px 0px'}}>
           <Col span={4}> 
           </Col>
           <Col span={16}>

@@ -22,7 +22,7 @@ import MiniSandwiches from '../img/MiniSandwiches.webp';
 import BocaditosQueso from '../img/BocaditosQueso.webp';
 import BrochetasFrutas from '../img/BrochetasFrutas.webp';
 import CanapesVariados from '../img/CanapesVariados.webp';
-
+import { useTranslation } from "react-i18next";
 const { Content } = Layout;
 const { Meta } = Card;
 
@@ -92,36 +92,40 @@ const contentStyle = {
   background: '#364d79',
 };
 
-const tortasDeBabyShower = [
-  { title: 'Torta Temática de Vainilla', img: TortaVanillaBabyShower, description: 'Suave y deliciosa, decorada con motivos de Baby Shower.' },
-  { title: 'Torta de Chocolate', img: TortaChocolateBaby, description: 'Perfecta para celebrar la llegada de un niño, con detalles encantadores.' },
-  { title: 'Torta Rosada', img: TortaRosada, description: 'Elegante y deliciosa, ideal para una temática femenina.' },
-  { title: 'Torta Personalizada', img: TortaBabyNombre, description: 'Un diseño moderno que destaca el nombre del bebé.' },
-];
-
-const MesadePostres = [
-  { title: 'Cupcakes Decorados', img: CupcakesRA, description: 'Diseñados con tiernos detalles en azul y rosa pastel.' },
-  { title: 'Galletas de Bebé', img: GalletasBabyShower2, description: 'Un dulce recuerdo con diseños de sonajeros, biberones y más.' },
-  { title: 'Cake Pops', img: CakePops, description: 'Pequeñas delicias fáciles de disfrutar para grandes y pequeños.' },
-  { title: 'Mini Tartaletas de Crema', img: TartaletasCrema, description: 'Perfectas para una mesa de postres encantadora.' },
-];
-
-const Bebidas = [
-  { title: 'Coctel Azul Brillante', img: CoctelAzul, description: 'Una bebida fresca y colorida para la ocasión.' },
-  { title: 'Pink Lemonade', img: PinkLemonade, description: 'Un toque rosado y refrescante, ideal para Baby Showers.' },
-  { title: 'Smoothies de Frutas', img: SmoothiesFrutas, description: 'Opciones saludables y llenas de sabor.' },
-  { title: 'Batido de Fresa y Plátano', img: BatidoFresaPlatano, description: 'Una combinación cremosa y dulce que encanta a todos.' },
-];
-
-const Bocadillos = [
-  { title: 'Mini Sándwiches', img: MiniSandwiches, description: 'Pequeños y decorados, perfectos para compartir.' },
-  { title: 'Bocaditos de Queso y Uva', img: BocaditosQueso, description: 'Sencillos, elegantes y deliciosos.' },
-  { title: 'Brochetas de Frutas', img: BrochetasFrutas, description: 'Coloridas y saludables, perfectas para los pequeños invitados.' },
-  { title: 'Canapés Variados', img: CanapesVariados, description: 'Sabores diversos en presentaciones encantadoras.' },
-];
 
 
-const BabyShowers = () => (
+const BabyShowers = () => {
+    const {t} = useTranslation();
+
+    const tortasDeBabyShower = [
+      { title: [t('Torta Temática de Vainilla')], img: TortaVanillaBabyShower, description: [t('DTorta Temática de Vainilla')] },
+      { title: [t('Torta de Chocolate')], img: TortaChocolateBaby, description: [t('DTorta de Chocolate')] },
+      { title: [t('Torta Rosada')], img: TortaRosada, description: [t('DTorta Rosada')] },
+      { title: [t('Torta Personalizada')], img: TortaBabyNombre, description: [t('DTorta Personalizada')] },
+    ];
+    
+    const MesadePostres = [
+      { title: [t('Cupcakes Decorados')], img: CupcakesRA, description: [t('DCupcakes Decorados')] },
+      { title: [t('Galletas de Bebé')], img: GalletasBabyShower2, description: [t('DGalletas de Bebé')] },
+      { title: [t('Cake Pops')], img: CakePops, description: [t('DCake Pops')] },
+      { title: [t('Mini Tartaletas de Crema')], img: TartaletasCrema, description: [t('DMini Tartaletas de Crema')] },
+    ];
+    
+    const Bebidas = [
+      { title: [t('Coctel Azul Brillante')], img: CoctelAzul, description: [t('DCoctel Azul Brillante')] },
+      { title: [t('Pink Lemonade')], img: PinkLemonade, description: [t('DPink Lemonade')] },
+      { title: [t('Smoothies de Frutas')], img: SmoothiesFrutas, description: [t('DSmoothies de Frutas')] },
+      { title: [t('Batido de Fresa y Plátano')], img: BatidoFresaPlatano, description: [t('Batido de Fresa y Plátano')] },
+    ];
+    
+    const Bocadillos = [
+      { title: [t('Mini Sándwiches')], img: MiniSandwiches, description: [t('DMini Sándwiches')] },
+      { title: [t('Bocaditos de Queso y Uva')], img: BocaditosQueso, description: [t('DBocaditos de Queso y Uva')] },
+      { title: [t('Brochetas de Frutas')], img: BrochetasFrutas, description: [t('DBrochetas de Frutas')] },
+      { title: [t('Canapés Variados')], img: CanapesVariados, description: [t('DCanapés Variados')] },
+    ];
+    
+  return(
   <>
 
     <Layout>
@@ -131,8 +135,8 @@ const BabyShowers = () => (
             <h3 style={contentStyle}>
               <div className='TortaBabyShower'>
                 <div className='CajaLeft'>
-                  <span className='TextoEvento'>TORTAS PARA</span>
-                  <span className='TextoEvento'>BABY SHOWER</span>
+                  <span className='TextoEvento'>{t("TORTAS PARA")}</span>
+                  <span className='TextoEvento'>{t("BABY SHOWER")}</span>
                 </div>                
               </div>
             </h3>
@@ -141,8 +145,8 @@ const BabyShowers = () => (
             <h3 style={contentStyle}>
               <div className='CupcakesBabyShower'>
                 <div className='CajaRight'>
-                  <span className='TextoEvento'>CUPCAKES PARA</span>
-                  <span className='TextoEvento'>BABY SHOWERS</span>
+                  <span className='TextoEvento'>{t("CUPCAKES PARA")}</span>
+                  <span className='TextoEvento'>{t("BABY SHOWERS")}</span>
                 </div>                
               </div>
             </h3>
@@ -151,8 +155,8 @@ const BabyShowers = () => (
             <h3 style={contentStyle}>
               <div className='MacaronTonosPastel'>
                 <div className='CajaLeft'>
-                  <span className='TextoEvento'>MACARONS EN</span>
-                  <span className='TextoEvento'>TONOS PASTEL</span>
+                  <span className='TextoEvento'>{t("MACARONS EN")}</span>
+                  <span className='TextoEvento'>{t("TONOS PASTEL")}</span>
                 </div>                
               </div>
             </h3>
@@ -161,8 +165,8 @@ const BabyShowers = () => (
             <h3 style={contentStyle}>
               <div className='GalletasBabyShower'>
                 <div className='CajaRight'>
-                  <span className='TextoEvento'>GALLETAS PARA</span>
-                  <span className='TextoEvento'>BABY SHOWERS</span>
+                  <span className='TextoEvento'>{t("GALLETAS PARA")}</span>
+                  <span className='TextoEvento'>{t("BABY SHOWERS")}</span>
                 </div>
               </div>
             </h3>
@@ -171,8 +175,8 @@ const BabyShowers = () => (
             <h3 style={contentStyle}>
               <div className='Tartaletas'>
                 <div className='CajaLeft'>
-                  <span className='TextoEvento'>MINI TARTALETAS</span>
-                  <span className='TextoEvento'>DE FRUTA</span>
+                  <span className='TextoEvento'>{t("MINI TARTALETAS")}</span>
+                  <span className='TextoEvento'>{t("DE FRUTA")}</span>
                 </div>
               </div>
             </h3>
@@ -184,12 +188,12 @@ const BabyShowers = () => (
           </Col>
 
           <Col span={16}>
-            <H1>Baby Showers</H1>
+            <H1>{t("Baby Showers")}</H1>
             <P1>
-              En nuestra panadería, entendemos que cada Baby Shower es un momento único para celebrar la llegada de un nuevo miembro a la familia. Ofrecemos una deliciosa variedad de productos personalizados, desde tiernas tortas temáticas hasta cupcakes, galletas y postres que encantarán a todos tus invitados.
+            {t("P1B1")}
             </P1>
             <P1>
-              Nos encargamos de añadir dulzura y encanto a tu celebración, cuidando cada detalle para que el evento sea inolvidable. ¡Confía en nosotros para endulzar este hermoso comienzo!
+            {t("P1B2")}
             </P1>
           </Col>
 
@@ -202,7 +206,7 @@ const BabyShowers = () => (
           </Col>
           <Col span={16}>
             <ContenOfrec>
-              <HOfrec>¿Qué ofrecemos?</HOfrec>
+              <HOfrec>{t("¿Qué ofrecemos?")}</HOfrec>
             </ContenOfrec>
           </Col>
           <Col span={4}>
@@ -214,7 +218,7 @@ const BabyShowers = () => (
           </Col>
 
           <Col span={16}>
-            <H2>Tortas de Boda</H2>
+            <H2>{t("Tortas de Boda")}</H2>
             <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
                   {tortasDeBabyShower.slice(0, 4).map((tortasDeBabyShower, index) => (
@@ -229,7 +233,7 @@ const BabyShowers = () => (
                   ))}
                 </Row>
               </div>
-              <H2>Mesa de Postres</H2>
+              <H2>{t("Mesa de Postres")}</H2>
               <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
                   {MesadePostres.slice(0, 4).map((MesadePostres, index) => (
@@ -244,7 +248,7 @@ const BabyShowers = () => (
                   ))}
                 </Row>
               </div>              
-              <H2>Bebidas</H2>
+              <H2>{t("Bebidas")}</H2>
               <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
                   {Bebidas.slice(0, 4).map((Bebidas, index) => (
@@ -259,7 +263,7 @@ const BabyShowers = () => (
                   ))}
                 </Row>
               </div>
-              <H2>Bocadillos</H2>
+              <H2>{t("Bocadillos")}</H2>
               <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
                   {Bocadillos.slice(0, 4).map((Bocadillos, index) => (
@@ -284,5 +288,6 @@ const BabyShowers = () => (
     </Layout>
 
   </>
-);
+  )
+};
 export default BabyShowers;

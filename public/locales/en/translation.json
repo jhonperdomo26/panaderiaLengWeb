@@ -9,8 +9,16 @@
     
 
     "Inicio":"inicio",
-
-
+    "Productos Destacados": "Featured Products",
+    "Croissant":"Croissant",
+    "Muffin de Chocolate":"Chocolate Muffin",
+    "Pan de Queso":"Cheese Bread",
+    "Tarta de Fresa":"Strawberry Cake",
+    "Dona de Vainilla":"Vanilla Donut",
+    "Brownie":"Brownie",
+    "Tarta de Manzana":"Apple cake",
+    "Cheesecake":"Cheesecake",
+    "Delicioso y recién horneado":"Delicious and freshly baked",
 
 
     "Menú": "Menu",
@@ -127,6 +135,12 @@
     "DCanapés de Salmón":"A touch of luxury in every bite.",
     "Rollitos Jamón y Queso":"Ham and Cheese Rolls",
     "DRollitos Jamón y Queso":"Classic and delicious, loved by everyone.",
+
+
+
+
+
+
 
 
 

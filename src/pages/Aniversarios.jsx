@@ -23,6 +23,8 @@ import Empanaditas from '../img/Empanaditas.webp';
 import CanapesSalmon from '../img/CanapesSalmon.webp';
 import RollitosJamon from '../img/RollitosJamon.webp';
 
+import { useTranslation } from "react-i18next";
+
 const { Content } = Layout;
 const { Meta } = Card;
 
@@ -121,7 +123,9 @@ const Bocadillos = [
 ];
 
 
-const Aniversarios = () => (
+const Aniversarios = () => {
+  const {t} = useTranslation();
+  return(
   <>
 
     <Layout>
@@ -131,8 +135,8 @@ const Aniversarios = () => (
             <h3 style={contentStyle}>
               <div className='Torta3Pisos'>
                 <div className='CajaLeft'>
-                  <span className='TextoEvento'>TORTA DE</span>
-                  <span className='TextoEvento'>ANIVERSARIO</span>
+                  <span className='TextoEvento'>{t("TORTA DE")}</span>
+                  <span className='TextoEvento'>{t("ANIVERSARIO")}</span>
                 </div>                
               </div>
             </h3>
@@ -141,8 +145,8 @@ const Aniversarios = () => (
             <h3 style={contentStyle}>
               <div className='CupcakesDecorados'>
                 <div className='CajaRight'>
-                  <span className='TextoEvento'>MACARONS</span>
-                  <span className='TextoEvento'>DE CELEBRACIÓN</span>
+                  <span className='TextoEvento'>{t("MACARONS")}</span>
+                  <span className='TextoEvento'>{t("DE CELEBRACIÓN")}</span>
                 </div>                
               </div>
             </h3>
@@ -151,8 +155,8 @@ const Aniversarios = () => (
             <h3 style={contentStyle}>
               <div className='PostresGourmet'>
                 <div className='CajaLeft'>
-                  <span className='TextoEvento'>CUPCAKES PARA</span>
-                  <span className='TextoEvento'>ANIVERSARIOS</span>
+                  <span className='TextoEvento'>{t("CUPCAKES PARA")}</span>
+                  <span className='TextoEvento'>{t("ANIVERSARIOS")}</span>
                 </div>                
               </div>
             </h3>
@@ -161,8 +165,8 @@ const Aniversarios = () => (
             <h3 style={contentStyle}>
               <div className='GalletasPersonalizadas'>
                 <div className='CajaRight'>
-                  <span className='TextoEvento'>MINITARTAS DE</span>
-                  <span className='TextoEvento'>FRUTAS</span>
+                  <span className='TextoEvento'>{t("MINITARTAS DE")}</span>
+                  <span className='TextoEvento'>{t("FRUTAS")}</span>
                 </div>
               </div>
             </h3>
@@ -171,8 +175,8 @@ const Aniversarios = () => (
             <h3 style={contentStyle}>
               <div className='MesaPostres'>
                 <div className='CajaLeft'>
-                  <span className='TextoEvento'>GALLETAS</span>
-                  <span className='TextoEvento'>DECORADAS</span>
+                  <span className='TextoEvento'>{t("GALLETAS")}</span>
+                  <span className='TextoEvento'>{t("DECORADAS")}</span>
                 </div>
               </div>
             </h3>
@@ -184,12 +188,12 @@ const Aniversarios = () => (
           </Col>
 
           <Col span={16}>
-            <H1>Aniversarios</H1>
+            <H1>{t("Aniversarios")}</H1>
             <P1>
-              Celebra el amor y los momentos compartidos con nuestras creaciones especiales para aniversarios. Desde elegantes tortas decoradas con flores hasta postres gourmet, cupcakes y más, nuestra panadería se encarga de dar ese toque dulce y sofisticado que tu celebración merece.
+            {t("P1A1")}
             </P1>
             <P1>
-              Haz de tu aniversario una ocasión inolvidable con nuestros productos únicos y personalizados, ideales para compartir con quienes más amas. ¡Endulzamos tus recuerdos!
+            {t("P1A2")} 
             </P1>
           </Col>
 
@@ -202,7 +206,7 @@ const Aniversarios = () => (
           </Col>
           <Col span={16}>
             <ContenOfrec>
-              <HOfrec>¿Qué ofrecemos?</HOfrec>
+              <HOfrec>{t("¿Qué ofrecemos?")}</HOfrec>
             </ContenOfrec>
           </Col>
           <Col span={4}>
@@ -284,5 +288,6 @@ const Aniversarios = () => (
     </Layout>
 
   </>
-);
+  )
+};
 export default Aniversarios;

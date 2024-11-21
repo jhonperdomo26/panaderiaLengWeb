@@ -264,18 +264,15 @@ a:hover{
   justify-content: flex-start;
 }
 
-
-/* Menu */
 .custom-card-container {
-  padding: 20px;
+  padding: 5px;
   text-align: center;
+  justify-content: center;
 }
 
 .card-grid {
   display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -287,9 +284,11 @@ a:hover{
   overflow: hidden;
   cursor: pointer;
   z-index: 1;
-  width: 300px;
+  width: 200px;
   height: 300px;
+  margin: 0 auto;
 }
+
 
 .custom-card:hover {
   transform: scale(1.02);
@@ -323,7 +322,7 @@ a:hover{
 }
 
 .card-back {
-  background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+  background: rgba(255, 255, 255, 0.8); 
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -342,8 +341,8 @@ a:hover{
   height: 100%;
   background-size: cover;
   background-position: center;
-  filter: blur(10px); /* Difumina la imagen */
-  z-index: -1; /* Asegura que la imagen borrosa esté detrás del contenido */
+  filter: blur(10px); 
+  z-index: -1; 
 }
 
 
@@ -404,8 +403,8 @@ a:hover{
 
 .quantity-controls {
   display: flex;
-  align-items: center; /* Centra horizontalmente el contenido */
-  gap: 10px; /* Espacio entre las flechas y el número */
+  align-items: center;
+  gap: 10px; 
   justify-content: center;
 }
 
@@ -472,8 +471,8 @@ a:hover{
   font-size: 23px;
   font-weight: bold;
   color: #fff;
-  margin-bottom: 10px; /* Espaciado inferior */
-  text-align: center; /* Centrar el texto */
+  margin-bottom: 10px;
+  text-align: center; 
   background: #571D0B;
   border-radius: 5px;
   justify-content: center;

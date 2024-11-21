@@ -199,10 +199,5 @@ const Combos = ({ addToCart }) => {
   );
 };
 
-<<<<<<< HEAD
-
 export default Combos;
 
-=======
-export default Combos;
->>>>>>> 970356f (Correcc precio tarjetas + Carrito funcional)

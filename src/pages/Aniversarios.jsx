@@ -7,10 +7,12 @@ import TortaVanilla from '../img/TortaVanilla.webp';
 import TortaChocolate from '../img/tortachoco.png';
 import TortaRedVelvet from '../img/TortaRedVelvet.webp';
 import TortaNaked from '../img/TortaNaked.webp';
+
 import TartaletasFrutas from '../img/TartaletasFrutas.webp';
 import Macarrones from '../img/Macarrones.webp';
 import BrowniesGourmet from '../img/BrowniesGourmet.webp';
 import CheesecakeVasito from '../img/CheesecakeVasito.webp';
+
 import CoctelChampagne from '../img/CoctelChampagne.webp';
 import LimonadaRomero from '../img/LimonadaRomero.webp';
 import AguaInfusionada from '../img/AguaInfusionada.webp';
@@ -90,32 +92,32 @@ const contentStyle = {
   background: '#364d79',
 };
 
-const tortasDeBoda = [
-  { title: 'Torta Clásica de Vainilla', img: TortaVanilla, description: 'Elegancia en cada bocado, decorada con flores de azúcar.' },
-  { title: 'Torta de Chocolate y Frutas', img: TortaChocolate, description: 'Una combinación exquisita de chocolate y frutos rojos.' },
-  { title: 'Torta Red Velvet', img: TortaRedVelvet, description: 'El toque perfecto de sofisticación y dulzura.' },
-  { title: 'Torta Naked Almendras', img: TortaNaked, description: 'Un diseño moderno con sabor artesanal.' },
+const tortasDeAniversario = [
+  { title: 'Torta Chocolate/Avellanas', img: TortaVanilla, description: 'Rica y cremosa, decorada con un elegante toque de avellanas.' },
+  { title: 'Torta Frutos Rojos', img: TortaChocolate, description: 'Ligera y delicada, con un diseño romántico para tu celebración.' },
+  { title: 'Torta Zanahoria Nueces', img: TortaRedVelvet, description: 'Un clásico irresistible con un sabor cálido y especiado.' },
+  { title: 'Torta de Tres Leches', img: TortaNaked, description: 'Dulce y jugosa, perfecta para disfrutar en pareja o con invitados especiales.' },
 ];
 
 const MesadePostres = [
-  { title: 'Mini Tartaletas de Frutas', img: TartaletasFrutas, description: 'Coloridas y deliciosas, perfectas para cualquier mesa.' },
-  { title: 'Macarrones Franceses', img: Macarrones, description: 'Un toque de elegancia con sabores variados.' },
-  { title: 'Brownies Gourmet', img: BrowniesGourmet, description: 'Un clásico irresistible con ingredientes premium.' },
-  { title: 'Cheesecake en Vasito', img: CheesecakeVasito, description: 'Portátiles y llenos de sabor, perfectos para tus invitados.' },
+  { title: 'Mini Tartas de Chocolate', img: TartaletasFrutas, description: 'Deliciosas y sofisticadas, ideales para complementar tu celebración.' },
+  { title: 'Macarons Personalizados', img: Macarrones, description: 'Delicados y con colores temáticos para tu aniversario.' },
+  { title: 'Cheesecake de Maracuyá', img: BrowniesGourmet, description: 'Un postre refrescante con un toque tropical.' },
+  { title: 'Mini Éclairs', img: CheesecakeVasito, description: 'Pequeñas delicias rellenas con sabores exquisitos.' },
 ];
 
 const Bebidas = [
-  { title: 'Coctel de Champagne', img: CoctelChampagne, description: 'Elegante y burbujeante, perfecto para brindar.' },
-  { title: 'Limonada con Romero', img: LimonadaRomero, description: 'Una combinación única de frescura y aroma.' },
-  { title: 'Agua Infusionada', img: AguaInfusionada, description: 'Refrescante y decorativa, con frutas y hierbas.' },
-  { title: 'Mojito Sin Alcohol', img: MojitoSinAlcohol, description: 'Fresco y cítrico, ideal para todos los invitados.' },
+  { title: 'Coctel Bellini', img: CoctelChampagne, description: 'Un clásico elegante para brindar por el amor.' },
+  { title: 'Té Frío de Hibisco', img: LimonadaRomero, description: 'Refrescante y con un color vibrante, ideal para celebraciones al aire libre.' },
+  { title: 'Espresso Martini', img: AguaInfusionada, description: 'Un toque de café y glamour en cada sorbo.' },
+  { title: 'Limonada de Lavanda', img: MojitoSinAlcohol, description: 'Sofisticada y aromática, perfecta para acompañar tus momentos especiales.' },
 ];
 
 const Bocadillos = [
-  { title: 'Mini Quiches', img: MiniQuiches, description: 'Sabores variados, perfectos como entradas.' },
-  { title: 'Empanaditas Gourmet', img: Empanaditas, description: 'Crocantes y rellenas de ingredientes frescos.' },
-  { title: 'Canapés de Salmón', img: CanapesSalmon, description: 'Un toque de lujo en cada bocado.' },
-  { title: 'Rollitos Jamón y Queso', img: RollitosJamon, description: 'Clásicos y deliciosos, amados por todos.' },
+  { title: 'Canapés Queso y Miel', img: MiniQuiches, description: 'Delicados y llenos de sabor, una opción sofisticada.' },
+  { title: 'Brochetas Caprese', img: Empanaditas, description: 'Frescas y ligeras, ideales para abrir el apetito.' },
+  { title: 'Mini Croissants Rellenos', img: CanapesSalmon, description: 'Un clásico reinventado con rellenos gourmet.' },
+  { title: 'Tartaletas de Espárragos', img: RollitosJamon, description: 'Elegancia y sabor en un pequeño bocado.' },
 ];
 
 
@@ -130,7 +132,7 @@ const Aniversarios = () => (
               <div className='Torta3Pisos'>
                 <div className='CajaLeft'>
                   <span className='TextoEvento'>TORTA DE</span>
-                  <span className='TextoEvento'>BODAS</span>
+                  <span className='TextoEvento'>ANIVERSARIO</span>
                 </div>                
               </div>
             </h3>
@@ -139,8 +141,8 @@ const Aniversarios = () => (
             <h3 style={contentStyle}>
               <div className='CupcakesDecorados'>
                 <div className='CajaRight'>
-                  <span className='TextoEvento'>CUPCAKES</span>
-                  <span className='TextoEvento'>DECORADOS</span>
+                  <span className='TextoEvento'>MACARONS</span>
+                  <span className='TextoEvento'>DE CELEBRACIÓN</span>
                 </div>                
               </div>
             </h3>
@@ -149,8 +151,8 @@ const Aniversarios = () => (
             <h3 style={contentStyle}>
               <div className='PostresGourmet'>
                 <div className='CajaLeft'>
-                  <span className='TextoEvento'>POSTRES</span>
-                  <span className='TextoEvento'>GOURMET</span>
+                  <span className='TextoEvento'>CUPCAKES PARA</span>
+                  <span className='TextoEvento'>ANIVERSARIOS</span>
                 </div>                
               </div>
             </h3>
@@ -159,8 +161,8 @@ const Aniversarios = () => (
             <h3 style={contentStyle}>
               <div className='GalletasPersonalizadas'>
                 <div className='CajaRight'>
-                  <span className='TextoEvento'>GALLETAS</span>
-                  <span className='TextoEvento'>PERSONALIZADAS</span>
+                  <span className='TextoEvento'>MINITARTAS DE</span>
+                  <span className='TextoEvento'>FRUTAS</span>
                 </div>
               </div>
             </h3>
@@ -169,8 +171,8 @@ const Aniversarios = () => (
             <h3 style={contentStyle}>
               <div className='MesaPostres'>
                 <div className='CajaLeft'>
-                  <span className='TextoEvento'>MESA DE</span>
-                  <span className='TextoEvento'>POSTRES</span>
+                  <span className='TextoEvento'>GALLETAS</span>
+                  <span className='TextoEvento'>DECORADAS</span>
                 </div>
               </div>
             </h3>
@@ -212,16 +214,16 @@ const Aniversarios = () => (
           </Col>
 
           <Col span={16}>
-            <H2>Tortas de Boda</H2>
+            <H2>Tortas de Aniversario</H2>
             <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
-                  {tortasDeBoda.slice(0, 4).map((tortasDeBoda, index) => (
+                  {tortasDeAniversario.slice(0, 4).map((tortasDeAniversario, index) => (
                     <Col span={6} key={index}>
                       <Card
                         hoverable
-                        cover={<img alt={tortasDeBoda.title} src={tortasDeBoda.img} style={{ width: '100%', height: '275px' }}/>}
+                        cover={<img alt={tortasDeAniversario.title} src={tortasDeAniversario.img} style={{ width: '100%', height: '275px' }}/>}
                       >
-                        <Card.Meta title={tortasDeBoda.title} description={tortasDeBoda.description} style={{ width: '100%', height: '100px'}}/>
+                        <Card.Meta title={tortasDeAniversario.title} description={tortasDeAniversario.description} style={{ width: '100%', height: '100px'}}/>
                       </Card>
                     </Col>
                   ))}

@@ -170,4 +170,6 @@ const Combos = ({ addToCart }) => {
   );
 };
 
+
 export default Combos;
+

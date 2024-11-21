@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../css/main.css";
 import { Layout, Row, Col, Modal, Button } from "antd";
 import Pericos from "../img/Pericos.webp";

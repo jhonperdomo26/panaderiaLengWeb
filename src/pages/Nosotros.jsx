@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styled from '@emotion/styled';
 import '../css/main.css';
 import { Layout, Flex, Row, Col } from 'antd';

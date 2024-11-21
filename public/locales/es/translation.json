@@ -4,7 +4,7 @@
 
 
 
-    "greeting": "Ubicaciones de nuestras panaderias español",
+    "greeting": "Encuentra nuestras panaderías",
     "prueva": "cumpleaños español",
     "Agregar":"Agregar",
     "El carrito está vacío.": "El carrito está vacío.",
@@ -333,18 +333,57 @@
 
 
 
+    "Cumpleaños":"Cumpleaños",
+    "TORTAS":"TORTAS",
+    "DE CUMPLEAÑOS":"DE CUMPLEAÑOS",
+    "CUPCAKES":"CUPCAKES",
+    "COLORIDOS":"COLORIDOS",
+    "SNACKS":"SNACKS",
+    "DIVERTIDOS":"DIVERTIDOS",
+    "TEMÁTICAS":"TEMÁTICAS",
+    "MESA DE":"MESA DE",
+    "CUMPLEAÑOS":"CUMPLEAÑOS",
+    "P1C1":"Porque un cumpleaños no está completo sin un toque dulce, en nuestra panadería ofrecemos una variedad de opciones que harán de tu fiesta un evento memorable. Desde coloridas tortas temáticas hasta cupcakes decorados, galletas y postres que se adaptan a tus gustos y estilo.",
+    "P1C2":"Estamos aquí para ayudarte a crear momentos llenos de sabor y alegría. ¡Celebra con nosotros y déjanos endulzar tu día especial!",
 
+    "Tortas de Cumpleaños":"Tortas de Cumpleaños",
+    "Torta Arcoíris":"Torta Arcoíris",
+    "DTorta Arcoíris":"Un estallido de colores para hacer sonreír a todos.",
+    "DDDTorta de Chocolate":"Pura indulgencia, perfecta para los amantes del chocolate.",
+    "Torta de Frutas Tropicales":"Torta de Frutas Tropicales",
+    "DTorta de Frutas Tropicales":"Refrescante y ligera, ideal para fiestas al aire libre.",
+    "Torta Temática":"Torta Temática",
+    "DTorta Temática":"Diseñada según tus sueños, desde personajes hasta paisajes.",
+    
+    "Mesa de Postres2":"",
+    "Cupcakes Personalizados":"Cupcakes Personalizados",
+    "DCupcakes Personalizados":"Pequeñas delicias que combinan con el tema de tu fiesta.",
+    "Galletas Decoradas":"Galletas Decoradas",
+    "DGalletas Decoradas":"Un toque dulce y creativo que encanta a niños y adultos.s",
+    "Cake Pops de Colores":"Cake Pops de Colores",
+    "DCake Pops de Colores":"Bocados divertidos y fáciles de disfrutar",
+    "Gelatinas Multicolor":"Gelatinas Multicolor",
+    "DGelatinas Multicolor":"Llamativas y refrescantes, un clásico de los cumpleaños.",
 
+    "Bebidas3":"",
+    "Batidos de Sabores":"Batidos de Sabores",
+    "DBatidos de Sabores":"Frutales y cremosos, perfectos para cualquier edad.",
+    "Limonada Azul":"Limonada Azul",
+    "DLimonada Azul":"Un toque especial y vibrante para la fiesta.",
+    "Chocolatada Fría":"Chocolatada Fría",
+    "DChocolatada Fría":"Un favorito para los más pequeños.",
+    "Sodas Artesanales":"Sodas Artesanales",
+    "DSodas Artesanales":"Burbujeantes y coloridas, ideales para brindar.",
 
-
-
-
-
-
-
-
-
-
+    "Bocadillos2":"",
+    "Mini Hamburguesas":"Mini Hamburguesas",
+    "DMini Hamburguesas":"Diversión en tamaño pequeño, irresistibles para todos.",
+    "Hot Dogs Miniatura":"Hot Dogs Miniatura",
+    "DHot Dogs Miniatura":"Un clásico que nunca pasa de moda.",
+    "Palomitas Saborizadas":"Palomitas Saborizadas",
+    "DPalomitas Saborizadas":"Crocantes y coloridas, el snack perfecto.",
+    "Mini Pizzas":"Mini Pizzas",
+    "DMini Pizzas":"Pequeñas y sabrosas, hechas para compartir.",
 
 
 

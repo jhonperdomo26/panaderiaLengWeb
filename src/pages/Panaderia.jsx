@@ -1,6 +1,6 @@
 import "../css/main.css";
 import { Layout, Row, Col, Modal, Button } from "antd";
-import React, { useState } from "react";
+import { useState } from "react";
 import Croissant from '../img/croissant.png';
 import PanQue from '../img/pandequeso.png';
 import Brownie from '../img/brownie.png';
@@ -64,10 +64,7 @@ const contenido = {
   padding: '20px',
 };
 
-const styleIcono = {
-  fontSize: '10px',
-  color: 'white',
-};
+
 
 const { Content } = Layout;
 

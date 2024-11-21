@@ -1,7 +1,6 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import { GoogleMap, useLoadScript, MarkerF, InfoWindowF } from "@react-google-maps/api";
-import { Flex, Layout, Col, Row } from "antd";  // Eliminé Content de la importación
-import styled from "@emotion/styled";
+import { Layout, Col, Row } from "antd";  // Eliminé Content de la importación
 import { useTranslation } from "react-i18next";
 
 const cajaDecoracion = {
@@ -39,10 +38,7 @@ const markers = [
   },
 ];
 
-const H1 = styled.h1`
-  margin: 1%;
-  font-size: 26px;
-`;
+
 
 const API = () => {
  const { t } = useTranslation(); 
@@ -69,7 +65,7 @@ const API = () => {
             <Row justify="center" align="middle" style={{ marginTop: "30px", height: "150px" }}>
               <Col span={16}>
                 <div style={cajaDecoracion}>
-                  <span style={texto}>Encuentra nuestras panaderías</span>
+                  <span style={texto}>{t("greeting")}</span>
                 </div>
               </Col>
             </Row>

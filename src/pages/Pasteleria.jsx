@@ -1,5 +1,5 @@
 import "../css/main.css";
-import React, { useState } from "react"; // Importa useState correctamente
+import { useState } from "react"; // Importa useState correctamente
 import { Layout, Row, Col, Modal, Button } from "antd";
 import BrazoReina from "../img/brazodereina.png";
 import Tresleches from "../img/tresleches.png";

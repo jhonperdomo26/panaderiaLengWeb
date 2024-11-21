@@ -1,8 +1,10 @@
 import styled from '@emotion/styled';
 import '../css/main.css/';
 import { Carousel } from 'antd';
-import { Layout, Flex, Row, Col } from 'antd';
+import { Layout, Row, Col } from 'antd';
 import { Card } from 'antd';
+import { useTranslation } from "react-i18next";
+
 import RainCake from '../img/RainCake.webp';
 import ChocoCake from '../img/ChocoCake.webp';
 import FruitCake from '../img/FruitCake.webp';
@@ -24,7 +26,6 @@ import PalomitasSabor from '../img/PalomitasSabor.webp';
 import MiniPizzas from '../img/MiniPizzas.webp';
 
 const { Content } = Layout;
-const { Meta } = Card;
 
 const H1 = styled.h1`
   font-weight: bold;
@@ -45,16 +46,6 @@ const P1 = styled.p`
   font-weight: 400;
 `
 
-const PCajaDecoracion = styled.span`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
-  font-size: 18px;
-  font-weight: bold;
-  heigth: 100px;
-  width: 100px;
-`
 
 const ContenOfrec = styled.div`
   display: flex;
@@ -75,13 +66,7 @@ const HOfrec = styled.h1`
   margin: 20px;
 `
 
-const Imagen = styled.img`
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
+
 
 const contentStyle = {
   margin: 0,
@@ -92,35 +77,39 @@ const contentStyle = {
   background: '#364d79',
 };
 
-const tortasDeCumpleaños = [
-  { title: 'Torta Arcoíris', img: RainCake, description: 'Un estallido de colores para hacer sonreír a todos.' },
-  { title: 'Torta de Chocolate', img: ChocoCake, description: 'Pura indulgencia, perfecta para los amantes del chocolate.' },
-  { title: 'Torta de Frutas Tropicales', img: FruitCake, description: 'Refrescante y ligera, ideal para fiestas al aire libre.' },
-  { title: 'Torta Temática', img: PersoCake, description: 'Diseñada según tus sueños, desde personajes hasta paisajes.' },
-];
 
-const MesadePostres = [
-  { title: 'Cupcakes Personalizados', img: PersoCupcake, description: 'Pequeñas delicias que combinan con el tema de tu fiesta.' },
-  { title: 'Galletas Decoradas', img: CookieDeco, description: 'Un toque dulce y creativo que encanta a niños y adultos.' },
-  { title: 'Cake Pops de Colores', img: CakePops, description: 'Bocados divertidos y fáciles de disfrutar.' },
-  { title: 'Gelatinas Multicolor', img: JellyColor, description: 'Llamativas y refrescantes, un clásico de los cumpleaños.' },
-];
+const Cumpleaños = () => {
+  const { t } = useTranslation(); 
 
-const Bebidas = [
-  { title: 'Batidos de Sabores', img: Flavors, description: 'Frutales y cremosos, perfectos para cualquier edad.' },
-  { title: 'Limonada Azul', img: BlueLimonade, description: 'Un toque especial y vibrante para la fiesta.' },
-  { title: 'Chocolatada Fría', img: ColdChocolate, description: 'Un favorito para los más pequeños.' },
-  { title: 'Sodas Artesanales', img: SodaSabor, description: 'Burbujeantes y coloridas, ideales para brindar.' },
-];
-
-const Bocadillos = [
-  { title: 'Mini Hamburguesas', img: MiniHambur, description: 'Diversión en tamaño pequeño, irresistibles para todos.' },
-  { title: 'Hot Dogs Miniatura', img: MiniHotdog, description: 'Un clásico que nunca pasa de moda.' },
-  { title: 'Palomitas Saborizadas', img: PalomitasSabor, description: 'Crocantes y coloridas, el snack perfecto.' },
-  { title: 'Mini Pizzas', img: MiniPizzas, description: 'Pequeñas y sabrosas, hechas para compartir.' },
-];
-
-const Cumpleaños = () => (
+  const tortasDeCumpleaños = [
+    { title: [t('Torta Arcoíris')], img: RainCake, description: [t('DTorta Arcoíris')] },
+    { title: [t('Torta de Chocolate')], img: ChocoCake, description: [t('DDDTorta de Chocolate')] },
+    { title: [t('Torta de Frutas Tropicales')], img: FruitCake, description: [t('DTorta de Frutas Tropicales')] },
+    { title: [t('Torta Temática')], img: PersoCake, description: [t('DTorta Temática')] },
+  ];
+  
+  const MesadePostres = [
+    { title: [t('Cupcakes Personalizados')], img: PersoCupcake, description: [t('DCupcakes Personalizados')] },
+    { title: [t('Galletas Decoradas')], img: CookieDeco, description: [t('DGalletas Decoradas')] },
+    { title: [t('Cake Pops de Colores')], img: CakePops, description: [t('DCake Pops de Colores')] },
+    { title: [t('Gelatinas Multicolor')], img: JellyColor, description: [t('DGelatinas Multicolor')] },
+  ];
+  
+  const Bebidas = [
+    { title: [t('Batidos de Sabores')], img: Flavors, description: [t('DBatidos de Sabores')] },
+    { title: [t('Limonada Azul')], img: BlueLimonade, description: [t('DLimonada Azul')] },
+    { title: [t('Chocolatada Fría')], img: ColdChocolate, description: [t('DChocolatada Fría')] },
+    { title: [t('Sodas Artesanales')], img: SodaSabor, description: [t('DSodas Artesanales')] },
+  ];
+  
+  const Bocadillos = [
+    { title: [t('Mini Hamburguesas')], img: MiniHambur, description: [t('DMini Hamburguesas')] },
+    { title: [t('Hot Dogs Miniatura')], img: MiniHotdog, description: [t('DHot Dogs Miniatura')] },
+    { title: [t('Palomitas Saborizadas')], img: PalomitasSabor, description: [t('DPalomitas Saborizadas')] },
+    { title: [t('Mini Pizzas')], img: MiniPizzas, description: [t('DMini Pizzas')] },
+  ];
+  
+  return(
   <>
 
     <Layout>
@@ -130,8 +119,8 @@ const Cumpleaños = () => (
           <h3 style={contentStyle}>
             <div className='TortaCumpleaños'>
               <div className='CajaLeft'>
-                <span className='TextoEvento'>TORTAS</span>
-                <span className='TextoEvento'>DE CUMPLEAÑOS</span>
+                <span className='TextoEvento'>{t("TORTAS")}</span>
+                <span className='TextoEvento'>{t("DE CUMPLEAÑOS")}</span>
               </div>
             </div>
           </h3>
@@ -140,8 +129,8 @@ const Cumpleaños = () => (
           <h3 style={contentStyle}>
             <div className='CupcakesColoridos'>
               <div className='CajaRight'>
-                <span className='TextoEvento'>CUPCAKES</span>
-                <span className='TextoEvento'>COLORIDOS</span>
+                <span className='TextoEvento'>{t("CUPCAKES")}</span>
+                <span className='TextoEvento'>{t("COLORIDOS")}</span>
               </div>
             </div>
           </h3>
@@ -150,8 +139,8 @@ const Cumpleaños = () => (
           <h3 style={contentStyle}>
             <div className='SnacksDivertidos'>
               <div className='CajaLeft'>
-                <span className='TextoEvento'>SNACKS</span>
-                <span className='TextoEvento'>DIVERTIDOS</span>
+                <span className='TextoEvento'>{t("SNACKS")}</span>
+                <span className='TextoEvento'>{t("DIVERTIDOS")}</span>
               </div>
             </div>
           </h3>
@@ -160,8 +149,8 @@ const Cumpleaños = () => (
           <h3 style={contentStyle}>
             <div className='GalletasFiesta'>
               <div className='CajaRight'>
-                <span className='TextoEvento'>GALLETAS</span>
-                <span className='TextoEvento'>TEMÁTICAS</span>
+                <span className='TextoEvento'>{t("GALLETAS")}</span>
+                <span className='TextoEvento'>{t("TEMÁTICAS")}</span>
               </div>
             </div>
           </h3>
@@ -170,8 +159,8 @@ const Cumpleaños = () => (
           <h3 style={contentStyle}>
             <div className='MesaCumpleaños'>
               <div className='CajaLeft'>
-                <span className='TextoEvento'>MESA DE</span>
-                <span className='TextoEvento'>CUMPLEAÑOS</span>
+                <span className='TextoEvento'>{t("MESA DE")}</span>
+                <span className='TextoEvento'>{t("CUMPLEAÑOS")}</span>
               </div>
             </div>
           </h3>
@@ -183,12 +172,12 @@ const Cumpleaños = () => (
           </Col>
 
           <Col span={16}>
-            <H1>Cumpleaños</H1>
+            <H1>{t("Cumpleaños")}</H1>
             <P1>
-              Porque un cumpleaños no está completo sin un toque dulce, en nuestra panadería ofrecemos una variedad de opciones que harán de tu fiesta un evento memorable. Desde coloridas tortas temáticas hasta cupcakes decorados, galletas y postres que se adaptan a tus gustos y estilo.
+              {t("P1C1")}
             </P1>
             <P1>
-              Estamos aquí para ayudarte a crear momentos llenos de sabor y alegría. ¡Celebra con nosotros y déjanos endulzar tu día especial!
+              {t("P1C2")}  
             </P1>
           </Col>
 
@@ -201,7 +190,7 @@ const Cumpleaños = () => (
           </Col>
           <Col span={16}>
             <ContenOfrec>
-              <HOfrec>¿Qué ofrecemos?</HOfrec>
+              <HOfrec>{t("¿Qué ofrecemos?")}</HOfrec>
             </ContenOfrec>
           </Col>
           <Col span={4}>
@@ -213,7 +202,7 @@ const Cumpleaños = () => (
           </Col>
 
           <Col span={16}>
-            <H2>Tortas de Cumpleaños</H2>
+            <H2>{t("Tortas de Cumpleaños")}</H2>
             <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
                   {tortasDeCumpleaños.slice(0, 4).map((tortasDeCumpleaños, index) => (
@@ -228,7 +217,7 @@ const Cumpleaños = () => (
                   ))}
                 </Row>
               </div>
-              <H2>Mesa de Postres</H2>
+              <H2>{t("Mesa de Postres")}</H2>
               <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
                   {MesadePostres.slice(0, 4).map((MesadePostres, index) => (
@@ -243,7 +232,7 @@ const Cumpleaños = () => (
                   ))}
                 </Row>
               </div>              
-              <H2>Bebidas</H2>
+              <H2>{t("Bebidas")}</H2>
               <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
                   {Bebidas.slice(0, 4).map((Bebidas, index) => (
@@ -258,7 +247,7 @@ const Cumpleaños = () => (
                   ))}
                 </Row>
               </div>
-              <H2>Bocadillos</H2>
+              <H2>{t("Bocadillos")}</H2>
               <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
                   {Bocadillos.slice(0, 4).map((Bocadillos, index) => (
@@ -283,5 +272,6 @@ const Cumpleaños = () => (
     </Layout>
 
   </>
-);
+  )
+};
 export default Cumpleaños;

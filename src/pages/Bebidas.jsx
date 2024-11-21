@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Layout, Row, Col, Button, Modal } from 'antd';
 import Naranja from '../img/Naranja.webp';
 import Zanahoria from '../img/Zanahoria.webp';

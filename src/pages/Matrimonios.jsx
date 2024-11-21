@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import '../css/main.css/';
 import { Carousel } from 'antd';
-import { Layout, Flex, Row, Col } from 'antd';
+import { Layout, Row, Col } from 'antd';
 import { Card } from 'antd';
 import TortaVanilla from '../img/TortaVanilla.webp';
 import TortaChocolate from '../img/tortachoco.png';
@@ -22,7 +22,7 @@ import CanapesSalmon from '../img/CanapesSalmon.webp';
 import RollitosJamon from '../img/RollitosJamon.webp';
 
 const { Content } = Layout;
-const { Meta } = Card;
+
 
 const H1 = styled.h1`
   font-weight: bold;
@@ -43,16 +43,7 @@ const P1 = styled.p`
   font-weight: 400;
 `
 
-const PCajaDecoracion = styled.span`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
-  font-size: 18px;
-  font-weight: bold;
-  heigth: 100px;
-  width: 100px;
-`
+
 
 const ContenOfrec = styled.div`
   display: flex;
@@ -71,14 +62,6 @@ const HOfrec = styled.h1`
   color: white;
   text-align: center;
   margin: 20px;
-`
-
-const Imagen = styled.img`
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `
 
 const contentStyle = {

@@ -4,7 +4,7 @@
 
 
 
-    "greeting": "Ubicaciones de nuestras panaderias ingles",
+    "greeting": "Find our bakeries",
     "prueva": "cumpleaños ingles",
     "Agregar":"Add",
     "El carrito está vacío.": "The cart is empty.",
@@ -333,10 +333,57 @@
 
 
 
+    "Cumpleaños":"Cumpleaños",
+    "TORTAS":"CAKES",
+    "DE CUMPLEAÑOS":"BIRTHDAY",
+    "CUPCAKES":"CUPCAKES",
+    "COLORIDOS":"COLORFUL",
+    "SNACKS":"SNACKS",
+    "DIVERTIDOS":"FUNNY",
+    "TEMÁTICAS":"THEMES",
+    "MESA DE":"TABLE OF",
+    "CUMPLEAÑOS":"BIRTHDAY",
+    "P1C1":"Because a birthday is not complete without a sweet touch, at our bakery we offer a variety of options that will make your party a memorable event. From colorful themed cakes to decorated cupcakes, cookies and desserts that adapt to your tastes and style.",
+    "P1C2":"We are here to help you create moments full of flavor and joy. Celebrate with us and let us sweeten your special day!",
 
+    "Tortas de Cumpleaños":"Birthday Cakes",
+    "Torta Arcoíris":"Rainbow cake",
+    "DTorta Arcoíris":"A burst of colour to make everyone smile.",
+    "DDDTorta de Chocolate":"Pure indulgence, perfect for chocolate lovers.",
+    "Torta de Frutas Tropicales":"Tropical Fruit Cake",
+    "DTorta de Frutas Tropicales":"Refreshing and light, ideal for outdoor parties.",
+    "Torta Temática":"Theme cake",
+    "DTorta Temática":"Designed according to your dreams, from characters to landscapes.",
+    
+    "Mesa de Postres2":"",
+    "Cupcakes Personalizados":"Personalized Cupcakes",
+    "DCupcakes Personalizados":"Little treats that match your party theme.",
+    "Galletas Decoradas":"Decorated Cookies",
+    "DGalletas Decoradas":"A sweet and creative touch that delights children and adults.",
+    "Cake Pops de Colores":"Colourful Cake Pops",
+    "DCake Pops de Colores":"Fun and easy bites to enjoy",
+    "Gelatinas Multicolor":"Multicolored Jellies",
+    "DGelatinas Multicolor":"Striking and refreshing, a birthday classic.",
 
+    "Bebidas3":"",
+    "Batidos de Sabores":"Flavored Shakes",
+    "DBatidos de Sabores":"Fruity and creamy, perfect for any age.",
+    "Limonada Azul":"Blue Lemonade",
+    "DLimonada Azul":"A special and vibrant touch for the party.",
+    "Chocolatada Fría":"Cold Chocolate",
+    "DChocolatada Fría":"A favorite for the little ones.",
+    "Sodas Artesanales":"Craft Sodas",
+    "DSodas Artesanales":"Bubbly and colorful, ideal for toasting.",
 
-
+    "Bocadillos2":"",
+    "Mini Hamburguesas":"Mini Burgers",
+    "DMini Hamburguesas":"Fun in small sizes, irresistible to everyone.",
+    "Hot Dogs Miniatura":"Miniature Hot Dogs",
+    "DHot Dogs Miniatura":"Miniature Hot Dogs",
+    "Palomitas Saborizadas":"Flavored Popcorn",
+    "DPalomitas Saborizadas":"Crispy and colorful, the perfect snack.",
+    "Mini Pizzas":"Mini Pizzas",
+    "DMini Pizzas":"Small and tasty, made to share.",
 
 
 

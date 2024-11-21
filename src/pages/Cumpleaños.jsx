@@ -3,25 +3,25 @@ import '../css/main.css/';
 import { Carousel } from 'antd';
 import { Layout, Flex, Row, Col } from 'antd';
 import { Card } from 'antd';
-import TortaVanilla from '../img/TortaVanilla.webp';
-import TortaChocolate from '../img/tortachoco.png';
-import TortaRedVelvet from '../img/TortaRedVelvet.webp';
-import TortaNaked from '../img/TortaNaked.webp';
+import RainCake from '../img/RainCake.webp';
+import ChocoCake from '../img/ChocoCake.webp';
+import FruitCake from '../img/FruitCake.webp';
+import PersoCake from '../img/PersoCake.webp';
 
-import TartaletasFrutas from '../img/TartaletasFrutas.webp';
-import Macarrones from '../img/Macarrones.webp';
-import BrowniesGourmet from '../img/BrowniesGourmet.webp';
-import CheesecakeVasito from '../img/CheesecakeVasito.webp';
+import PersoCupcake from '../img/PersoCupcake.webp';
+import CookieDeco from '../img/CookieDeco.webp';
+import CakePops from '../img/CakePops.webp';
+import JellyColor from '../img/JellyColor.webp';
 
-import CoctelChampagne from '../img/CoctelChampagne.webp';
-import LimonadaRomero from '../img/LimonadaRomero.webp';
-import AguaInfusionada from '../img/AguaInfusionada.webp';
-import MojitoSinAlcohol from '../img/MojitoSinAlcohol.webp';
+import Flavors from '../img/Flavors.webp';
+import BlueLimonade from '../img/BlueLimonade.webp';
+import ColdChocolate from '../img/ColdChocolate.webp';
+import SodaSabor from '../img/SodaSabor.webp';
 
-import MiniQuiches from '../img/MiniQuiches.webp';
-import Empanaditas from '../img/Empanaditas.webp';
-import CanapesSalmon from '../img/CanapesSalmon.webp';
-import RollitosJamon from '../img/RollitosJamon.webp';
+import MiniHambur from '../img/MiniHambur.webp';
+import MiniHotdog from '../img/MiniHotdog.webp';
+import PalomitasSabor from '../img/PalomitasSabor.webp';
+import MiniPizzas from '../img/MiniPizzas.webp';
 
 const { Content } = Layout;
 const { Meta } = Card;
@@ -93,31 +93,31 @@ const contentStyle = {
 };
 
 const tortasDeCumpleaños = [
-  { title: 'Torta Arcoíris', img: TortaVanilla, description: 'Un estallido de colores para hacer sonreír a todos.' },
-  { title: 'Torta de Chocolate', img: TortaChocolate, description: 'Pura indulgencia, perfecta para los amantes del chocolate.' },
-  { title: 'Torta de Frutas Tropicales', img: TortaRedVelvet, description: 'Refrescante y ligera, ideal para fiestas al aire libre.' },
-  { title: 'Torta Temática', img: TortaNaked, description: 'Diseñada según tus sueños, desde personajes hasta paisajes.' },
+  { title: 'Torta Arcoíris', img: RainCake, description: 'Un estallido de colores para hacer sonreír a todos.' },
+  { title: 'Torta de Chocolate', img: ChocoCake, description: 'Pura indulgencia, perfecta para los amantes del chocolate.' },
+  { title: 'Torta de Frutas Tropicales', img: FruitCake, description: 'Refrescante y ligera, ideal para fiestas al aire libre.' },
+  { title: 'Torta Temática', img: PersoCake, description: 'Diseñada según tus sueños, desde personajes hasta paisajes.' },
 ];
 
 const MesadePostres = [
-  { title: 'Cupcakes Personalizados', img: TartaletasFrutas, description: 'Pequeñas delicias que combinan con el tema de tu fiesta.' },
-  { title: 'Galletas Decoradas', img: Macarrones, description: 'Un toque dulce y creativo que encanta a niños y adultos.' },
-  { title: 'Cake Pops de Colores', img: BrowniesGourmet, description: 'Bocados divertidos y fáciles de disfrutar.' },
-  { title: 'Gelatinas Multicolor', img: CheesecakeVasito, description: 'Llamativas y refrescantes, un clásico de los cumpleaños.' },
+  { title: 'Cupcakes Personalizados', img: PersoCupcake, description: 'Pequeñas delicias que combinan con el tema de tu fiesta.' },
+  { title: 'Galletas Decoradas', img: CookieDeco, description: 'Un toque dulce y creativo que encanta a niños y adultos.' },
+  { title: 'Cake Pops de Colores', img: CakePops, description: 'Bocados divertidos y fáciles de disfrutar.' },
+  { title: 'Gelatinas Multicolor', img: JellyColor, description: 'Llamativas y refrescantes, un clásico de los cumpleaños.' },
 ];
 
 const Bebidas = [
-  { title: 'Batidos de Sabores', img: CoctelChampagne, description: 'Frutales y cremosos, perfectos para cualquier edad.' },
-  { title: 'Limonada Azul', img: LimonadaRomero, description: 'Un toque especial y vibrante para la fiesta.' },
-  { title: 'Chocolatada Fría', img: AguaInfusionada, description: 'Un favorito para los más pequeños.' },
-  { title: 'Sodas Artesanales', img: MojitoSinAlcohol, description: 'Burbujeantes y coloridas, ideales para brindar.' },
+  { title: 'Batidos de Sabores', img: Flavors, description: 'Frutales y cremosos, perfectos para cualquier edad.' },
+  { title: 'Limonada Azul', img: BlueLimonade, description: 'Un toque especial y vibrante para la fiesta.' },
+  { title: 'Chocolatada Fría', img: ColdChocolate, description: 'Un favorito para los más pequeños.' },
+  { title: 'Sodas Artesanales', img: SodaSabor, description: 'Burbujeantes y coloridas, ideales para brindar.' },
 ];
 
 const Bocadillos = [
-  { title: 'Mini Hamburguesas', img: MiniQuiches, description: 'Diversión en tamaño pequeño, irresistibles para todos.' },
-  { title: 'Hot Dogs Miniatura', img: Empanaditas, description: 'Un clásico que nunca pasa de moda.' },
-  { title: 'Palomitas Saborizadas', img: CanapesSalmon, description: 'Crocantes y coloridas, el snack perfecto.' },
-  { title: 'Mini Pizzas', img: RollitosJamon, description: 'Pequeñas y sabrosas, hechas para compartir.' },
+  { title: 'Mini Hamburguesas', img: MiniHambur, description: 'Diversión en tamaño pequeño, irresistibles para todos.' },
+  { title: 'Hot Dogs Miniatura', img: MiniHotdog, description: 'Un clásico que nunca pasa de moda.' },
+  { title: 'Palomitas Saborizadas', img: PalomitasSabor, description: 'Crocantes y coloridas, el snack perfecto.' },
+  { title: 'Mini Pizzas', img: MiniPizzas, description: 'Pequeñas y sabrosas, hechas para compartir.' },
 ];
 
 const Cumpleaños = () => (
@@ -125,7 +125,7 @@ const Cumpleaños = () => (
 
     <Layout>
       <Content className='FondoPan'>
-      <Carousel arrows autoplay infinite={false}>
+      <Carousel arrows infinite={false}>
         <div>
           <h3 style={contentStyle}>
             <div className='TortaCumpleaños'>

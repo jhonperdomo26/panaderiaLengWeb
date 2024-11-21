@@ -6,16 +6,40 @@
 
     "greeting": "Ubicaciones de nuestras panaderias español",
     "prueva": "cumpleaños español",
+
+
+    "Inicio":"inicio",
+    "Productos Destacados": "Productos Destacados",
+    "Croissant":"Croissant",
+    "Muffin de Chocolate":"Muffin de Chocolate",
+    "Pan de Queso":"Pan de Queso",
+    "Tarta de Fresa":"Tarta de Fresa",
+    "Dona de Vainilla":"Dona de Vainilla",
+    "Brownie":"Brownie",
+    "Tarta de Manzana":"Tarta de Manzana",
+    "Cheesecake":"Cheesecake",
+    "Delicioso y recién horneado":"Delicioso y recién horneado",
+
     
     "Menú": "Menú",
     "Panadería": "Panadería",
     "Pastelería": "Pastelería",
     "Desayunos": "Desayunos",
     "Bebidas": "Bebidas",
-    "Combos": "Combos",
+
 
     
+    "Combos": "Combos",
+    "Combo Yaguareño": "Combo Yaguareño",
+    "DCombo Yaguareño": "Tamal acompañado de quesillo y chocolate",
+    "Delicombo el Opita": "Delicombo el Opita",
+    "DDelicombo el Opita": "Almojabana acompañada con chocolate",
+    "Combo Cumpleañero": "Combo Cumpleañero",
+    "DCombo Cumpleañero": "Torta de chocolate con gaseosa 1.25lts",
+    "Desayuno Sorpresa": "Desayuno Sorpresa",
+    "DDesayuno Sorpresa": "Desayuno para Celebrar tus fechas especiales",
 
+    
     "Nosotros": "Nosotros",
     "TituloN1": "Historia y Origen",
     "PN1": "La La Panadería Horneados se fundó en 2019 en la ciudad de Neiva, Huila, un lugar donde la cultura y la tradición culinaria se entrelazan con la calidez de su gente. La idea de abrir la panadería nació en la mente de Ana y Juan, una pareja de jóvenes emprendedores que, después de años de soñar con un negocio propio, decidieron dar el salto y compartir su amor por la cocina.",
@@ -37,9 +61,7 @@
 
     "Eventos": "Eventos",
     "Eventos Especiales": "Eventos Especiales",
-    "Matrimonios": "Matrimonios",
     "DMatrimonios": "Celebra el amor con nuestros pasteles y decoraciones únicas para matrimonios, para hacer de tu día especial un momento inolvidable.",
-    "Baby Showers": "Baby Showers",
     "DBaby Showers": "Dale la bienvenida a tu bebé con una mesa de dulces adorable y personalizada, diseñada para llenar de ternura y sabor este momento especial.",
     "Aniversarios": "Aniversarios",
     "DAniversarios": "Conmemora un año más de amor con una celebración dulce y elegante. Nuestros pasteles de aniversario están hechos para reflejar la historia que celebran.",
@@ -55,6 +77,141 @@
     "Paquete Completo":"Paquete Completo",
     "D1Paquete Completo":"Con nuestro Paquete Completo, nos encargamos de cada detalle para que tu evento sea un éxito. Desde el pastel perfecto hasta una deliciosa selección de bocadillos y bebidas, ofrecemos una experiencia integral que hará de tu celebración algo inolvidable. ",
     "D2Paquete Completo":"Nuestro equipo personaliza cada paquete según tus necesidades, para que tengas todo lo que necesitas en un solo lugar. Ya sea un matrimonio, cumpleaños, baby shower o aniversario, creamos un menú a medida, con productos frescos y de calidad, cuidando la presentación y el sabor en cada plato.",
+
+
+
+    "Matrimonios": "Matrimonios",
+    "MT1I1":"TORTA DE",
+    "MT1I2":"BODAS",
+    "MT2I1":"CUPCAKES",
+    "MT2I2":"DECORADOS",
+    "MT3I1":"POSTRES",
+    "MT3I2":"GOURMET",
+    "MT4I1":"GALLETAS",
+    "MT4I2":"PERSONALIZADAS",
+    "MT5I1":"MESA DE",
+    "MT5I2":"POSTRES",
+    "PM1":"En nuestra panadería, sabemos que el día de tu boda merece un toque de dulzura inolvidable. Ofrecemos productos únicos y personalizados, desde elegantes tortas de bodas hasta deliciosos cupcakes y postres finos, que harán de tu celebración un momento aún más especial.",
+    "PM2":"Nos dedicamos a crear experiencias únicas para ti y tus seres queridos, asegurando que cada detalle esté lleno de sabor y belleza. ¡Confía en nosotros para endulzar uno de los días más importantes de tu vida!",
+    "¿Qué ofrecemos?":"¿Qué ofrecemos?",
+
+    "Tortas de Boda":"Tortas de Boda",
+    "Torta Clásica de Vainilla":"Torta Clásica de Vainilla",
+    "DTorta Clásica de Vainilla":"Elegancia en cada bocado, decorada con flores de azúcar.",
+    "Torta de Chocolate y Frutas":"Torta de Chocolate y Frutas",
+    "DTorta de Chocolate y Frutas":"Una combinación exquisita de chocolate y frutos rojos.",
+    "Torta Red Velvet":"Torta Red Velvet",
+    "DTorta Red Velvet":"El toque perfecto de sofisticación y dulzura.",
+    "Torta Naked Almendras":"Torta Naked Almendras",
+    "DTorta Naked Almendras":"Un diseño moderno con sabor artesanal.",
+
+    "Mesa de Postres": "Mesa de Postres",
+    "Mini Tartaletas de Frutas":"Torta Clásica de Vainilla",
+    "DMini Tartaletas de Frutas":"Coloridas y deliciosas, perfectas para cualquier mesa.",
+    "Macarrones Franceses":"Torta de Chocolate y Frutas",
+    "DMacarrones Franceses":"Un toque de elegancia con sabores variados.",
+    "Brownies Gourmet":"Torta Red Velvet",
+    "DBrownies Gourmet":"Un clásico irresistible con ingredientes premium.",
+    "Cheesecake en Vasito":"Torta Naked Almendras",
+    "DCheesecake en Vasito":"Portátiles y llenos de sabor, perfectos para tus invitados.",
+
+    "Bebidas2": "Bebidas",
+    "Coctel de Champagne":"Coctel de Champagne",
+    "DCoctel de Champagne":"Elegante y burbujeante, perfecto para brindar.",
+    "Limonada con Romero":"Limonada con Romero",
+    "DLimonada con Romero":"Una combinación única de frescura y aroma.",
+    "Agua Infusionada":"Agua Infusionada",
+    "DAgua Infusionada":"Refrescante y decorativa, con frutas y hierbas.",
+    "Mojito Sin Alcohol":"Mojito Sin Alcohol",
+    "DMojito Sin Alcohol":"Fresco y cítrico, ideal para todos los invitados.",
+    "Bocadillos":"Bocadillos",
+    "Mini Quiches":"Mini Quiches",
+    "DMini Quiches":"Sabores variados, perfectos como entradas.",
+    "Empanaditas Gourmet":"Empanaditas Gourmet",
+    "DEmpanaditas Gourmet":"Crocantes y rellenas de ingredientes frescos.",
+    "Canapés de Salmón":"Canapés de Salmón",
+    "DCanapés de Salmón":"Un toque de lujo en cada bocado.",
+    "Rollitos Jamón y Queso":"Rollitos Jamón y Queso",
+    "DRollitos Jamón y Queso":"Clásicos y deliciosos, amados por todos.",
+
+
+
+
+    "Baby Showers": "Baby Showers",
+    "TORTAS PARA": "TORTAS PARA",
+    "BABY SHOWER": "BABY SHOWER",
+    "CUPCAKES PARA": "CUPCAKES PARA",
+    "BABY SHOWERS": "BABY SHOWERS",
+    "MACARONS EN": "MACARONS EN",
+    "TONOS PASTEL": "TONOS PASTEL",
+    "GALLETAS PARA": "GALLETAS PARA",
+    "MINI TARTALETAS": "MINI TARTALETAS",
+    "DE FRUTA": "DE FRUTA",
+    "P1B1": "En nuestra panadería, entendemos que cada Baby Shower es un momento único para celebrar la llegada de un nuevo miembro a la familia. Ofrecemos una deliciosa variedad de productos personalizados, desde tiernas tortas temáticas hasta cupcakes, galletas y postres que encantarán a todos tus invitados.",
+    "P1B2":"Nos encargamos de añadir dulzura y encanto a tu celebración, cuidando cada detalle para que el evento sea inolvidable. ¡Confía en nosotros para endulzar este hermoso comienzo!",
+   
+    "Torta Temática de Vainilla": "Torta Temática de Vainilla",
+    "DTorta Temática de Vainilla": "Suave y deliciosa, decorada con motivos de Baby Shower.",
+    "Torta de Chocolate":"Torta de Chocolate",
+    "DTorta de Chocolate":"Perfecta para celebrar la llegada de un niño, con detalles encantadores.",
+    "Torta Rosada":"Torta Rosada",
+    "DTorta Rosada":"Elegante y deliciosa, ideal para una temática femenina.",
+    "Torta Personalizada":"Torta Personalizada",
+    "DTorta Personalizada":"Un diseño moderno que destaca el nombre del bebé.",
+    
+    "Cupcakes Decorados":"Cupcakes Decorados",
+    "DCupcakes Decorados":"Diseñados con tiernos detalles en azul y rosa pastel.s",
+    "Galletas de Bebé":"Galletas de Bebé",
+    "DGalletas de Bebé":"Un dulce recuerdo con diseños de sonajeros, biberones y más.",
+    "Cake Pops":"Cake Pops",
+    "DCake Pops":"Pequeñas delicias fáciles de disfrutar para grandes y pequeños.",
+    "Mini Tartaletas de Crema":"Mini Tartaletas de Crema",
+    "DMini Tartaletas de Crema":"Perfectas para una mesa de postres encantadora.",
+
+    "Coctel Azul Brillante":"Coctel Azul Brillante",
+    "DCoctel Azul Brillante":"Una bebida fresca y colorida para la ocasión.",
+    "Pink Lemonade":"Pink Lemonade",
+    "DPink Lemonade":"Un toque rosado y refrescante, ideal para Baby Showers.",
+    "Smoothies de Frutas":"Smoothies de Frutas",
+    "DSmoothies de Frutas":"Opciones saludables y llenas de sabor.",
+    "Batido de Fresa y Plátano":"Batido de Fresa y Plátano",
+    "DBatido de Fresa y Plátano":"Una combinación cremosa y dulce que encanta a todos.",
+
+    "Mini Sándwiches":"Mini Sándwiches",
+    "DMini Sándwiches":"Pequeños y decorados, perfectos para compartir.",
+    "Bocaditos de Queso y Uva":"Bocaditos de Queso y Uva",
+    "DBocaditos de Queso y Uva":"Sencillos, elegantes y deliciosos.",
+    "Brochetas de Frutas":"Smoothies de Frutas",
+    "DBrochetas de Frutas":"Coloridas y saludables, perfectas para los pequeños invitados.",
+    "Canapés Variados":"Batido de Fresa y Plátano",
+    "DCanapés Variados":"Sabores diversos en presentaciones encantadoras.",
+
+
+
+
+    "ANIVERSARIO":"ANIVERSARIO",
+    "TORTA DE":"TORTA DE",
+    "MACARONS":"MACARONS",
+    "DE CELEBRACIÓN":"DE CELEBRACIÓN",
+    "ANIVERSARIOS":"ANIVERSARIOS",
+    "MINITARTAS DE":"MINITARTAS DE",
+    "FRUTAS":"FRUTAS",
+    "GALLETAS":"GALLETAS",
+    "DECORADAS":"DECORADAS",
+    "P1A1":" Celebra el amor y los momentos compartidos con nuestras creaciones especiales para aniversarios. Desde elegantes tortas decoradas con flores hasta postres gourmet, cupcakes y más, nuestra panadería se encarga de dar ese toque dulce y sofisticado que tu celebración merece.",
+    "P1A2":"Haz de tu aniversario una ocasión inolvidable con nuestros productos únicos y personalizados, ideales para compartir con quienes más amas. ¡Endulzamos tus recuerdos!",
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

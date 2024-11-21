@@ -7,10 +7,12 @@ import TortaVanilla from '../img/TortaVanilla.webp';
 import TortaChocolate from '../img/tortachoco.png';
 import TortaRedVelvet from '../img/TortaRedVelvet.webp';
 import TortaNaked from '../img/TortaNaked.webp';
+
 import TartaletasFrutas from '../img/TartaletasFrutas.webp';
 import Macarrones from '../img/Macarrones.webp';
 import BrowniesGourmet from '../img/BrowniesGourmet.webp';
 import CheesecakeVasito from '../img/CheesecakeVasito.webp';
+
 import CoctelChampagne from '../img/CoctelChampagne.webp';
 import LimonadaRomero from '../img/LimonadaRomero.webp';
 import AguaInfusionada from '../img/AguaInfusionada.webp';

@@ -1,9 +1,25 @@
 import { Fragment, useState } from "react";
-import { GoogleMap, useLoadScript, MarkerF, InfoWindowF,} from "@react-google-maps/api";
-import { Flex } from "antd";
+import { GoogleMap, useLoadScript, MarkerF, InfoWindowF } from "@react-google-maps/api";
+import { Flex, Layout, Col, Row } from "antd";  // Eliminé Content de la importación
 import styled from "@emotion/styled";
 import { useTranslation } from "react-i18next";
-import Languageselector from "../components/language-selector";
+
+const cajaDecoracion = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '100%',
+  height: '150px',
+  backgroundColor: 'rgba(114, 93, 66, 1)',
+  borderRadius: '20px',
+};
+
+const texto = {
+  fontSize: '50px',
+  fontWeight: 'bold',
+  color: 'white',
+  textAlign: 'center',
+};
 
 const markers = [
   {
@@ -29,8 +45,7 @@ const H1 = styled.h1`
 `;
 
 const API = () => {
-  const {t} = useTranslation();
-
+  const { t } = useTranslation();
 
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAP_API_KEY,
@@ -44,45 +59,53 @@ const API = () => {
     }
     setActiveMarker(marker);
   };
-  
-  return (  
-    <Fragment>
-      <div>
-        <Flex align="center" justify="space-evenly">
-          <Languageselector />
-         <H1>{t("greeting")}</H1>
-        </Flex>
-        <Flex align="center" justify="space-evenly">
-         
-        
-        <div style={{ width: "98%", height: "93vh" }}>
-          {isLoaded ? (
-            <GoogleMap
-              center={{ lat: 2.9289, lng: -75.28189 }}
-              zoom={13}
-              onClick={() => setActiveMarker(null)}
+
+  return (
+    <>
+      <Layout style={{ minHeight: '100vh', backgroundColor: '#e8e8e8' }}>
+        <Layout.Content>
+          <div></div>
+          <div>
+            <Row justify="center" align="middle" style={{ marginTop: "30px", height: "150px" }}>
+              <Col span={16}>
+                <div style={cajaDecoracion}>
+                  <span style={texto}>Encuentra nuestras panaderías</span>
+                </div>
+              </Col>
+            </Row>
+            <Row justify="center" align="middle" style={{margin:"30px"}}>
+              <Col span={16}>
+              <div style={{ width: "100%", height: "93vh", border:"4px solid #725D42", borderRadius:"5px"}}>
+                {isLoaded ? (
+                  <GoogleMap
+                    center={{ lat: 2.9289, lng: -75.28189 }}
+                    zoom={13}
+                    onClick={() => setActiveMarker(null)}
+                    mapContainerStyle={{ width: "100%", height: "90vh" }}
+                  >
+                    {markers.map(({ id, name, position }) => (
+                      <MarkerF
+                        key={id}
+                        position={position}
+                        onClick={() => handleActiveMarker(id)}
+                      >
+                        {activeMarker === id ? (
+                          <InfoWindowF onCloseClick={() => setActiveMarker(null)}>
+                            <div>{name}</div>
+                          </InfoWindowF>
+                        ) : null}
+                      </MarkerF>
+                    ))}
+                  </GoogleMap>
+                ) : null}
+              </div>
+              </Col>
               
-              mapContainerStyle={{ width: "100%", height: "90vh" }}
-            >
-              {markers.map(({ id, name, position }) => (
-                <MarkerF
-                  key={id}
-                  position={position}
-                  onClick={() => handleActiveMarker(id)}
-                >
-                  {activeMarker === id ? (
-                    <InfoWindowF onCloseClick={() => setActiveMarker(null)}>
-                      <div>{name}</div>
-                    </InfoWindowF>
-                  ) : null}
-                </MarkerF>
-              ))}
-            </GoogleMap>
-          ) : null}
-        </div>
-        </Flex>
-      </div>
-    </Fragment>
+            </Row>
+          </div>
+        </Layout.Content>
+      </Layout>
+    </>
   );
 };
 

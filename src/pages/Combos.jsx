@@ -205,4 +205,6 @@ const Combos = ({ addToCart }) => {
     </Layout>
   );
 };
+
 export default Combos;
+

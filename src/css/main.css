@@ -189,7 +189,6 @@ a:hover{
   height: 100%;
 }
 
-
 /* Baby Showers */
 
 .TortaBabyShower{
@@ -263,6 +262,70 @@ a:hover{
   align-items: center;
   justify-content: flex-start;
 }
+
+/* Cumpleaños */
+
+.TortaCumpleaños{
+  background-image: url(/src/img/TortaCumpleaños.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.CupcakesColoridos{
+  background-image: url(/src/img/CupcakesColoridos.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.SnacksDivertidos{
+  background-image: url(/src/img/SnacksDivertidos.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.GalletasFiesta{
+  background-image: url(/src/img/GalletasFiesta.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.MesaCumpleaños{
+  background-image: url(/src/img/MesaCumpleaños.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Menu */
 
 .custom-card-container {
   padding: 5px;
@@ -344,7 +407,6 @@ a:hover{
   filter: blur(10px); 
   z-index: -1; 
 }
-
 
 .card-header {
   text-align: center;
@@ -477,5 +539,4 @@ a:hover{
   border-radius: 5px;
   justify-content: center;
   padding:5%;
-
 }

@@ -130,7 +130,7 @@ const Aniversarios = () => {
 
     <Layout>
       <Content className='FondoPan'>
-        <Carousel arrows autoplay infinite={false} >
+        <Carousel arrows infinite={false} >
           <div>
             <h3 style={contentStyle}>
               <div className='Torta3Pisos'>

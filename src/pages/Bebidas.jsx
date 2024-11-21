@@ -13,6 +13,7 @@ import Limonada from '../img/Limonada.webp';
 import Avena from '../img/Avena.webp';
 import Sevillana from '../img/Sevillana.webp';
 import FondoBeb from '../img/FondoBeb.webp';
+import { useTranslation } from "react-i18next";
 
 // Estilos en línea
 const cajaDecoracion = {
@@ -61,23 +62,27 @@ const contenido = {
 
 const { Content } = Layout;
 
-// Array de productos con sus imágenes y descripciones
-const products = [
-  { title: "Jugo de Naranja", img: Naranja, description:"Delicioso y refrescante", price: 10 },
-  { title: "Jugo de Zanahoria", img: Zanahoria, description:"Delicioso y saludable", price: 10 },
-  { title: "Batido Verde", img: Verde, description:"Saludable y fresco", price: 10 },
-  { title: "Milo Frío", img: Milo, description:"Delicioso y refrescante", price: 10 },
-  { title: "Americano", img: Americano, description:"Delicioso y reconfortante", price: 10 },
-  { title: "Capuccino", img: Capu, description:"Delicioso y reconfortante", price: 10 },
-  { title: "Chocolate", img: Choco, description:"Delicioso y reconfortante", price: 10 },
-  { title: "Gaseosa", img: Coke, description:"Deliciosa y refrescante", price: 10 },
-  { title: "Expreso", img: Expreso, description:"Delicioso y energizante", price: 10 },
-  { title: "Limonada", img: Limonada, description:"Deliciosa y refrescante", price: 10 },
-  { title: "Avena", img: Avena, description:"Deliciosa y muy tradicional", price: 10 },
-  { title: "Sevillana", img: Sevillana, description:"Deliciosa y muy tradicional", price: 10 },
-];
+
+
 
 const Bebidas = () => {
+  const { t } = useTranslation(); 
+
+  const products = [
+    { title: [t("Jugo de Naranja")], img: Naranja, description:[t("DJugo de Naranja")], price: 10 },
+    { title: [t("Jugo de Zanahoria")], img: Zanahoria, description:[t("DJugo de Zanahoria")], price: 10 },
+    { title: [t("Batido Verde")], img: Verde, description: [t("DBatido Verde")], price: 10 },
+    { title: [t("Milo Frío")], img: Milo, description: [t("DMilo Frío")], price: 10 },
+    { title: [t("Americano")], img: Americano, description: [t("DAmericano")], price: 10 },
+    { title: [t("Capuccino")], img: Capu, description:[t("DCapuccino")], price: 10 },
+    { title: [t("Chocolate")], img: Choco, description:[t("DChocolate")], price: 10 },
+    { title: [t("Gaseosa")], img: Coke, description:[t("DGaseosa")], price: 10 },
+    { title: [t("Expreso")], img: Expreso, description:[t("DExpreso")], price: 10 },
+    { title: [t("Limonada")], img: Limonada, description:[t("DLimonada")], price: 10 },
+    { title: [t("Avena")], img: Avena, description: [t("DAvena")], price: 10 },
+    { title: [t("Sevillana")], img: Sevillana, description:[t("DSevillana")], price: 10 },
+  ];
+  
   const [cart, setCart] = useState([]);
   const [quantities, setQuantities] = useState(Array(products.length).fill(0));
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -120,7 +125,7 @@ const Bebidas = () => {
           <Row justify="center" align="middle" style={{ marginTop: "30px", height: "150px" }}>
             <Col span={16}>
               <div style={cajaDecoracion}>
-                <span style={texto}>BEBIDAS</span>
+                <span style={texto}>{t("BEBIDAS")}</span>
               </div>
             </Col>
           </Row>
@@ -169,7 +174,7 @@ const Bebidas = () => {
                             className="add-to-cart"
                             onClick={(e) => addToCartHandler(i * 4 + index, e)}
                           >
-                            Agregar
+                            {t("Agregar")}
                           </button>
                         </div>
                       </div>
@@ -188,14 +193,14 @@ const Bebidas = () => {
         onCancel={handleCloseModal}
         footer={[
           <Button key="back" onClick={handleCloseModal}>
-            Cerrar
+            {t("Cerrar")}
           </Button>,
         ]}
         width={500}
         style={{ top: 20 }}
       >
         {cart.length === 0 ? (
-          <p>El carrito está vacío.</p>
+          <p>{t("El carrito está vacío.")}</p>
         ) : (
           <div>
             {cart.map((item, index) => (

@@ -14,6 +14,8 @@ import SanPollo from "../img/SanPollo.webp";
 import Tamal from "../img/Tamal.webp";
 import Fruta from "../img/Fruta.webp";
 import FondoDes from "../img/FondoDes.webp";
+import { useTranslation } from "react-i18next";
+
 
 const cajaDecoracion = {
   display: "flex",
@@ -61,22 +63,26 @@ const contenido = {
 
 const { Content } = Layout;
 
-const products = [
-  { title: "Huevos Pericos", img: Pericos, description: "Huevos con Cebolla y Tomate", price: 10 },
-  { title: "Huevos Rancheros", img: Rancheros, description: "Huevos batidos con Salchicha", price: 10 },
-  { title: "Omelette de Pollo", img: OmelettePollo, description: "Delicioso Omelette con Pollo", price: 10 },
-  { title: "Omelette Ranchero", img: OmeletteRanch, description: "Delicioso Omelette con Jamón y Queso", price: 10 },
-  { title: "Calentado", img: Calentado, description: "Calentado de Arroz con Frijoles", price: 10 },
-  { title: "Crepe de Pollo", img: CrepePollo, description: "Tortilla Delgada de Trigo con Pollo", price: 10 },
-  { title: "Waffles de Buñuelo", img: Waffle, description: "Deliciosos Waffles de Mezcla de Buñuelos", price: 10 },
-  { title: "Tostadas Francesas", img: TostadasFra, description: "Pan Dorado con Miel y Frutas", price: 10 },
-  { title: "Carne al Bistec", img: Bistec, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Sandwich de Pollo", img: SanPollo, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Tamal", img: Tamal, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Ensalada de Frutas", img: Fruta, description: "Delicioso y recién horneado", price: 10 },
-];
+
 
 const Desayunos = () => {
+  const { t } = useTranslation(); 
+
+  const products = [
+    { title: [t("Huevos Pericos")], img: Pericos, description: [t("DHuevos Pericos")], price: 10 },
+    { title: [t("Huevos Rancheros")], img: Rancheros, description: [t("DHuevos Rancheros")], price: 10 },
+    { title: [t("Omelette de Pollo")], img: OmelettePollo, description: [t("DOmelette de Pollo")], price: 10 },
+    { title: [t("Omelette Ranchero")], img: OmeletteRanch, description: [t("DOmelette Ranchero")], price: 10 },
+    { title: [t("Calentado")], img: Calentado, description: [t("DCalentado")], price: 10 },
+    { title: [t("Crepe de Pollo")], img: CrepePollo, description: [t("DCrepe de Pollo")], price: 10 },
+    { title: [t("Waffles de Buñuelo")], img: Waffle, description: [t("DWaffles de Buñuelo")], price: 10 },
+    { title: [t("Tostadas Francesas")], img: TostadasFra, description: [t("DTostadas Francesas")], price: 10 },
+    { title: [t("Carne al Bistec")], img: Bistec, description: [t("DCarne al Bistec")], price: 10 },
+    { title: [t("Sandwich de Pollo")], img: SanPollo, description: [t("DSandwich de Pollo")], price: 10 },
+    { title: [t("Tamal")], img: Tamal, description: [t("DTamal")], price: 10 },
+    { title: [t("Ensalada de Frutas")], img: Fruta, description: [t("DEnsalada de Frutas")], price: 10 },
+  ];
+
   const [isFlipped, setIsFlipped] = useState(Array(products.length).fill(false));
   const [quantities, setQuantities] = useState(Array(products.length).fill(0));
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -119,7 +125,7 @@ const Desayunos = () => {
           <Row justify="center" align="middle" style={{ marginTop: "30px", height: "150px" }}>
             <Col span={16}>
               <div style={cajaDecoracion}>
-                <span style={texto}>DESAYUNOS</span>
+                <span style={texto}>{t("DESAYUNOS")}</span>
               </div>
             </Col>
           </Row>
@@ -176,7 +182,7 @@ const Desayunos = () => {
                               addToCartHandler(i * 4 + index, e);
                             }}
                           >
-                            Agregar
+                            {t("Agregar")}
                           </button>
                         </div>
                       </div>
@@ -196,14 +202,14 @@ const Desayunos = () => {
         onCancel={handleCloseModal}
         footer={[
           <Button key="back" onClick={handleCloseModal}>
-            Cerrar
+            {t("Cerrar")}
           </Button>,
         ]}
         width={500}
         style={{ top: 20 }}
       >
         {cart.length === 0 ? (
-          <p>El carrito está vacío.</p>
+          <p>{t("El carrito está vacío.")}</p>
         ) : (
           <div>
             {cart.map((item, index) => (

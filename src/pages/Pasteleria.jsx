@@ -18,6 +18,7 @@ import EmpanadaPollo from "../img/empanadapollo.png";
 import EmpanadaCarne from "../img/empanadacarne.png";
 import TortaMilky from "../img/tortamilky.png";
 import FondoPas from "../img/FondoPas.webp";
+import { useTranslation } from "react-i18next";
 
 const cajaDecoracion = {
   display: "flex",
@@ -65,26 +66,32 @@ const contenido = {
 
 const { Content } = Layout;
 
-const products = [
-  { title: "Brazo de Reina", img: BrazoReina, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Torta de Tres Leches", img: Tresleches, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Ponqué Tradicional", img: Ponque, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Torta de Red Velvet", img: TortaRed, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Torta de Zanahoria", img: TortaZana, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Torta de Chocolate", img: TortaChoco, description: "Brownies melcochudos", price: 10 },
-  { title: "Torta de Naranja con Amapola", img: TortaAmapola, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Milhoja de Arequipe", img: Milhojas, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Cheesecake de Frutos Rojos", img: CheesecakeFrutos, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Caja Cupcakes x4", img: Cupcakes, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Torta Almojabana", img: TortaAlmojabana, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Torta Frutos Rojos", img: TortaFrutRojos, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Torta Milky Way", img: TortaMilky, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Hojaldre de Pollo", img: HojaldrePollo, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Empanada Pollo", img: EmpanadaPollo, description: "Delicioso y recién horneado", price: 10 },
-  { title: "Empanada Carne", img: EmpanadaCarne, description: "Delicioso y recién horneado", price: 10 },
-];
+
 
 const Pasteleria = () => {
+  const { t } = useTranslation(); 
+
+  const products = [
+    { title: [t("Brazo de Reina")], img: BrazoReina, description: [t("DBrazo de Reina")], price: 10 },
+    { title: [t("Torta de Tres Leches")], img: Tresleches, description: [t("DTorta de Tres Leches")], price: 10 },
+    { title: [t("Ponqué Tradicional")], img: Ponque, description: [t("DPonqué Tradicional")], price: 10 },
+    { title: [t("Torta de Red Velvet")], img: TortaRed, description: [t("DTorta de Red Velvet")], price: 10 },
+    { title: [t("Torta de Zanahoria")], img: TortaZana, description: [t("DTorta de Zanahoria")], price: 10 },
+    { title: [t("Torta de Chocolate")], img: TortaChoco, description: [t("DTorta de Chocolate")], price: 10 },
+    { title: [t("Torta de Naranja con Amapola")], img: TortaAmapola, description: [t("DTorta de Naranja con Amapola")], price: 10 },
+    { title: [t("Milhoja de Arequipe")], img: Milhojas, description: [t("DMilhoja de Arequipe")], price: 10 },
+    { title: [t("Cheesecake de Frutos Rojos")], img: CheesecakeFrutos, description: [t("DCheesecake de Frutos Rojos")], price: 10 },
+    { title: [t("Caja Cupcakes x4")], img: Cupcakes, description: [t("DCaja Cupcakes x4")], price: 10 },
+    { title: [t("Torta Almojabana")], img: TortaAlmojabana, description: [t("DTorta Almojabana")], price: 10 },
+    { title: [t("Torta Frutos Rojos")], img: TortaFrutRojos, description: [t("DTorta Frutos Rojos")], price: 10 },
+    { title: [t("Torta Milky Way")], img: TortaMilky, description: [t("DTorta Milky Way")], price: 10 },
+    { title: [t("Hojaldre de Pollo")], img: HojaldrePollo, description: [t("DHojaldre de Pollo")], price: 10 },
+    { title: [t("Empanada Pollo")], img: EmpanadaPollo, description: [t("DEmpanada Pollo")], price: 10 },
+    { title: [t("Empanada Carne")], img: EmpanadaCarne, description: [t("DEmpanada Carne")], price: 10 },
+  ];
+
+
+
   const [isFlipped, setIsFlipped] = useState(Array(products.length).fill(false));
   const [quantities, setQuantities] = useState(Array(products.length).fill(0));
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -127,7 +134,7 @@ const Pasteleria = () => {
           <Row justify="center" align="middle" style={{ marginTop: "30px", height: "150px" }}>
             <Col span={16}>
               <div style={cajaDecoracion}>
-                <span style={texto}>PASTELERÍA</span>
+                <span style={texto}>{t("PASTELERÍA")}</span>
               </div>
             </Col>
           </Row>
@@ -179,7 +186,7 @@ const Pasteleria = () => {
                             className="add-to-cart"
                             onClick={(e) => addToCartHandler(i * 4 + index, e)}
                           >
-                            Agregar
+                            {t("Agregar")}
                           </button>
                         </div>
                       </div>
@@ -197,14 +204,14 @@ const Pasteleria = () => {
         onCancel={handleCloseModal}
         footer={[
           <Button key="back" onClick={handleCloseModal}>
-            Cerrar
+            {t("Cerrar")}
           </Button>,
         ]}
         width={500}
         style={{ top: 20 }}
       >
         {cart.length === 0 ? (
-          <p>El carrito está vacío.</p>
+          <p>{t("El carrito está vacío.")}</p>
         ) : (
           <div>
             {cart.map((item, index) => (

@@ -1,20 +1,20 @@
-import "../css/main.css";
 import React, { useState } from "react";
-import { Card, Col, Layout, Row } from 'antd';
-import Naranja from '../img/Naranja.webp'
-import Zanahoria from '../img/Zanahoria.webp'
-import Verde from '../img/Verde.webp'
-import Milo from '../img/Milo.webp'
-import Americano from '../img/Americano.webp'
-import Capu from '../img/Capu.webp'
-import Choco from '../img/Choco.webp'
-import Coke from '../img/Coke.webp'
-import Expreso from '../img/Expreso.webp'
-import Limonada from '../img/Limonada.webp'
-import Avena from '../img/Avena.webp'
-import Sevillana from '../img/Sevillana.webp'
-import FondoBeb from '../img/FondoBeb.webp'
+import { Layout, Row, Col, Button, Modal } from 'antd';
+import Naranja from '../img/Naranja.webp';
+import Zanahoria from '../img/Zanahoria.webp';
+import Verde from '../img/Verde.webp';
+import Milo from '../img/Milo.webp';
+import Americano from '../img/Americano.webp';
+import Capu from '../img/Capu.webp';
+import Choco from '../img/Choco.webp';
+import Coke from '../img/Coke.webp';
+import Expreso from '../img/Expreso.webp';
+import Limonada from '../img/Limonada.webp';
+import Avena from '../img/Avena.webp';
+import Sevillana from '../img/Sevillana.webp';
+import FondoBeb from '../img/FondoBeb.webp';
 
+// Estilos en línea
 const cajaDecoracion = {
   display: 'flex',
   alignItems: 'center',
@@ -61,118 +61,159 @@ const contenido = {
 
 const { Content } = Layout;
 
+// Array de productos con sus imágenes y descripciones
 const products = [
-  { title: "Jugo de Naranja", img: Naranja, description:"Delicioso y refrescante"},
-  { title: "Jugo de Zanahoria", img: Zanahoria, description:"Delicioso y saludable" },
-  { title: "Batido Verde", img: Verde, description:"Saludable y fresco" },
-  { title: "Milo Frío", img: Milo, description:"Delicioso y refrescante" },
-  { title: "Americano", img: Americano, description:"Delicioso y reconfortante" },
-  { title: "Capuccino", img: Capu, description:"Delicioso y reconfortante" },
-  { title: "Chocolate", img: Choco, description:"Delicioso y reconfortante" },
-  { title: "Gaseosa", img: Coke, description:"Deliciosa y refrescante" },
-  { title: "Expreso", img: Expreso, description:"Delicioso y energizante" },
-  { title: "Limonada", img: Limonada, description:"Deliciosa y refrescante" },
-  { title: "Avena", img: Avena, description:"Deliciosa y muy tradicional" },
-  { title: "Sevillana", img: Sevillana, description:"Deliciosa y muy tradicional" },
-  ];
+  { title: "Jugo de Naranja", img: Naranja, description:"Delicioso y refrescante", price: 10 },
+  { title: "Jugo de Zanahoria", img: Zanahoria, description:"Delicioso y saludable", price: 10 },
+  { title: "Batido Verde", img: Verde, description:"Saludable y fresco", price: 10 },
+  { title: "Milo Frío", img: Milo, description:"Delicioso y refrescante", price: 10 },
+  { title: "Americano", img: Americano, description:"Delicioso y reconfortante", price: 10 },
+  { title: "Capuccino", img: Capu, description:"Delicioso y reconfortante", price: 10 },
+  { title: "Chocolate", img: Choco, description:"Delicioso y reconfortante", price: 10 },
+  { title: "Gaseosa", img: Coke, description:"Deliciosa y refrescante", price: 10 },
+  { title: "Expreso", img: Expreso, description:"Delicioso y energizante", price: 10 },
+  { title: "Limonada", img: Limonada, description:"Deliciosa y refrescante", price: 10 },
+  { title: "Avena", img: Avena, description:"Deliciosa y muy tradicional", price: 10 },
+  { title: "Sevillana", img: Sevillana, description:"Deliciosa y muy tradicional", price: 10 },
+];
 
-  const Bebidas = ({ addToCart }) => {
-    const [isFlipped, setIsFlipped] = useState(Array(products.length).fill(false));
-    const [quantities, setQuantities] = useState(Array(products.length).fill(0));
-  
-    const handleCardClick = (index) => {
-      setIsFlipped((prevFlipped) => {
-        const newFlipped = [...prevFlipped];
-        newFlipped[index] = !newFlipped[index];
-        return newFlipped;
-      });
-    };
-  
-    const handleQuantityChange = (index, change, event) => {
-      event.stopPropagation();
-      const newQuantities = [...quantities];
-      newQuantities[index] = Math.max(newQuantities[index] + change, 0);
-      setQuantities(newQuantities);
-    };
-  
-    const addToCartHandler = (index, event) => {
-      event.stopPropagation();
-      if (quantities[index] > 0) {
-        addToCart(products[index], quantities[index]);
-        setQuantities([...quantities.slice(0, index), 0, ...quantities.slice(index + 1)]);
-      }
-    };
-  
-    return (
-      <Layout style={{ minHeight: '100vh' }}>
-        <Content style={fondoPagina}>
-          <div style={fondoImagen}></div>
-          <div style={contenido}>
-            <Row justify="center" align="middle" style={{ marginTop: "30px", height: "150px" }}>
-              <Col span={16}>
-                <div style={cajaDecoracion}>
-                  <span style={texto}>BEBIDAS</span>
-                </div>
-              </Col>
-            </Row>
-            {Array.from({ length: Math.ceil(products.length / 4) }, (_, i) => (
-              <Row key={i} gutter={[16, 16]} justify="center" style={{  margin:'30px 200px' }}>
-                {products.slice(i * 4, (i + 1) * 4).map((product, index) => (
-                  <Col key={index} span={6}>
-                    <div
-                      className={`custom-card ${isFlipped[i * 4 + index] ? "flipped" : ""}`}
-                      onClick={() => handleCardClick(i * 4 + index)}
-                      style={{ marginBottom: '20px' }}
-                    >
-                      <div className="card-inner">
-                        <div className="card-front">
-                          <div className="card-header">
-                            <div className="card-image-wrapper">
-                              <img src={product.img} alt={product.title} className="card-image" />
-                            </div>
+const Bebidas = () => {
+  const [cart, setCart] = useState([]);
+  const [quantities, setQuantities] = useState(Array(products.length).fill(0));
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(Array(products.length).fill(false));
+
+  const handleQuantityChange = (index, change, event) => {
+    event.stopPropagation();
+    const newQuantities = [...quantities];
+    newQuantities[index] = Math.max(newQuantities[index] + change, 0);
+    setQuantities(newQuantities);
+  };
+
+  const addToCartHandler = (index, event) => {
+    event.stopPropagation();
+    if (quantities[index] > 0) {
+      const newItem = { ...products[index], quantity: quantities[index] };
+      setCart((prevCart) => [...prevCart, newItem]);
+      setQuantities([...quantities.slice(0, index), 0, ...quantities.slice(index + 1)]);
+      setIsModalVisible(true);  // Mostrar modal del carrito al agregar un producto
+    }
+  };
+
+  const handleCardClick = (index) => {
+    setIsFlipped((prevFlipped) => {
+      const newFlipped = [...prevFlipped];
+      newFlipped[index] = !newFlipped[index];
+      return newFlipped;
+    });
+  };
+
+  const handleCloseModal = () => {
+    setIsModalVisible(false);
+  };
+
+  return (
+    <Layout style={{ minHeight: '100vh' }}>
+      <Content style={fondoPagina}>
+        <div style={fondoImagen}></div>
+        <div style={contenido}>
+          <Row justify="center" align="middle" style={{ marginTop: "30px", height: "150px" }}>
+            <Col span={16}>
+              <div style={cajaDecoracion}>
+                <span style={texto}>BEBIDAS</span>
+              </div>
+            </Col>
+          </Row>
+          {Array.from({ length: Math.ceil(products.length / 4) }, (_, i) => (
+            <Row key={i} gutter={[16, 16]} justify="center" style={{ margin:'30px 200px' }}>
+              {products.slice(i * 4, (i + 1) * 4).map((product, index) => (
+                <Col key={index} span={6}>
+                  <div
+                    className={`custom-card ${isFlipped[i * 4 + index] ? "flipped" : ""}`}
+                    onClick={() => handleCardClick(i * 4 + index)}  // Al hacer clic en la tarjeta, se voltea
+                    style={{ marginBottom: '20px' }}
+                  >
+                    <div className="card-inner">
+                      <div className="card-front">
+                        <div className="card-header">
+                          <div className="card-image-wrapper">
+                            <img src={product.img} alt={product.title} className="card-image" />
                           </div>
-                          <h3 style={{ padding: '15px', fontWeight: 900 }}>{product.title}</h3>
                         </div>
-                        <div className="card-back">
-                          <div className="background-image" style={{ backgroundImage: `url(${product.img})` }} />
-                          <div className="card-content">
-                            <h3 className="product-name">{product.title}</h3>
-                            <p>{product.description}</p>
-                            <div className="quantity-controls">
-                              <div className="arrow-buttons">
-                                <button
-                                  className="quantity-button up"
-                                  onClick={(e) => handleQuantityChange(i * 4 + index, 1, e)}
-                                >
-                                  ▲
-                                </button>
-                                <button
-                                  className="quantity-button down"
-                                  onClick={(e) => handleQuantityChange(i * 4 + index, -1, e)}
-                                >
-                                  ▼
-                                </button>
-                              </div>
-                              <span className="quantity">{quantities[i * 4 + index]}</span>
+                        <h3 style={{ padding: '15px', fontWeight: 900 }}>{product.title}</h3>
+                      </div>
+                      <div className="card-back">
+                        <div className="background-image" style={{ backgroundImage: `url(${product.img})` }} />
+                        <div className="card-content">
+                          <h3 className="product-name">{product.title}</h3>
+                          <p>{product.description}</p>
+                          <p><strong>${product.price}</strong></p>
+                          <div className="quantity-controls">
+                            <div className="arrow-buttons">
+                              <button
+                                className="quantity-button up"
+                                onClick={(e) => handleQuantityChange(i * 4 + index, 1, e)}
+                              >
+                                ▲
+                              </button>
+                              <button
+                                className="quantity-button down"
+                                onClick={(e) => handleQuantityChange(i * 4 + index, -1, e)}
+                              >
+                                ▼
+                              </button>
                             </div>
-                            <button
-                              className="add-to-cart"
-                              onClick={(e) => { e.stopPropagation(); addToCartHandler(i * 4 + index, e); }}
-                            >
-                              Agregar
-                            </button>
+                            <span className="quantity">{quantities[i * 4 + index]}</span>
                           </div>
+                          <button
+                            className="add-to-cart"
+                            onClick={(e) => addToCartHandler(i * 4 + index, e)}
+                          >
+                            Agregar
+                          </button>
                         </div>
                       </div>
                     </div>
-                  </Col>
-                ))}
-              </Row>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          ))}
+        </div>
+
+        {/* Modal con carrito */}
+              <Modal
+        title="Tu Carrito"
+        visible={isModalVisible}
+        onCancel={handleCloseModal}
+        footer={[
+          <Button key="back" onClick={handleCloseModal}>
+            Cerrar
+          </Button>,
+        ]}
+        width={500}
+        style={{ top: 20 }}
+      >
+        {cart.length === 0 ? (
+          <p>El carrito está vacío.</p>
+        ) : (
+          <div>
+            {cart.map((item, index) => (
+              <div key={index} className="carrito-item" style={{ display: 'flex', marginBottom: '15px' }}>
+                <img src={item.img} alt={item.title} style={{ width: '50px', marginRight: '10px' }} />
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{`Precio: $${item.price}`}</p>
+                  <p>{`Cantidad: ${item.quantity}`}</p>
+                </div>
+              </div>
             ))}
           </div>
-        </Content>
-      </Layout>
-    );
-  };
-  
-  export default Bebidas;
+        )}
+      </Modal>
+      </Content>
+    </Layout>
+  );
+};
+
+export default Bebidas;

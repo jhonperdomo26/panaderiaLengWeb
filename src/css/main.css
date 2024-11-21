@@ -192,6 +192,18 @@ a:hover{
 
 /* Baby Showers */
 
+.TortaBabyShower{
+  background-image: url(/src/img/TortaBabyShower.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .MacaronTonosPastel{
   background-image: url(/src/img/MacaronBabyShower.webp);
   background-size: cover;
@@ -276,7 +288,7 @@ a:hover{
   cursor: pointer;
   z-index: 1;
   width: 300px;
-  height: 440px;
+  height: 300px;
 }
 
 .custom-card:hover {

@@ -127,10 +127,10 @@ const Cumpleaños = () => (
         <Carousel arrows autoplay infinite={false} >
           <div>
             <h3 style={contentStyle}>
-              <div className='Torta3Pisos'>
+              <div className='TortaBabyShower'>
                 <div className='CajaLeft'>
-                  <span className='TextoEvento'>TORTA DE</span>
-                  <span className='TextoEvento'>BODAS</span>
+                  <span className='TextoEvento'>TORTAS PARA</span>
+                  <span className='TextoEvento'>BABY SHOWER</span>
                 </div>                
               </div>
             </h3>
@@ -182,12 +182,12 @@ const Cumpleaños = () => (
           </Col>
 
           <Col span={16}>
-            <H1>Matrimonios</H1>
+            <H1>Cumpleaños</H1>
             <P1>
-              En nuestra panadería, sabemos que el día de tu boda merece un toque de dulzura inolvidable. Ofrecemos productos únicos y personalizados, desde elegantes tortas de bodas hasta deliciosos cupcakes y postres finos, que harán de tu celebración un momento aún más especial.
+              Porque un cumpleaños no está completo sin un toque dulce, en nuestra panadería ofrecemos una variedad de opciones que harán de tu fiesta un evento memorable. Desde coloridas tortas temáticas hasta cupcakes decorados, galletas y postres que se adaptan a tus gustos y estilo.
             </P1>
             <P1>
-              Nos dedicamos a crear experiencias únicas para ti y tus seres queridos, asegurando que cada detalle esté lleno de sabor y belleza. ¡Confía en nosotros para endulzar uno de los días más importantes de tu vida!
+              Estamos aquí para ayudarte a crear momentos llenos de sabor y alegría. ¡Celebra con nosotros y déjanos endulzar tu día especial!
             </P1>
           </Col>
 

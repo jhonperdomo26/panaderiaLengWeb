@@ -1,12 +1,13 @@
 import 'antd/dist/reset.css';
 import '../css/main.css';
 import { DownOutlined } from '@ant-design/icons';
-import { Layout, Menu, Dropdown, Space } from 'antd';
+import { Layout, Menu, Dropdown, Space, Modal, Button } from 'antd';
 import { Link } from 'react-router-dom';
 import LogoSimple from '../img/LogoSimple.webp';
 import styled from '@emotion/styled';
 import { useTranslation } from "react-i18next";
 import shoppingcart from '../img/shoppingcart.png';
+import { useState } from 'react';  // Asegúrate de importar useState
 
 const Imagen = styled.img`
   display: block;
@@ -20,6 +21,8 @@ const { Header } = Layout;
 
 const Cabecera = () => {
   const { t, i18n } = useTranslation();
+  const [isModalVisible, setIsModalVisible] = useState(false); // Estado para controlar la visibilidad del modal
+  const [cartItems, setCartItems] = useState([]); // Este estado almacena los productos en el carrito
 
   const items = [
     {
@@ -56,6 +59,47 @@ const Cabecera = () => {
     </Menu>
   );
 
+  // Función para abrir el modal del carrito
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  // Función para cerrar el modal del carrito
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
+  // Este componente modal mostrará los productos del carrito
+  const CartModal = () => (
+    <Modal
+      title="Tu Carrito"
+      visible={isModalVisible}
+      onCancel={handleCancel}
+      footer={[
+        <Button key="back" onClick={handleCancel}>
+          Cerrar
+        </Button>,
+      ]}
+    >
+      {cartItems.length === 0 ? (
+        <p>El carrito está vacío.</p>
+      ) : (
+        <div>
+          {cartItems.map((item, index) => (
+            <div key={index} style={{ display: 'flex', marginBottom: '15px' }}>
+              <img src={item.img} alt={item.title} style={{ width: '50px', marginRight: '10px' }} />
+              <div>
+                <h3>{item.title}</h3>
+                <p>{`Cantidad: ${item.quantity}`}</p>
+                <p>{`Precio: $${item.price}`}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </Modal>
+  );
+
   return (
     <Layout>
       <Header className="Cabeza" style={{ backgroundColor: '#f0ca83', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -68,7 +112,7 @@ const Cabecera = () => {
               {i18n.language === 'es' && 'ES'}
               {i18n.language === 'en' && 'EN'}
               {i18n.language === 'fr' && 'FR'}
-              <DownOutlined style={{ fontSize: '15px' }}/>
+              <DownOutlined style={{ fontSize: '15px' }} />
             </Space>
           </Dropdown>
         </div>
@@ -94,7 +138,7 @@ const Cabecera = () => {
                 <a onClick={(e) => e.preventDefault()}>
                   <Space style={{ color: '#541e12' }}>
                     {t("Menú")}
-                    <DownOutlined style={{ fontSize: '15px' }}/>
+                    <DownOutlined style={{ fontSize: '15px' }} />
                   </Space>
                 </a>
               </Dropdown>
@@ -113,17 +157,21 @@ const Cabecera = () => {
             </Menu.Item>
 
             <Menu.Item key="6">
-              <Link to="/carrito" style={{ marginLeft: '20px', verticalAlign: 'middle' }}>
+              <div style={{ marginLeft: '20px', verticalAlign: 'middle' }} onClick={showModal}>
                 <img src={shoppingcart} alt="Carrito" style={{ width: '23px', height: '23px' }} />
-              </Link>
+              </div>
             </Menu.Item>
           </Menu>
         </div>
       </Header>
+
+      {/* Modal del carrito */}
+      <CartModal />
     </Layout>
   );
 };
 
 export default Cabecera;
+
 
 

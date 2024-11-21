@@ -1,6 +1,6 @@
 import "../css/main.css";
+import { Layout, Row, Col, Modal, Button } from "antd";
 import React, { useState } from "react";
-import { Col, Layout, Row } from 'antd';
 import Croissant from '../img/croissant.png';
 import PanQue from '../img/pandequeso.png';
 import Brownie from '../img/brownie.png';
@@ -73,27 +73,29 @@ const styleIcono = {
 const { Content } = Layout;
 
 const products = [
-  { title: "Croissant", img: Croissant, description: "Pan hojaldrado con jamón y queso" },
-  { title: "Pan Brioche Dulce", img: PanBrioche, description: "Pan suave y ligeramente dulce" },
-  { title: "Pan de Queso", img: PanQue, description: "Pan relleno de queso" },
-  { title: "Pan Galleta", img: PanGalleta, description: "Pan con cubierta dulce y crujiente" },
-  { title: "Cucas", img: Cucas, description: "Deliciosas cucas huilenses" },
-  { title: "Caña", img: Cañas, description: "Pan dulce con un toque de azúcar" },
-  { title: "Panzerotti", img: Panzerotti, description: "Pan crujiente relleno de queso" },
-  { title: "Pan de Masa Madre", img: PanMasaMadre, description: "Pan artesanal de levadura natural" },
-  { title: "Pan Hawaiano", img: PanHawaiano, description: "Pan relleno de queso y piña" },
-  { title: "Pandebono", img: Pandebono, description: "Hecho con queso, yuca y harina de maíz" },
-  { title: "Almojabana", img: Almojabanas, description: "Hecha con queso y almidón de yuca" },
-  { title: "Mogolla", img: Mogollas, description: "Pan dulce y esponjoso con bocadillo" },
-  { title: "Pan aliñado", img: PanAliñado, description: "Preparado con aceite, ajo y especias" },
-  { title: "Mojicón con Queso", img: MojiconQueso, description: "Pan dulce relleno de queso" },
-  { title: "Brownie", img: Brownie, description: "Crujiente por fuera y suave por dentro." },
-  { title: "Pan Batido", img: PanBatido, description: "Delicioso y recién horneado" },
+  { title: "Croissant", img: Croissant, description: "Pan hojaldrado con jamón y queso", price: 10 },
+  { title: "Pan Brioche Dulce", img: PanBrioche, description: "Pan suave y ligeramente dulce", price: 10 },
+  { title: "Pan de Queso", img: PanQue, description: "Pan relleno de queso", price: 10 },
+  { title: "Pan Galleta", img: PanGalleta, description: "Pan con cubierta dulce y crujiente", price: 10 },
+  { title: "Cucas", img: Cucas, description: "Deliciosas cucas huilenses", price: 10 },
+  { title: "Caña", img: Cañas, description: "Pan dulce con un toque de azúcar", price: 10 },
+  { title: "Panzerotti", img: Panzerotti, description: "Pan crujiente relleno de queso", price: 10 },
+  { title: "Pan de Masa Madre", img: PanMasaMadre, description: "Pan artesanal de levadura natural", price: 10 },
+  { title: "Pan Hawaiano", img: PanHawaiano, description: "Pan relleno de queso y piña", price: 10 },
+  { title: "Pandebono", img: Pandebono, description: "Hecho con queso, yuca y harina de maíz", price: 10 },
+  { title: "Almojabana", img: Almojabanas, description: "Hecha con queso y almidón de yuca", price: 10 },
+  { title: "Mogolla", img: Mogollas, description: "Pan dulce y esponjoso con bocadillo", price: 10 },
+  { title: "Pan aliñado", img: PanAliñado, description: "Preparado con aceite, ajo y especias", price: 10 },
+  { title: "Mojicón con Queso", img: MojiconQueso, description: "Pan dulce relleno de queso", price: 10 },
+  { title: "Brownie", img: Brownie, description: "Crujiente por fuera y suave por dentro.", price: 10 },
+  { title: "Pan Batido", img: PanBatido, description: "Delicioso y recién horneado", price: 10 },
 ];
 
-const Panaderia = ({ addToCart }) => {
+const Panaderia = () => {
   const [isFlipped, setIsFlipped] = useState(Array(products.length).fill(false));
   const [quantities, setQuantities] = useState(Array(products.length).fill(0));
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [cart, setCart] = useState([]);
 
   const handleCardClick = (index) => {
     setIsFlipped((prevFlipped) => {
@@ -113,9 +115,15 @@ const Panaderia = ({ addToCart }) => {
   const addToCartHandler = (index, event) => {
     event.stopPropagation();
     if (quantities[index] > 0) {
-      addToCart(products[index], quantities[index]);
+      const newItem = { ...products[index], quantity: quantities[index] };
+      setCart((prevCart) => [...prevCart, newItem]);
       setQuantities([...quantities.slice(0, index), 0, ...quantities.slice(index + 1)]);
+      setIsModalVisible(true); // Mostrar el modal al agregar el producto
     }
+  };
+
+  const handleCloseModal = () => {
+    setIsModalVisible(false);
   };
 
   return (
@@ -153,6 +161,7 @@ const Panaderia = ({ addToCart }) => {
                         <div className="card-content">
                           <h3 className="product-name">{product.title}</h3>
                           <p>{product.description}</p>
+                          <p><strong>${product.price}</strong></p>
                           <div className="quantity-controls">
                             <div className="arrow-buttons">
                               <button
@@ -185,6 +194,36 @@ const Panaderia = ({ addToCart }) => {
             </Row>
           ))}
         </div>
+        {/* Modal para mostrar el carrito */}
+      <Modal
+        title="Tu Carrito"
+        visible={isModalVisible}
+        onCancel={handleCloseModal}
+        footer={[
+          <Button key="back" onClick={handleCloseModal}>
+            Cerrar
+          </Button>,
+        ]}
+        width={500}
+        style={{ top: 20 }}
+      >
+        {cart.length === 0 ? (
+          <p>El carrito está vacío.</p>
+        ) : (
+          <div>
+            {cart.map((item, index) => (
+              <div key={index} className="carrito-item" style={{ display: "flex", marginBottom: "15px" }}>
+                <img src={item.img} alt={item.title} style={{ width: "50px", marginRight: "10px" }} />
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{`Precio: $${item.price}`}</p>
+                  <p>{`Cantidad: ${item.quantity}`}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </Modal>
       </Content>
     </Layout>
   );

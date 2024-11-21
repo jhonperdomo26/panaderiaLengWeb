@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../css/main.css";
-import { Layout, Row, Col } from "antd"; 
+import { Layout, Row, Col, Modal, Button } from "antd"; 
 import Yaguara from '../img/Yaguara.webp'
 import Cumple from '../img/Cumple.webp'
 import Opita from '../img/Opita.webp'
@@ -54,15 +54,17 @@ const contenido = {
 const { Content } = Layout;
 
 const products = [
-  { title: "Combo Yaguareño", img: Yaguara, description: "Tamal acompañado de quesillo y chocolate" },
-  { title: "Delicombo el Opita", img: Opita, description: "Almojabana acompañada con chocolate" },
-  { title: "Combo Cumpleañero", img: Cumple, description: "Torta de chocolate con gaseosa 1.25lts" },
-  { title: "Desayuno Sorpresa", img: Sorpresa, description: "Desayuno para Celebrar tus fechas especiales" },
+  { title: "Combo Yaguareño", img: Yaguara, description: "Tamal acompañado de quesillo y chocolate", price: 10 },
+  { title: "Delicombo el Opita", img: Opita, description: "Almojabana acompañada con chocolate", price: 10 },
+  { title: "Combo Cumpleañero", img: Cumple, description: "Torta de chocolate con gaseosa 1.25lts", price: 10 },
+  { title: "Desayuno Sorpresa", img: Sorpresa, description: "Desayuno para Celebrar tus fechas especiales", price: 10 },
 ];
 
 const Combos = ({ addToCart }) => {
   const [isFlipped, setIsFlipped] = useState(Array(products.length).fill(false));
   const [quantities, setQuantities] = useState(Array(products.length).fill(0));
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [cart, setCart] = useState([]);
 
   const handleCardClick = (index) => {
     setIsFlipped((prevFlipped) => {
@@ -82,9 +84,15 @@ const Combos = ({ addToCart }) => {
   const addToCartHandler = (index, event) => {
     event.stopPropagation();
     if (quantities[index] > 0) {
-      addToCart(products[index], quantities[index]);
+      const newItem = { ...products[index], quantity: quantities[index] };
+      setCart((prevCart) => [...prevCart, newItem]);
       setQuantities([...quantities.slice(0, index), 0, ...quantities.slice(index + 1)]);
+      setIsModalVisible(true); // Mostrar el modal al agregar el producto
     }
+  };
+
+  const handleCloseModal = () => {
+    setIsModalVisible(false);
   };
 
   return (
@@ -100,7 +108,7 @@ const Combos = ({ addToCart }) => {
             </Col>
           </Row>
           {Array.from({ length: Math.ceil(products.length / 4) }, (_, i) => (
-            <Row key={i} gutter={[16, 16]} justify="center" style={{  margin:'30px 200px ' }}>
+            <Row key={i} gutter={[16, 16]} justify="center" style={{ margin: '30px 200px ' }}>
               {products.slice(i * 4, (i + 1) * 4).map((product, index) => (
                 <Col key={index} span={6}>
                   <div
@@ -122,6 +130,7 @@ const Combos = ({ addToCart }) => {
                         <div className="card-content">
                           <h3 className="product-name">{product.title}</h3>
                           <p>{product.description}</p>
+                          <p><strong>${product.price}</strong></p>
                           <div className="quantity-controls">
                             <div className="arrow-buttons">
                               <button
@@ -155,10 +164,38 @@ const Combos = ({ addToCart }) => {
           ))}
         </div>
       </Content>
+
+      {/* Modal para mostrar el carrito */}
+      <Modal
+        title="Tu Carrito"
+        visible={isModalVisible}
+        onCancel={handleCloseModal}
+        footer={[
+          <Button key="back" onClick={handleCloseModal}>
+            Cerrar
+          </Button>,
+        ]}
+        width={500}
+        style={{ top: 20 }}
+      >
+        {cart.length === 0 ? (
+          <p>El carrito está vacío.</p>
+        ) : (
+          <div>
+            {cart.map((item, index) => (
+              <div key={index} className="carrito-item" style={{ display: 'flex', marginBottom: '15px' }}>
+                <img src={item.img} alt={item.title} style={{ width: '50px', marginRight: '10px' }} />
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{`Precio: $${item.price}`}</p>
+                  <p>{`Cantidad: ${item.quantity}`}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </Modal>
     </Layout>
   );
 };
-
-
 export default Combos;
-

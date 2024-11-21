@@ -67,10 +67,6 @@ const contenido = {
   padding: '20px',
 };
 
-const styleIcono = {
-  fontSize: '10px',
-  color: 'white',
-};
 
 const { Content } = Layout;
 
@@ -133,7 +129,7 @@ const Panaderia = ({ addToCart }) => {
             </Col>
           </Row>
           {Array.from({ length: Math.ceil(products.length / 4) }, (_, i) => (
-            <Row key={i} gutter={[16, 16]} justify="center" style={{ marginTop: "30px" }}>
+            <Row key={i} gutter={[16, 16]} justify="center" style={{ margin:'30px 200px ' }}>
               {products.slice(i * 4, (i + 1) * 4).map((product, index) => (
                 <Col key={index} span={6}>
                   <div

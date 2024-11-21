@@ -5,7 +5,7 @@ import Yaguara from '../img/Yaguara.webp'
 import Cumple from '../img/Cumple.webp'
 import Opita from '../img/Opita.webp'
 import Sorpresa from '../img/Sorpresa.webp'
-import FondoPan from '../img/FondoPan.webp'
+import FondoCom from '../img/FondoCom.webp'
 
 const cajaDecoracion = {
   display: 'flex',
@@ -14,29 +14,29 @@ const cajaDecoracion = {
   width: '100%',
   height: '150px',
   backgroundColor: 'rgba(114, 93, 66, 1)',
-  borderRadius: '20px'
+  borderRadius: '20px',
 };
 
 const texto = {
   fontSize: '50px',
   fontWeight: 'bold',
   color: 'white',
-  textAlign: 'center'
+  textAlign: 'center',
 };
 
 const fondoPagina = {
-  position: 'relative',           
+  position: 'relative',
   minHeight: '100vh',
   width: '100%',
-  overflow: 'hidden',            
+  overflow: 'hidden',
 };
 
 const fondoImagen = {
-  backgroundImage: `url(${FondoPan})`,
+  backgroundImage: `url(${FondoCom})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
-  opacity: 0.2,              
+  opacity: 0.2,
   position: 'absolute',
   top: 0,
   left: 0,
@@ -47,13 +47,8 @@ const fondoImagen = {
 
 const contenido = {
   position: 'relative',
-  zIndex: 2,                     // Asegura que el contenido esté encima del fondo
+  zIndex: 2,
   padding: '20px',
-};
-
-const styleIcono = {
-  fontSize: '10px',
-  color: 'white',
 };
 
 const { Content } = Layout;
@@ -72,7 +67,7 @@ const Combos = ({ addToCart }) => {
   const handleCardClick = (index) => {
     setIsFlipped((prevFlipped) => {
       const newFlipped = [...prevFlipped];
-      newFlipped[index] = !prevFlipped[index];
+      newFlipped[index] = !newFlipped[index];
       return newFlipped;
     });
   };
@@ -94,28 +89,23 @@ const Combos = ({ addToCart }) => {
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
-
       <Content style={fondoPagina}>
         <div style={fondoImagen}></div>
         <div style={contenido}>
           <Row justify="center" align="middle" style={{ marginTop: "30px", height: "150px" }}>
-              <Col span={16}>
-                  <div style={cajaDecoracion}>
-                    <span style={texto}>COMBOS</span>
-                  </div>  
-              </Col>
-          </Row>  
-
-        
-        <Row justify="center" style={{ marginTop: '20px' }}>
-          <Col span={16}>
-            <div className="custom-card-container">
-              <div className="card-grid" style={{ width: '100%' }}>
-                {products.map((product, index) => (
+            <Col span={16}>
+              <div style={cajaDecoracion}>
+                <span style={texto}>COMBOS</span>
+              </div>
+            </Col>
+          </Row>
+          {Array.from({ length: Math.ceil(products.length / 4) }, (_, i) => (
+            <Row key={i} gutter={[16, 16]} justify="center" style={{  margin:'30px 200px ' }}>
+              {products.slice(i * 4, (i + 1) * 4).map((product, index) => (
+                <Col key={index} span={6}>
                   <div
-                    key={index}
-                    className={`custom-card ${isFlipped[index] ? "flipped" : ""}`}
-                    onClick={() => handleCardClick(index)}
+                    className={`custom-card ${isFlipped[i * 4 + index] ? "flipped" : ""}`}
+                    onClick={() => handleCardClick(i * 4 + index)}
                     style={{ marginBottom: '20px' }}
                   >
                     <div className="card-inner">
@@ -136,22 +126,22 @@ const Combos = ({ addToCart }) => {
                             <div className="arrow-buttons">
                               <button
                                 className="quantity-button up"
-                                onClick={(e) => handleQuantityChange(index, 1, e)}
+                                onClick={(e) => handleQuantityChange(i * 4 + index, 1, e)}
                               >
                                 ▲
                               </button>
                               <button
                                 className="quantity-button down"
-                                onClick={(e) => handleQuantityChange(index, -1, e)}
+                                onClick={(e) => handleQuantityChange(i * 4 + index, -1, e)}
                               >
                                 ▼
                               </button>
                             </div>
-                            <span className="quantity">{quantities[index]}</span>
+                            <span className="quantity">{quantities[i * 4 + index]}</span>
                           </div>
                           <button
                             className="add-to-cart"
-                            onClick={(e) => { e.stopPropagation(); addToCartHandler(index, e); }}
+                            onClick={(e) => { e.stopPropagation(); addToCartHandler(i * 4 + index, e); }}
                           >
                             Agregar
                           </button>
@@ -159,17 +149,14 @@ const Combos = ({ addToCart }) => {
                       </div>
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          </Col>
-        </Row>
+                </Col>
+              ))}
+            </Row>
+          ))}
         </div>
       </Content>
     </Layout>
   );
 };
 
-
 export default Combos;
-

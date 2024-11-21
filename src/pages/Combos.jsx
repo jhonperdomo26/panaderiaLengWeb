@@ -7,8 +7,6 @@ import Opita from '../img/Opita.webp'
 import Sorpresa from '../img/Sorpresa.webp'
 import FondoPan from '../img/FondoPan.webp'
 
-
-
 const cajaDecoracion = {
   display: 'flex',
   alignItems: 'center',

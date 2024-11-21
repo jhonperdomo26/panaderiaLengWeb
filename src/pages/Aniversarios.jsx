@@ -182,12 +182,12 @@ const Aniversarios = () => (
           </Col>
 
           <Col span={16}>
-            <H1>Matrimonios</H1>
+            <H1>Aniversarios</H1>
             <P1>
-              En nuestra panadería, sabemos que el día de tu boda merece un toque de dulzura inolvidable. Ofrecemos productos únicos y personalizados, desde elegantes tortas de bodas hasta deliciosos cupcakes y postres finos, que harán de tu celebración un momento aún más especial.
+              Celebra el amor y los momentos compartidos con nuestras creaciones especiales para aniversarios. Desde elegantes tortas decoradas con flores hasta postres gourmet, cupcakes y más, nuestra panadería se encarga de dar ese toque dulce y sofisticado que tu celebración merece.
             </P1>
             <P1>
-              Nos dedicamos a crear experiencias únicas para ti y tus seres queridos, asegurando que cada detalle esté lleno de sabor y belleza. ¡Confía en nosotros para endulzar uno de los días más importantes de tu vida!
+              Haz de tu aniversario una ocasión inolvidable con nuestros productos únicos y personalizados, ideales para compartir con quienes más amas. ¡Endulzamos tus recuerdos!
             </P1>
           </Col>
 

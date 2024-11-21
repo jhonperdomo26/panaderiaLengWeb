@@ -92,92 +92,91 @@ const contentStyle = {
   background: '#364d79',
 };
 
-const tortasDeBoda = [
-  { title: 'Torta Clásica de Vainilla', img: TortaVanilla, description: 'Elegancia en cada bocado, decorada con flores de azúcar.' },
-  { title: 'Torta de Chocolate y Frutas', img: TortaChocolate, description: 'Una combinación exquisita de chocolate y frutos rojos.' },
-  { title: 'Torta Red Velvet', img: TortaRedVelvet, description: 'El toque perfecto de sofisticación y dulzura.' },
-  { title: 'Torta Naked Almendras', img: TortaNaked, description: 'Un diseño moderno con sabor artesanal.' },
+const tortasDeCumpleaños = [
+  { title: 'Torta Arcoíris', img: TortaVanilla, description: 'Un estallido de colores para hacer sonreír a todos.' },
+  { title: 'Torta de Chocolate', img: TortaChocolate, description: 'Pura indulgencia, perfecta para los amantes del chocolate.' },
+  { title: 'Torta de Frutas Tropicales', img: TortaRedVelvet, description: 'Refrescante y ligera, ideal para fiestas al aire libre.' },
+  { title: 'Torta Temática', img: TortaNaked, description: 'Diseñada según tus sueños, desde personajes hasta paisajes.' },
 ];
 
 const MesadePostres = [
-  { title: 'Mini Tartaletas de Frutas', img: TartaletasFrutas, description: 'Coloridas y deliciosas, perfectas para cualquier mesa.' },
-  { title: 'Macarrones Franceses', img: Macarrones, description: 'Un toque de elegancia con sabores variados.' },
-  { title: 'Brownies Gourmet', img: BrowniesGourmet, description: 'Un clásico irresistible con ingredientes premium.' },
-  { title: 'Cheesecake en Vasito', img: CheesecakeVasito, description: 'Portátiles y llenos de sabor, perfectos para tus invitados.' },
+  { title: 'Cupcakes Personalizados', img: TartaletasFrutas, description: 'Pequeñas delicias que combinan con el tema de tu fiesta.' },
+  { title: 'Galletas Decoradas', img: Macarrones, description: 'Un toque dulce y creativo que encanta a niños y adultos.' },
+  { title: 'Cake Pops de Colores', img: BrowniesGourmet, description: 'Bocados divertidos y fáciles de disfrutar.' },
+  { title: 'Gelatinas Multicolor', img: CheesecakeVasito, description: 'Llamativas y refrescantes, un clásico de los cumpleaños.' },
 ];
 
 const Bebidas = [
-  { title: 'Coctel de Champagne', img: CoctelChampagne, description: 'Elegante y burbujeante, perfecto para brindar.' },
-  { title: 'Limonada con Romero', img: LimonadaRomero, description: 'Una combinación única de frescura y aroma.' },
-  { title: 'Agua Infusionada', img: AguaInfusionada, description: 'Refrescante y decorativa, con frutas y hierbas.' },
-  { title: 'Mojito Sin Alcohol', img: MojitoSinAlcohol, description: 'Fresco y cítrico, ideal para todos los invitados.' },
+  { title: 'Batidos de Sabores', img: CoctelChampagne, description: 'Frutales y cremosos, perfectos para cualquier edad.' },
+  { title: 'Limonada Azul', img: LimonadaRomero, description: 'Un toque especial y vibrante para la fiesta.' },
+  { title: 'Chocolatada Fría', img: AguaInfusionada, description: 'Un favorito para los más pequeños.' },
+  { title: 'Sodas Artesanales', img: MojitoSinAlcohol, description: 'Burbujeantes y coloridas, ideales para brindar.' },
 ];
 
 const Bocadillos = [
-  { title: 'Mini Quiches', img: MiniQuiches, description: 'Sabores variados, perfectos como entradas.' },
-  { title: 'Empanaditas Gourmet', img: Empanaditas, description: 'Crocantes y rellenas de ingredientes frescos.' },
-  { title: 'Canapés de Salmón', img: CanapesSalmon, description: 'Un toque de lujo en cada bocado.' },
-  { title: 'Rollitos Jamón y Queso', img: RollitosJamon, description: 'Clásicos y deliciosos, amados por todos.' },
+  { title: 'Mini Hamburguesas', img: MiniQuiches, description: 'Diversión en tamaño pequeño, irresistibles para todos.' },
+  { title: 'Hot Dogs Miniatura', img: Empanaditas, description: 'Un clásico que nunca pasa de moda.' },
+  { title: 'Palomitas Saborizadas', img: CanapesSalmon, description: 'Crocantes y coloridas, el snack perfecto.' },
+  { title: 'Mini Pizzas', img: RollitosJamon, description: 'Pequeñas y sabrosas, hechas para compartir.' },
 ];
-
 
 const Cumpleaños = () => (
   <>
 
     <Layout>
       <Content className='FondoPan'>
-        <Carousel arrows autoplay infinite={false} >
-          <div>
-            <h3 style={contentStyle}>
-              <div className='TortaBabyShower'>
-                <div className='CajaLeft'>
-                  <span className='TextoEvento'>TORTAS PARA</span>
-                  <span className='TextoEvento'>BABY SHOWER</span>
-                </div>                
+      <Carousel arrows autoplay infinite={false}>
+        <div>
+          <h3 style={contentStyle}>
+            <div className='TortaCumpleaños'>
+              <div className='CajaLeft'>
+                <span className='TextoEvento'>TORTAS</span>
+                <span className='TextoEvento'>DE CUMPLEAÑOS</span>
               </div>
-            </h3>
-          </div>
-          <div>
-            <h3 style={contentStyle}>
-              <div className='CupcakesDecorados'>
-                <div className='CajaRight'>
-                  <span className='TextoEvento'>CUPCAKES</span>
-                  <span className='TextoEvento'>DECORADOS</span>
-                </div>                
+            </div>
+          </h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>
+            <div className='CupcakesColoridos'>
+              <div className='CajaRight'>
+                <span className='TextoEvento'>CUPCAKES</span>
+                <span className='TextoEvento'>COLORIDOS</span>
               </div>
-            </h3>
-          </div>
-          <div>
-            <h3 style={contentStyle}>
-              <div className='PostresGourmet'>
-                <div className='CajaLeft'>
-                  <span className='TextoEvento'>POSTRES</span>
-                  <span className='TextoEvento'>GOURMET</span>
-                </div>                
+            </div>
+          </h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>
+            <div className='SnacksDivertidos'>
+              <div className='CajaLeft'>
+                <span className='TextoEvento'>SNACKS</span>
+                <span className='TextoEvento'>DIVERTIDOS</span>
               </div>
-            </h3>
-          </div>
-          <div>
-            <h3 style={contentStyle}>
-              <div className='GalletasPersonalizadas'>
-                <div className='CajaRight'>
-                  <span className='TextoEvento'>GALLETAS</span>
-                  <span className='TextoEvento'>PERSONALIZADAS</span>
-                </div>
+            </div>
+          </h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>
+            <div className='GalletasFiesta'>
+              <div className='CajaRight'>
+                <span className='TextoEvento'>GALLETAS</span>
+                <span className='TextoEvento'>TEMÁTICAS</span>
               </div>
-            </h3>
-          </div>
-          <div>
-            <h3 style={contentStyle}>
-              <div className='MesaPostres'>
-                <div className='CajaLeft'>
-                  <span className='TextoEvento'>MESA DE</span>
-                  <span className='TextoEvento'>POSTRES</span>
-                </div>
+            </div>
+          </h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>
+            <div className='MesaCumpleaños'>
+              <div className='CajaLeft'>
+                <span className='TextoEvento'>MESA DE</span>
+                <span className='TextoEvento'>CUMPLEAÑOS</span>
               </div>
-            </h3>
-          </div>        
-        </Carousel>
+            </div>
+          </h3>
+        </div>
+      </Carousel>
 
         <Row style={{ margin: '5px 0px' }}>
           <Col span={4}>
@@ -214,16 +213,16 @@ const Cumpleaños = () => (
           </Col>
 
           <Col span={16}>
-            <H2>Tortas de Boda</H2>
+            <H2>Tortas de Cumpleaños</H2>
             <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
-                  {tortasDeBoda.slice(0, 4).map((tortasDeBoda, index) => (
+                  {tortasDeCumpleaños.slice(0, 4).map((tortasDeCumpleaños, index) => (
                     <Col span={6} key={index}>
                       <Card
                         hoverable
-                        cover={<img alt={tortasDeBoda.title} src={tortasDeBoda.img} style={{ width: '100%', height: '275px' }}/>}
+                        cover={<img alt={tortasDeCumpleaños.title} src={tortasDeCumpleaños.img} style={{ width: '100%', height: '275px' }}/>}
                       >
-                        <Card.Meta title={tortasDeBoda.title} description={tortasDeBoda.description} style={{ width: '100%', height: '100px'}}/>
+                        <Card.Meta title={tortasDeCumpleaños.title} description={tortasDeCumpleaños.description} style={{ width: '100%', height: '100px'}}/>
                       </Card>
                     </Col>
                   ))}

@@ -6,6 +6,10 @@
 
     "greeting": "Ubicaciones de nuestras panaderias ingles",
     "prueva": "cumpleaños ingles",
+    "Agregar":"Add",
+    "El carrito está vacío.": "The cart is empty.",
+    "Cerrar":"Close",
+    
     
 
     "Inicio":"inicio",
@@ -22,10 +26,133 @@
 
 
     "Menú": "Menu",
+
+
+
     "Panadería": "baker's",
+    "PANADERÍA": "BAKER'S",
+    "DCroissant":"Puff pastry bread with ham and cheese",
+    "Pan Brioche Dulce":"Sweet Brioche Bread",
+    "DPan Brioche Dulce":"Soft and slightly sweet bread",
+    "DPan de Queso":"Cheese-filled bread",
+    "Pan Galleta":"Bread Cookie",
+    "DPan Galleta":"Bread with a sweet and crunchy topping",
+    "Cucas":"Cucas",
+    "DCucas":"Delicious cucas from Huila",
+    "Caña":"Caña",
+    "DCaña":"Sweet bread with a touch of sugar",
+    "Panzerotti":"Panzerotti",
+    "DPanzerotti":"Crispy bread filled with cheese",
+    "Pan de Masa Madre":"Sourdough Bread",
+    "DPan de Masa Madre":"Artisanal bread made with natural yeast",
+    "Pan Hawaiano":"Hawaiian Bread",
+    "DPan Hawaiano":"Bread filled with cheese and pineapple",
+    "Pandebono":"Pandebono",
+    "DPandebono":"Made with cheese, yuca and corn flour",
+    "Almojabana":"Almojabana",
+    "DAlmojabana":"Made with cheese and cassava starch",
+    "Mogolla":"Mogolla",
+    "DMogolla":"Sweet and fluffy bread with sandwich",
+    "Pan aliñado":"Seasoned bread",
+    "DPan aliñado":"Prepared with oil, garlic and spices",
+    "Mojicón con Queso": "Mojicon with Cheese",
+    "DMojicón con Queso": "Sweet bread filled with cheese",
+    "DBrownie":"Crispy on the outside and soft on the inside.",
+    "Pan Batido":"Bread Beaten",
+    "DPan Batido":"Delicious and freshly baked",
+
+
+
+
     "Pastelería": "Bakery",
+    "PASTELERÍA": "BAKERY",
+    "Brazo de Reina":"Brazo de Reina",
+    "DBrazo de Reina":"Delicious and freshly baked",
+    "Torta de Tres Leches":"Three Milk Cake",
+    "DTorta de Tres Leches":"Delicious and freshly baked",
+    "Ponqué Tradicional":"Traditional Cake",
+    "DPonqué Tradicional":"Delicious and freshly baked",
+    "Torta de Red Velvet":"Red Velvet Cake",
+    "DTorta de Red Velvet":"Delicious and freshly bakedo",
+    "Torta de Zanahoria":"Carrot cake",
+    "DTorta de Zanahoria":"Delicious and freshly baked",
+    "DDTorta de Chocolate":"Gooey brownies",
+    "Torta de Naranja con Amapola":"Orange Poppy Seed Cake",
+    "DTorta de Naranja con Amapola":"Delicious and freshly baked",
+    "Milhoja de Arequipe":"Arequipe Mille-feuille",
+    "DMilhoja de Arequipe":"Delicious and freshly bakedo",
+    "Cheesecake de Frutos Rojos":"Red Fruit Cheesecake",
+    "DCheesecake de Frutos Rojos":"Delicious and freshly bakedo",
+    "Caja Cupcakes x4":"Cupcakes Box x4",
+    "DCaja Cupcakes x4":"Delicious and freshly baked",
+    "Torta Almojabana":"Almojabana cake",
+    "DTorta Almojabana":"Delicious and freshly baked",
+    "DTorta Frutos Rojos":"Delicious and freshly baked",
+    "Torta Milky Way":"Milky Way Cake",
+    "DTorta Milky Way":"Delicious and freshly baked",
+    "Hojaldre de Pollo":"Chicken Puff Pastry",
+    "DHojaldre de Pollo":"Delicious and freshly baked",
+    "Empanada Pollo":"Chicken empanada",
+    "DEmpanada Pollo":"Delicious and freshly baked",
+    "Empanada Carne":"Meat Pie",
+    "DEmpanada Carne":"Delicious and freshly baked",
+
+
+
     "Desayunos": "Breakfasts",
+    "DESAYUNOS": "BREAKFAST",
+    "Huevos Pericos":"Parrot Eggs",
+    "DHuevos Pericos":"Eggs with Onion and Tomato",
+    "Huevos Rancheros":"Huevos Rancheros",
+    "DHuevos Rancheros":"Beaten Eggs with Sausage",
+    "Omelette de Pollo":"Chicken Omelette",
+    "DOmelette de Pollo":"Delicious Omelette with Chicken",
+    "Omelette Ranchero":"Ranch Omelette",
+    "DOmelette Ranchero":"Delicious Omelette with Ham and Cheese",
+    "Calentado":"Calentado",
+    "DCalentado":"Calentado Rice with Beans",
+    "Crepe de Pollo":"Chicken Crepe",
+    "DCrepe de Pollo":"Thin Wheat Tortilla with Chicken",
+    "Waffles de Buñuelo":"Donut Waffles",
+    "DWaffles de Buñuelo":"Delicious Donut Mix Waffles",
+    "Tostadas Francesas":"French Toast",
+    "DTostadas Francesas":"Golden Bread with Honey and Fruit",
+    "Carne al Bistec":"Steak Meat",
+    "DCarne al Bistec":"Delicious and freshly baked",
+    "Sandwich de Pollo":"Sandwich de Pollo",
+    "DSandwich de Pollo":"Delicioso y recién horneado",
+    "Tamal":"Tamale",
+    "DTamal":"Delicious and freshly baked",
+    "Ensalada de Frutas":"Fruit Salad",
+    "DEnsalada de Frutas":"Delicious and freshly baked",
+
+
+
     "Bebidas": "Drinks",
+    "BEBIDAS":"DRINKS",
+    "Jugo de Naranja":"Orange juice",
+    "DJugo de Naranja":"Delicious and refreshing",
+    "Jugo de Zanahoria":"Carrot Juice",
+    "DJugo de Zanahoria":"Delicious and healthy",
+    "Batido Verde":"Green Smoothie",
+    "DBatido Verde":"Healthy and fresh",
+    "Milo Frío":"Milo Cold",
+    "DMilo Frío":"Delicious and refreshing",
+    "Americano":"Americano",
+    "DAmericano":"Delicious and comforting",
+    "Capuccino":"Capuccino",
+    "DCapuccino":"Delicious and comforting",
+    "DChocolate":"Delicious and comforting",
+    "Gaseosa": "Soda",
+    "DGaseosa": "Delicious and refreshing",
+    "Expreso":"Expreso",
+    "DExpreso":"Delicious and energizing",
+    "Limonada":"Lemonade",
+    "DLimonada":"Delicious and refreshing",
+    "Avena":"Oatmeal",
+    "DAvena":"Delicious and very traditional",
+    "Sevillana":"Sevillana",
+    "DSevillana":"Delicious and very traditional",
 
 
 
@@ -40,6 +167,7 @@
     "DDesayuno Sorpresa": "Breakfast to celebrate your special dates",
 
     
+
     "Nosotros": "About us",
     "TituloN1": "History and Origin",
     "PN1": "La Panadería Horneados was founded in 2019 in the city of Neiva, Huila, a place where culture and culinary tradition intertwine with the warmth of its people. The idea of ​​opening the bakery was born in the minds of Ana and Juan, a couple of young entrepreneurs who, after years of dreaming of their own business, decided to take the leap and share their love for cooking.",
@@ -59,10 +187,10 @@
     "PNV": "To become the benchmark bakery in the region, recognized for our quality, innovation and the artisanal touch of our products.",
 
 
+
     "Eventos": "Events",
     "Eventos Especiales": "Special Events",
     "DMatrimonios": "Celebrate love with our unique wedding cakes and decorations to make your special day unforgettable.",
-    "Baby Showers": "Baby Showers",
     "DBaby Showers": "Welcome your baby with an adorable and personalized dessert table, designed to fill this special moment with tenderness and flavor.",
     "Aniversarios": "Anniversaries",
     "DAniversarios": "Commemorate another year of love with a sweet and elegant celebration. Our anniversary cakes are made to reflect the story you celebrate.",
@@ -80,7 +208,7 @@
     "D2Paquete Completo":"Our team customizes each package to your needs, so you have everything you need in one place. Whether it's a wedding, birthday, baby shower or anniversary, we create a custom menu, with fresh, quality products, taking care of the presentation and flavor of each dish.",
 
 
-
+    
     "Matrimonios": "Marriages",
     "MT1I1":"CAKE OF",
     "MT1I2":"WEDDING",
@@ -124,8 +252,7 @@
     "Agua Infusionada":"Infused water",
     "DAgua Infusionada":"Refreshing and decorative, with fruits and herbs.",
     "Mojito Sin Alcohol":"Non-alcoholic Mojito",
-    "DMojito Sin Alcohol":"Fresco y cítrico, ideal para todos los invitados.",
-
+    "DMojito Sin Alcohol":"Fresh and citrusy, ideal for all guests.",
     "Bocadillos":"snacks",
     "Mini Quiches":"Mini Quiches",
     "DMini Quiches":"Varied flavors, perfect as starters.",
@@ -135,6 +262,76 @@
     "DCanapés de Salmón":"A touch of luxury in every bite.",
     "Rollitos Jamón y Queso":"Ham and Cheese Rolls",
     "DRollitos Jamón y Queso":"Classic and delicious, loved by everyone.",
+
+
+
+
+    "Baby Showers": "Baby Showers",
+    "TORTAS PARA": "CAKES FOR",
+    "BABY SHOWER": "BABY SHOWER",
+    "CUPCAKES PARA": "CUPCAKES FOR",
+    "BABY SHOWERS": "BABY SHOWERS",
+    "MACARONS EN": "MACARONI IN",
+    "TONOS PASTEL": "PASTEL TONES",
+    "GALLETAS PARA": "COOKIES FOR",
+    "MINI TARTALETAS": "MINI TARTLETS",
+    "DE FRUTA": "OF FRUIT",
+    "P1B1": "At our bakery, we understand that every baby shower is a unique time to celebrate the arrival of a new member to the family. We offer a delicious variety of personalized products, from cute themed cakes to cupcakes, cookies and desserts that will delight all your guests.",
+    "P1B2":"We take care of adding sweetness and charm to your celebration, taking care of every detail so that the event is unforgettable. Trust us to sweeten this beautiful beginning!",
+
+    "Torta Temática de Vainilla": "Vanilla Themed Cake",
+    "DTorta Temática de Vainilla": "Soft and delicious, decorated with Baby Shower motifs.",
+    "Torta de Chocolate":"Chocolate Cake",
+    "DTorta de Chocolate":"Perfect to celebrate the arrival of a child, with charming details.",
+    "Torta Rosada":"Pink Cake",
+    "DTorta Rosada":"Elegant and delicious, ideal for a feminine theme.",
+    "Torta Personalizada":"Personalized Cake",
+    "DTorta Personalizada":"A modern design that highlights the baby's name.",
+    
+    "Cupcakes Decorados":"Decorated Cupcakes",
+    "DCupcakes Decorados":"Designed with tender details in blue and pastel pink.",
+    "Galletas de Bebé":"Baby Cookies",
+    "DGalletas de Bebé":"A sweet keepsake with designs for rattles, bottles and more.",
+    "Cake Pops":"Cake Pops",
+    "DCake Pops":"Small delicacies that are easy to enjoy for both adults and children.",
+    "Mini Tartaletas de Crema":"Mini Cream Tartlets",
+    "DMini Tartaletas de Crema":"Perfect for a lovely dessert table.",
+
+    "Coctel Azul Brillante":"Bright Blue Cocktail",
+    "DCoctel Azul Brillante":"A fresh and colorful drink for the occasion.",
+    "Pink Lemonade":"Pink Lemonade",
+    "DPink Lemonade":"A refreshing pink touch, ideal for Baby Showers.",
+    "Smoothies de Frutas":"Fruit Smoothies",
+    "DSmoothies de Frutas":"Healthy and flavorful options.",
+    "Batido de Fresa y Plátano":"Strawberry Banana Smoothie",
+    "DBatido de Fresa y Plátano":"A creamy and sweet combination that everyone loves.",
+    
+    "Mini Sándwiches":"Mini Sandwiches",
+    "DMini Sándwiches":"Small and decorated, perfect for sharing.",
+    "Bocaditos de Queso y Uva":"Cheese and Grape Bites",
+    "DBocaditos de Queso y Uva":"Simple, elegant and delicious.",
+    "Brochetas de Frutas":"Fruit Smoothies",
+    "DBrochetas de Frutas":"Colorful and healthy, perfect for little guests.",
+    "Canapés Variados":"Assorted Canapes",
+    "DCanapés Variados":"Diverse flavors in charming presentations.",
+
+
+
+
+    "ANIVERSARIO":"ANNIVERSARY",
+    "TORTA DE":"CAKE OF",
+    "MACARONS":"MACARONS",
+    "DE CELEBRACIÓN":"OF CELEBRATION",
+    "ANIVERSARIOS":"ANNIVERSARIES",
+    "MINITARTAS DE":"MINI CAKES OF",
+    "FRUTAS":"FRUIT",
+    "GALLETAS":"COOKIES",
+    "DECORADAS":"DECORATED",
+    "P1A1":"Celebrate love and shared moments with our special anniversary creations. From elegant flower-decorated cakes to gourmet desserts, cupcakes and more, our bakery is here to give your celebration that sweet and sophisticated touch it deserves.",
+    "P1A2":"Make your anniversary an unforgettable occasion with our unique and personalized products, ideal for sharing with those you love the most. We sweeten your memories!",
+
+
+
 
 
 

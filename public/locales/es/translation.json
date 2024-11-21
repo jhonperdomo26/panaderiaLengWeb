@@ -6,6 +6,10 @@
 
     "greeting": "Ubicaciones de nuestras panaderias español",
     "prueva": "cumpleaños español",
+    "Agregar":"Agregar",
+    "El carrito está vacío.": "El carrito está vacío.",
+    "Cerrar":"Cerrar",
+    
 
 
     "Inicio":"inicio",
@@ -22,10 +26,133 @@
 
     
     "Menú": "Menú",
+
+
+
     "Panadería": "Panadería",
+    "PANADERÍA": "PANADERÍA",
+    "DCroissant":"Pan hojaldrado con jamón y queso",
+    "Pan Brioche Dulce":"Pan Brioche Dulce",
+    "DPan Brioche Dulce":"Pan suave y ligeramente dulce",
+    "DPan de Queso":"Pan relleno de queso",
+    "Pan Galleta":"Pan Galleta",
+    "DPan Galleta":"Pan con cubierta dulce y crujiente",
+    "Cucas":"Cucas",
+    "DCucas":"Deliciosas cucas huilenses",
+    "Caña":"Caña",
+    "DCaña":"Pan dulce con un toque de azúcar",
+    "Panzerotti":"Panzerotti",
+    "DPanzerotti":"Pan crujiente relleno de queso",
+    "Pan de Masa Madre":"Pan de Masa Madre",
+    "DPan de Masa Madre":"Pan artesanal de levadura natural",
+    "Pan Hawaiano":"Pan Hawaiano",
+    "DPan Hawaiano":"Pan relleno de queso y piña",
+    "Pandebono":"Pandebono",
+    "DPandebono":"Hecho con queso, yuca y harina de maíz",
+    "Almojabana":"Almojabana",
+    "DAlmojabana":"Hecha con queso y almidón de yuca",
+    "Mogolla":"Mogolla",
+    "DMogolla":"Pan dulce y esponjoso con bocadillo",
+    "Pan aliñado":"Pan aliñado",
+    "DPan aliñado":"Preparado con aceite, ajo y especias",
+    "Mojicón con Queso": "Mojicón con Queso",
+    "DMojicón con Queso": "Pan dulce relleno de queso",
+    "DBrownie":"Crujiente por fuera y suave por dentro.",
+    "Pan Batido":"Pan Batido",
+    "DPan Batido":"Delicioso y recién horneado",
+
+
+
+
     "Pastelería": "Pastelería",
+    "PASTELERÍA": "PASTELERÍA",
+    "Brazo de Reina":"Brazo de Reina",
+    "DBrazo de Reina":"Delicioso y recién horneado",
+    "Torta de Tres Leches":"Torta de Tres Leches",
+    "DTorta de Tres Leches":"Delicioso y recién horneado",
+    "Ponqué Tradicional":"Ponqué Tradicional",
+    "DPonqué Tradicional":"Delicioso y recién horneado",
+    "Torta de Red Velvet":"Torta de Red Velvet",
+    "DTorta de Red Velvet":"Delicioso y recién horneado",
+    "Torta de Zanahoria":"Torta de Zanahoria",
+    "DTorta de Zanahoria":"Delicioso y recién horneado",
+    "DDTorta de Chocolate":"Brownies melcochudos",
+    "Torta de Naranja con Amapola":"Torta de Naranja con Amapola",
+    "DTorta de Naranja con Amapola":"Delicioso y recién horneado",
+    "Milhoja de Arequipe":"Milhoja de Arequipe",
+    "DMilhoja de Arequipe":"Delicioso y recién horneado",
+    "Cheesecake de Frutos Rojos":"Cheesecake de Frutos Rojos",
+    "DCheesecake de Frutos Rojos":"Delicioso y recién horneado",
+    "Caja Cupcakes x4":"Caja Cupcakes x4",
+    "DCaja Cupcakes x4":"Delicioso y recién horneado",
+    "Torta Almojabana":"Torta Almojabana",
+    "DTorta Almojabana":"Delicioso y recién horneado",
+    "DTorta Frutos Rojos":"Delicioso y recién horneado",
+    "Torta Milky Way":"Torta Milky Way",
+    "DTorta Milky Way":"Delicioso y recién horneado",
+    "Hojaldre de Pollo":"Hojaldre de Pollo",
+    "DHojaldre de Pollo":"Delicioso y recién horneado",
+    "Empanada Pollo":"Empanada Pollo",
+    "DEmpanada Pollo":"Delicioso y recién horneado",
+    "Empanada Carne":"Empanada Carne",
+    "DEmpanada Carne":"Delicioso y recién horneado",
+
+
+
     "Desayunos": "Desayunos",
+    "DESAYUNOS": "DESAYUNOS",
+    "Huevos Pericos":"Huevos Pericos",
+    "DHuevos Pericos":"Huevos con Cebolla y Tomate",
+    "Huevos Rancheros":"Huevos Rancheros",
+    "DHuevos Rancheros":"Huevos batidos con Salchicha",
+    "Omelette de Pollo":"Omelette de Pollo",
+    "DOmelette de Pollo":"Delicioso Omelette con Pollo",
+    "Omelette Ranchero":"Omelette Ranchero",
+    "DOmelette Ranchero":"Delicioso Omelette con Jamón y Queso",
+    "Calentado":"Calentado",
+    "DCalentado":"Calentado de Arroz con Frijoles",
+    "Crepe de Pollo":"Crepe de Pollo",
+    "DCrepe de Pollo":"Tortilla Delgada de Trigo con Pollo",
+    "Waffles de Buñuelo":"Waffles de Buñuelo",
+    "DWaffles de Buñuelo":"Deliciosos Waffles de Mezcla de Buñuelos",
+    "Tostadas Francesas":"Tostadas Francesas",
+    "DTostadas Francesas":"Pan Dorado con Miel y Frutas",
+    "Carne al Bistec":"Carne al Bistec",
+    "DCarne al Bistec":"Delicioso y recién horneado",
+    "Sandwich de Pollo":"Sandwich de Pollo",
+    "DSandwich de Pollo":"Delicioso y recién horneado",
+    "Tamal":"Tamal",
+    "DTamal":"Delicioso y recién horneado",
+    "Ensalada de Frutas":"Ensalada de Frutas",
+    "DEnsalada de Frutas":"Delicioso y recién horneado",
+
+
+
     "Bebidas": "Bebidas",
+    "BEBIDAS":"BEBIDAS",
+    "Jugo de Naranja":"Jugo de Naranja",
+    "DJugo de Naranja":"Delicioso y refrescante",
+    "Jugo de Zanahoria":"Jugo de Zanahoria",
+    "DJugo de Zanahoria":"Delicioso y saludable",
+    "Batido Verde":"Batido Verde",
+    "DBatido Verde":"Saludable y fresco",
+    "Milo Frío":"Milo Frío",
+    "DMilo Frío":"Delicioso y refrescante",
+    "Americano":"Americano",
+    "DAmericano":"Delicioso y reconfortante",
+    "Capuccino":"Capuccino",
+    "DCapuccino":"Delicioso y reconfortante",
+    "DChocolate":"Delicioso y reconfortante",
+    "Gaseosa": "Gaseosa",
+    "DGaseosa": "Deliciosa y refrescante",
+    "Expreso":"Expreso",
+    "DExpreso":"Delicioso y energizante",
+    "Limonada":"Limonada",
+    "DLimonada":"Deliciosa y refrescante",
+    "Avena":"Avena",
+    "DAvena":"Deliciosa y muy tradicional",
+    "Sevillana":"Sevillana",
+    "DSevillana":"Deliciosa y muy tradicional",
 
 
     
@@ -38,6 +165,7 @@
     "DCombo Cumpleañero": "Torta de chocolate con gaseosa 1.25lts",
     "Desayuno Sorpresa": "Desayuno Sorpresa",
     "DDesayuno Sorpresa": "Desayuno para Celebrar tus fechas especiales",
+
 
     
     "Nosotros": "Nosotros",
@@ -57,6 +185,7 @@
     "PNM" : "Crear momentos de felicidad y sabor a través de productos artesanales elaborados con dedicación y amor.",
     "Visión": "Visión",
     "PNV": "Convertirnos en la panadería de referencia en la región, reconocida por nuestra calidad, innovación y el toque artesanal de nuestros productos.",
+
 
 
     "Eventos": "Eventos",

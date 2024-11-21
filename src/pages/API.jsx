@@ -45,7 +45,7 @@ const H1 = styled.h1`
 `;
 
 const API = () => {
-  const { t } = useTranslation();
+ const { t } = useTranslation(); 
 
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAP_API_KEY,

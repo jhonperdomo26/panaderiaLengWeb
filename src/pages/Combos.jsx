@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../css/main.css";
 import { Layout, Row, Col, Modal, Button } from "antd"; 
 import Yaguara from '../img/Yaguara.webp'
@@ -6,6 +6,8 @@ import Cumple from '../img/Cumple.webp'
 import Opita from '../img/Opita.webp'
 import Sorpresa from '../img/Sorpresa.webp'
 import FondoCom from '../img/FondoCom.webp'
+import { useTranslation } from "react-i18next";
+
 
 const cajaDecoracion = {
   display: 'flex',
@@ -53,14 +55,19 @@ const contenido = {
 
 const { Content } = Layout;
 
-const products = [
-  { title: "Combo Yaguareño", img: Yaguara, description: "Tamal acompañado de quesillo y chocolate", price: 10 },
-  { title: "Delicombo el Opita", img: Opita, description: "Almojabana acompañada con chocolate", price: 10 },
-  { title: "Combo Cumpleañero", img: Cumple, description: "Torta de chocolate con gaseosa 1.25lts", price: 10 },
-  { title: "Desayuno Sorpresa", img: Sorpresa, description: "Desayuno para Celebrar tus fechas especiales", price: 10 },
-];
+
 
 const Combos = ({ addToCart }) => {
+  const { t } = useTranslation(); 
+
+  const products = [
+    { title: [t("Combo Yaguareño")], img: Yaguara, description: [t("DCombo Yaguareño")], price: 10 },
+    { title: [t("Delicombo el Opita")], img: Opita, description: [t("DDelicombo el Opita")], price: 10 },
+    { title: [t("Combo Cumpleañero")], img: Cumple, description: [t("DCombo Cumpleañero")], price: 10 },
+    { title: [t("Desayuno Sorpresa")], img: Sorpresa, description: [t("DDesayuno Sorpresa")], price: 10 },
+  ];
+
+
   const [isFlipped, setIsFlipped] = useState(Array(products.length).fill(false));
   const [quantities, setQuantities] = useState(Array(products.length).fill(0));
   const [isModalVisible, setIsModalVisible] = useState(false);

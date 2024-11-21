@@ -72,26 +72,30 @@ const styleIcono = {
 
 const { Content } = Layout;
 
-const products = [
-  { title: "Croissant", img: Croissant, description: "Pan hojaldrado con jamón y queso", price: 10 },
-  { title: "Pan Brioche Dulce", img: PanBrioche, description: "Pan suave y ligeramente dulce", price: 10 },
-  { title: "Pan de Queso", img: PanQue, description: "Pan relleno de queso", price: 10 },
-  { title: "Pan Galleta", img: PanGalleta, description: "Pan con cubierta dulce y crujiente", price: 10 },
-  { title: "Cucas", img: Cucas, description: "Deliciosas cucas huilenses", price: 10 },
-  { title: "Caña", img: Cañas, description: "Pan dulce con un toque de azúcar", price: 10 },
-  { title: "Panzerotti", img: Panzerotti, description: "Pan crujiente relleno de queso", price: 10 },
-  { title: "Pan de Masa Madre", img: PanMasaMadre, description: "Pan artesanal de levadura natural", price: 10 },
-  { title: "Pan Hawaiano", img: PanHawaiano, description: "Pan relleno de queso y piña", price: 10 },
-  { title: "Pandebono", img: Pandebono, description: "Hecho con queso, yuca y harina de maíz", price: 10 },
-  { title: "Almojabana", img: Almojabanas, description: "Hecha con queso y almidón de yuca", price: 10 },
-  { title: "Mogolla", img: Mogollas, description: "Pan dulce y esponjoso con bocadillo", price: 10 },
-  { title: "Pan aliñado", img: PanAliñado, description: "Preparado con aceite, ajo y especias", price: 10 },
-  { title: "Mojicón con Queso", img: MojiconQueso, description: "Pan dulce relleno de queso", price: 10 },
-  { title: "Brownie", img: Brownie, description: "Crujiente por fuera y suave por dentro.", price: 10 },
-  { title: "Pan Batido", img: PanBatido, description: "Delicioso y recién horneado", price: 10 },
-];
+
 
 const Panaderia = () => {
+  const { t } = useTranslation();
+
+  const products = [
+    { title: [t("Croissant")], img: Croissant, description: [t("DCroissant")], price: 10 },
+    { title: [t("Pan Brioche Dulce")], img: PanBrioche, description: [t("DPan Brioche Dulce")], price: 10 },
+    { title: [t("Pan de Queso")], img: PanQue, description: [t("DPan de Queso")], price: 10 },
+    { title: [t("Pan Galleta")], img: PanGalleta, description: [t("DPan Galleta")], price: 10 },
+    { title: [t("Cucas")], img: Cucas, description: [t("DCucas")], price: 10 },
+    { title: [t("Caña")], img: Cañas, description: [t("DCaña")], price: 10 },
+    { title: [t("Panzerotti")], img: Panzerotti, description: [t("DPanzerotti")], price: 10 },
+    { title: [t("Pan de Masa Madre")], img: PanMasaMadre, description: [t("DPan de Masa Madre")], price: 10 },
+    { title: [t("Pan Hawaiano")], img: PanHawaiano, description: [t("DPan Hawaiano")], price: 10 },
+    { title: [t("Pandebono")], img: Pandebono, description: [t("DPandebono")], price: 10 },
+    { title: [t("Almojabana")], img: Almojabanas, description: [t("DAlmojabana")], price: 10 },
+    { title: [t("Mogolla")], img: Mogollas, description: [t("DMogolla")], price: 10 },
+    { title: [t("Pan aliñado")], img: PanAliñado, description: [t("DPan aliñado")], price: 10 },
+    { title: [t("Mojicón con Queso")], img: MojiconQueso, description: [t("DMojicón con Queso")], price: 10 },
+    { title: [t("Brownie")], img: Brownie, description: [t("DBrownie")], price: 10 },
+    { title: [t("Pan Batido")], img: PanBatido, description: [t("D  Pan Batido")], price: 10 },
+  ];
+  
   const [isFlipped, setIsFlipped] = useState(Array(products.length).fill(false));
   const [quantities, setQuantities] = useState(Array(products.length).fill(0));
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -134,7 +138,7 @@ const Panaderia = () => {
           <Row justify="center" align="middle" style={{ marginTop: "30px", height: "150px" }}>
             <Col span={16}>
               <div style={cajaDecoracion}>
-                <span style={texto}>PANADERÍA</span>
+                <span style={texto}>{t("PANADERÍA")}</span>
               </div>
             </Col>
           </Row>
@@ -183,7 +187,7 @@ const Panaderia = () => {
                             className="add-to-cart"
                             onClick={(e) => { e.stopPropagation(); addToCartHandler(i * 4 + index, e); }}
                           >
-                            Agregar
+                            {t("Agregar")}
                           </button>
                         </div>
                       </div>
@@ -201,14 +205,14 @@ const Panaderia = () => {
         onCancel={handleCloseModal}
         footer={[
           <Button key="back" onClick={handleCloseModal}>
-            Cerrar
+            {t("Cerrar")}
           </Button>,
         ]}
         width={500}
         style={{ top: 20 }}
       >
         {cart.length === 0 ? (
-          <p>El carrito está vacío.</p>
+          <p>{t("El carrito está vacío.")}</p>
         ) : (
           <div>
             {cart.map((item, index) => (

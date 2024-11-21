@@ -18,11 +18,6 @@ const Pan = styled.div`
   height: 400px;
 `
 
-const ImagenPan = styled.img`
-  width: 100%;
-  height: auto;
-`
-
 const ContenedorImagen = styled.div`
   width: 40%;
   height: 100%;
@@ -50,11 +45,6 @@ const HEventosEspeciales = styled.h1`
   font-weight: bold;
   margin: 20px;
   font-size: 26px;
-`
-
-const ContenEventos = styled.div`
-  font-size: 24px;
-  margin: 20px;
 `
 
 const HImpar = styled.h1`

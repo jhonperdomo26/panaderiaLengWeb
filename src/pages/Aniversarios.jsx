@@ -3,20 +3,20 @@ import '../css/main.css/';
 import { Carousel } from 'antd';
 import { Layout, Flex, Row, Col } from 'antd';
 import { Card } from 'antd';
-import TortaVanilla from '../img/TortaVanilla.webp';
-import TortaChocolate from '../img/tortachoco.png';
-import TortaRedVelvet from '../img/TortaRedVelvet.webp';
-import TortaNaked from '../img/TortaNaked.webp';
+import TortaAvellanas from '../img/TortaAvellanas.webp';
+import FrutosRojos from '../img/FrutosRojos.webp';
+import TortaZana from '../img/TortaZana.webp';
+import TresLeches from '../img/TresLeches.webp';
 
-import TartaletasFrutas from '../img/TartaletasFrutas.webp';
-import Macarrones from '../img/Macarrones.webp';
 import BrowniesGourmet from '../img/BrowniesGourmet.webp';
-import CheesecakeVasito from '../img/CheesecakeVasito.webp';
+import Macarrones from '../img/Macarrones.webp';
+import Maracuya from '../img/Maracuya.jpg';
+import MiniEclair from '../img/MiniEclair.webp';
 
-import CoctelChampagne from '../img/CoctelChampagne.webp';
-import LimonadaRomero from '../img/LimonadaRomero.webp';
-import AguaInfusionada from '../img/AguaInfusionada.webp';
-import MojitoSinAlcohol from '../img/MojitoSinAlcohol.webp';
+import Bellini from '../img/Bellini.webp';
+import Tefrio from '../img/Tefrio.webp';
+import Martini from '../img/Martini.webp';
+import LimonadaLavanda from '../img/LimonadaLavanda.webp';
 
 import MiniQuiches from '../img/MiniQuiches.webp';
 import Empanaditas from '../img/Empanaditas.webp';
@@ -94,37 +94,39 @@ const contentStyle = {
   background: '#364d79',
 };
 
-const tortasDeAniversario = [
-  { title: 'Torta Chocolate/Avellanas', img: TortaVanilla, description: 'Rica y cremosa, decorada con un elegante toque de avellanas.' },
-  { title: 'Torta Frutos Rojos', img: TortaChocolate, description: 'Ligera y delicada, con un diseño romántico para tu celebración.' },
-  { title: 'Torta Zanahoria Nueces', img: TortaRedVelvet, description: 'Un clásico irresistible con un sabor cálido y especiado.' },
-  { title: 'Torta de Tres Leches', img: TortaNaked, description: 'Dulce y jugosa, perfecta para disfrutar en pareja o con invitados especiales.' },
-];
 
-const MesadePostres = [
-  { title: 'Mini Tartas de Chocolate', img: TartaletasFrutas, description: 'Deliciosas y sofisticadas, ideales para complementar tu celebración.' },
-  { title: 'Macarons Personalizados', img: Macarrones, description: 'Delicados y con colores temáticos para tu aniversario.' },
-  { title: 'Cheesecake de Maracuyá', img: BrowniesGourmet, description: 'Un postre refrescante con un toque tropical.' },
-  { title: 'Mini Éclairs', img: CheesecakeVasito, description: 'Pequeñas delicias rellenas con sabores exquisitos.' },
-];
-
-const Bebidas = [
-  { title: 'Coctel Bellini', img: CoctelChampagne, description: 'Un clásico elegante para brindar por el amor.' },
-  { title: 'Té Frío de Hibisco', img: LimonadaRomero, description: 'Refrescante y con un color vibrante, ideal para celebraciones al aire libre.' },
-  { title: 'Espresso Martini', img: AguaInfusionada, description: 'Un toque de café y glamour en cada sorbo.' },
-  { title: 'Limonada de Lavanda', img: MojitoSinAlcohol, description: 'Sofisticada y aromática, perfecta para acompañar tus momentos especiales.' },
-];
-
-const Bocadillos = [
-  { title: 'Canapés Queso y Miel', img: MiniQuiches, description: 'Delicados y llenos de sabor, una opción sofisticada.' },
-  { title: 'Brochetas Caprese', img: Empanaditas, description: 'Frescas y ligeras, ideales para abrir el apetito.' },
-  { title: 'Mini Croissants Rellenos', img: CanapesSalmon, description: 'Un clásico reinventado con rellenos gourmet.' },
-  { title: 'Tartaletas de Espárragos', img: RollitosJamon, description: 'Elegancia y sabor en un pequeño bocado.' },
-];
 
 
 const Aniversarios = () => {
   const {t} = useTranslation();
+
+  const tortasDeAniversario = [
+    { title: 'Torta Chocolate/Avellanas', img: TortaAvellanas, description: 'Rica y cremosa, decorada con un elegante toque de avellanas.' },
+    { title: 'Torta Frutos Rojos', img: FrutosRojos, description: 'Ligera y delicada, con un diseño romántico para tu celebración.' },
+    { title: 'Torta Zanahoria Nueces', img: TortaZana, description: 'Un clásico irresistible con un sabor cálido y especiado.' },
+    { title: 'Torta de Tres Leches', img: TresLeches, description: 'Dulce y jugosa, perfecta para disfrutar en pareja o con invitados especiales.' },
+  ];
+  
+  const MesadePostres = [
+    { title: 'Mini Tartas de Chocolate', img: BrowniesGourmet, description: 'Deliciosas y sofisticadas, ideales para complementar tu celebración.' },
+    { title: 'Macarons Personalizados', img: Macarrones, description: 'Delicados y con colores temáticos para tu aniversario.' },
+    { title: 'Cheesecake de Maracuyá', img: Maracuya, description: 'Un postre refrescante con un toque tropical.' },
+    { title: 'Mini Éclairs', img: MiniEclair, description: 'Pequeñas delicias rellenas con sabores exquisitos.' },
+  ];
+  
+  const Bebidas = [
+    { title: 'Coctel Bellini', img: Bellini, description: 'Un clásico elegante para brindar por el amor.' },
+    { title: 'Té Frío de Hibisco', img: Tefrio, description: 'Refrescante y con un color vibrante, ideal para celebraciones al aire libre.' },
+    { title: 'Espresso Martini', img: Martini, description: 'Un toque de café y glamour en cada sorbo.' },
+    { title: 'Limonada de Lavanda', img: LimonadaLavanda, description: 'Sofisticada y aromática, perfecta para acompañar tus momentos especiales.' },
+  ];
+  
+  const Bocadillos = [
+    { title: [t('Mini Quiches')], img: MiniQuiches, description: [t('DMini Quiches')] },
+    { title: [t('Empanaditas Gourmet')], img: Empanaditas, description: [t('DEmpanaditas Gourmet')] },
+    { title: [t('Canapés de Salmón')], img: CanapesSalmon, description: [t('DCanapés de Salmón')] },
+    { title: [t('Rollitos Jamón y Queso')], img: RollitosJamon, description: [t('DRollitos Jamón y Queso')] },
+  ];
   return(
   <>
 
@@ -133,7 +135,7 @@ const Aniversarios = () => {
         <Carousel arrows infinite={false} >
           <div>
             <h3 style={contentStyle}>
-              <div className='Torta3Pisos'>
+              <div className='TortaFlores'>
                 <div className='CajaLeft'>
                   <span className='TextoEvento'>{t("TORTA DE")}</span>
                   <span className='TextoEvento'>{t("ANIVERSARIO")}</span>
@@ -143,7 +145,7 @@ const Aniversarios = () => {
           </div>
           <div>
             <h3 style={contentStyle}>
-              <div className='CupcakesDecorados'>
+              <div className='MacaronsCele'>
                 <div className='CajaRight'>
                   <span className='TextoEvento'>{t("MACARONS")}</span>
                   <span className='TextoEvento'>{t("DE CELEBRACIÓN")}</span>
@@ -153,7 +155,7 @@ const Aniversarios = () => {
           </div>
           <div>
             <h3 style={contentStyle}>
-              <div className='PostresGourmet'>
+              <div className='CupcakeAni'>
                 <div className='CajaLeft'>
                   <span className='TextoEvento'>{t("CUPCAKES PARA")}</span>
                   <span className='TextoEvento'>{t("ANIVERSARIOS")}</span>
@@ -163,7 +165,7 @@ const Aniversarios = () => {
           </div>
           <div>
             <h3 style={contentStyle}>
-              <div className='GalletasPersonalizadas'>
+              <div className='MiniTartas'>
                 <div className='CajaRight'>
                   <span className='TextoEvento'>{t("MINITARTAS DE")}</span>
                   <span className='TextoEvento'>{t("FRUTAS")}</span>
@@ -173,7 +175,7 @@ const Aniversarios = () => {
           </div>
           <div>
             <h3 style={contentStyle}>
-              <div className='MesaPostres'>
+              <div className='GalletasAniversario'>
                 <div className='CajaLeft'>
                   <span className='TextoEvento'>{t("GALLETAS")}</span>
                   <span className='TextoEvento'>{t("DECORADAS")}</span>

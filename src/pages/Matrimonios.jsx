@@ -15,7 +15,7 @@ import CoctelChampagne from '../img/CoctelChampagne.webp';
 import LimonadaRomero from '../img/LimonadaRomero.webp';
 import AguaInfusionada from '../img/AguaInfusionada.webp';
 import MojitoSinAlcohol from '../img/MojitoSinAlcohol.webp';
-
+import { useTranslation } from "react-i18next";
 import MiniQuiches from '../img/MiniQuiches.webp';
 import Empanaditas from '../img/Empanaditas.webp';
 import CanapesSalmon from '../img/CanapesSalmon.webp';
@@ -90,36 +90,41 @@ const contentStyle = {
   background: '#364d79',
 };
 
-const tortasDeBoda = [
-  { title: 'Torta Clásica de Vainilla', img: TortaVanilla, description: 'Elegancia en cada bocado, decorada con flores de azúcar.' },
-  { title: 'Torta de Chocolate y Frutas', img: TortaChocolate, description: 'Una combinación exquisita de chocolate y frutos rojos.' },
-  { title: 'Torta Red Velvet', img: TortaRedVelvet, description: 'El toque perfecto de sofisticación y dulzura.' },
-  { title: 'Torta Naked Almendras', img: TortaNaked, description: 'Un diseño moderno con sabor artesanal.' },
-];
-
-const MesadePostres = [
-  { title: 'Mini Tartaletas de Frutas', img: TartaletasFrutas, description: 'Coloridas y deliciosas, perfectas para cualquier mesa.' },
-  { title: 'Macarrones Franceses', img: Macarrones, description: 'Un toque de elegancia con sabores variados.' },
-  { title: 'Brownies Gourmet', img: BrowniesGourmet, description: 'Un clásico irresistible con ingredientes premium.' },
-  { title: 'Cheesecake en Vasito', img: CheesecakeVasito, description: 'Portátiles y llenos de sabor, perfectos para tus invitados.' },
-];
-
-const Bebidas = [
-  { title: 'Coctel de Champagne', img: CoctelChampagne, description: 'Elegante y burbujeante, perfecto para brindar.' },
-  { title: 'Limonada con Romero', img: LimonadaRomero, description: 'Una combinación única de frescura y aroma.' },
-  { title: 'Agua Infusionada', img: AguaInfusionada, description: 'Refrescante y decorativa, con frutas y hierbas.' },
-  { title: 'Mojito Sin Alcohol', img: MojitoSinAlcohol, description: 'Fresco y cítrico, ideal para todos los invitados.' },
-];
-
-const Bocadillos = [
-  { title: 'Mini Quiches', img: MiniQuiches, description: 'Sabores variados, perfectos como entradas.' },
-  { title: 'Empanaditas Gourmet', img: Empanaditas, description: 'Crocantes y rellenas de ingredientes frescos.' },
-  { title: 'Canapés de Salmón', img: CanapesSalmon, description: 'Un toque de lujo en cada bocado.' },
-  { title: 'Rollitos Jamón y Queso', img: RollitosJamon, description: 'Clásicos y deliciosos, amados por todos.' },
-];
 
 
-const Matrimonios = () => (
+
+const Matrimonios = () => {
+    const {t} = useTranslation();
+
+    const tortasDeBoda = [
+      { title: [t('Torta Clásica de Vainilla')], img: TortaVanilla, description: [t('DTorta Clásica de Vainilla')] },
+      { title: [t('Torta de Chocolate y Frutas')], img: TortaChocolate, description: [t('DTorta de Chocolate y Frutas')] },
+      { title: [t('Torta Red Velvet')], img: TortaRedVelvet, description: [t('DTorta Red Velvet')] },
+      { title: [t('Torta Naked Almendras')], img: TortaNaked, description: [t('DTorta Naked Almendras')] },
+    ];
+    
+    const MesadePostres = [
+      { title: [t('Mini Tartaletas de Frutas')], img: TartaletasFrutas, description: [t("DMini Tartaletas de Frutas")] },
+      { title: [t('Macarrones Franceses')], img: Macarrones, description: [t("DMacarrones Franceses")] },
+      { title: [t('Brownies Gourmet')], img: BrowniesGourmet, description: [t("DBrownies Gourmet")] },
+      { title: [t('Cheesecake en Vasito')], img: CheesecakeVasito, description: [t("DCheesecake en Vasito")] },
+    ];
+    
+    const Bebidas = [
+      { title: [t('Coctel de Champagne')], img: CoctelChampagne, description: [t('DCoctel de Champagne')] },
+      { title: [t('Limonada con Romero')], img: LimonadaRomero, description: [t('DLimonada con Romero')] },
+      { title: [t('Agua Infusionada')], img: AguaInfusionada, description: [t('DAgua Infusionada')] },
+      { title: [t('Mojito Sin Alcohol')], img: MojitoSinAlcohol, description: [t('DMojito Sin Alcohol')] },
+    ];
+    
+    const Bocadillos = [
+      { title: [t('Mini Quiches')], img: MiniQuiches, description: [t('DMini Quiches')] },
+      { title: [t('Empanaditas Gourmet')], img: Empanaditas, description: [t('DEmpanaditas Gourmet')] },
+      { title: [t('Canapés de Salmón')], img: CanapesSalmon, description: [t('DCanapés de Salmón')] },
+      { title: [t('Rollitos Jamón y Queso')], img: RollitosJamon, description: [t('DRollitos Jamón y Queso')] },
+    ];
+
+    return(
   <>
 
     <Layout>
@@ -129,8 +134,8 @@ const Matrimonios = () => (
             <h3 style={contentStyle}>
               <div className='Torta3Pisos'>
                 <div className='CajaLeft'>
-                  <span className='TextoEvento'>TORTA DE</span>
-                  <span className='TextoEvento'>BODAS</span>
+                  <span className='TextoEvento'>{t("MT1I1")}</span>
+                  <span className='TextoEvento'>{t("MT1I2")}</span>
                 </div>                
               </div>
             </h3>
@@ -139,8 +144,8 @@ const Matrimonios = () => (
             <h3 style={contentStyle}>
               <div className='CupcakesDecorados'>
                 <div className='CajaRight'>
-                  <span className='TextoEvento'>CUPCAKES</span>
-                  <span className='TextoEvento'>DECORADOS</span>
+                  <span className='TextoEvento'>{t("MT2I1")}</span>
+                  <span className='TextoEvento'>{t("MT2I2")}</span>
                 </div>                
               </div>
             </h3>
@@ -149,8 +154,8 @@ const Matrimonios = () => (
             <h3 style={contentStyle}>
               <div className='PostresGourmet'>
                 <div className='CajaLeft'>
-                  <span className='TextoEvento'>POSTRES</span>
-                  <span className='TextoEvento'>GOURMET</span>
+                  <span className='TextoEvento'>{t("MT3I1")}</span>
+                  <span className='TextoEvento'>{t("MT3I2")}</span>
                 </div>                
               </div>
             </h3>
@@ -159,8 +164,8 @@ const Matrimonios = () => (
             <h3 style={contentStyle}>
               <div className='GalletasPersonalizadas'>
                 <div className='CajaRight'>
-                  <span className='TextoEvento'>GALLETAS</span>
-                  <span className='TextoEvento'>PERSONALIZADAS</span>
+                  <span className='TextoEvento'>{t("MT4I1")}</span>
+                  <span className='TextoEvento'>{t("MT4I2")}</span>
                 </div>
               </div>
             </h3>
@@ -169,8 +174,8 @@ const Matrimonios = () => (
             <h3 style={contentStyle}>
               <div className='MesaPostres'>
                 <div className='CajaLeft'>
-                  <span className='TextoEvento'>MESA DE</span>
-                  <span className='TextoEvento'>POSTRES</span>
+                  <span className='TextoEvento'>{t("MT5I1")}</span>
+                  <span className='TextoEvento'>{t("MT5I2")}</span>
                 </div>
               </div>
             </h3>
@@ -182,12 +187,12 @@ const Matrimonios = () => (
           </Col>
 
           <Col span={16}>
-            <H1>Matrimonios</H1>
+            <H1>{t("Matrimonios")}</H1>
             <P1>
-              En nuestra panadería, sabemos que el día de tu boda merece un toque de dulzura inolvidable. Ofrecemos productos únicos y personalizados, desde elegantes tortas de bodas hasta deliciosos cupcakes y postres finos, que harán de tu celebración un momento aún más especial.
+              {t("PM1")}
             </P1>
             <P1>
-              Nos dedicamos a crear experiencias únicas para ti y tus seres queridos, asegurando que cada detalle esté lleno de sabor y belleza. ¡Confía en nosotros para endulzar uno de los días más importantes de tu vida!
+              {t("PM2")}
             </P1>
           </Col>
 
@@ -200,7 +205,7 @@ const Matrimonios = () => (
           </Col>
           <Col span={16}>
             <ContenOfrec>
-              <HOfrec>¿Qué ofrecemos?</HOfrec>
+              <HOfrec>{t("¿Qué ofrecemos?")}</HOfrec>
             </ContenOfrec>
           </Col>
           <Col span={4}>
@@ -212,7 +217,7 @@ const Matrimonios = () => (
           </Col>
 
           <Col span={16}>
-            <H2>Tortas de Boda</H2>
+            <H2>{t("Tortas de Boda")}</H2>
             <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
                   {tortasDeBoda.slice(0, 4).map((tortasDeBoda, index) => (
@@ -227,7 +232,7 @@ const Matrimonios = () => (
                   ))}
                 </Row>
               </div>
-              <H2>Mesa de Postres</H2>
+              <H2>{t("Mesa de Postres")}</H2>
               <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
                   {MesadePostres.slice(0, 4).map((MesadePostres, index) => (
@@ -242,7 +247,7 @@ const Matrimonios = () => (
                   ))}
                 </Row>
               </div>              
-              <H2>Bebidas</H2>
+              <H2>{t("Bebidas2")}</H2>
               <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
                   {Bebidas.slice(0, 4).map((Bebidas, index) => (
@@ -257,7 +262,7 @@ const Matrimonios = () => (
                   ))}
                 </Row>
               </div>
-              <H2>Bocadillos</H2>
+              <H2>{t("Bocadillos")}</H2>
               <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
                   {Bocadillos.slice(0, 4).map((Bocadillos, index) => (
@@ -282,5 +287,6 @@ const Matrimonios = () => (
     </Layout>
 
   </>
-);
+)
+};
 export default Matrimonios;

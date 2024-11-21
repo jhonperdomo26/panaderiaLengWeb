@@ -12,6 +12,7 @@ import Donadevainilla from "../img/donavainilla.png";
 import Brownie from "../img/brownie.png";
 import Tartademanzana from "../img/tartademanzana.png";
 import Cheesecake from "../img/cheesecake.png";
+import { useTranslation } from "react-i18next";
 
 import styled from "@emotion/styled";
 const contentStyle = {
@@ -28,19 +29,24 @@ const Imagen = styled.img`
   display: block;
 `;
 
-// Lista de productos de pastelería
+
+
+const Inicio = () => {
+  const {t} = useTranslation();
+
+  // Lista de productos de pastelería
 const products = [
-  { title: "Croissant", img: Croissant },
-  { title: "Muffin de Chocolate", img: Muffin },
-  { title: "Pan de Queso", img: Pandequeso },
-  { title: "Tarta de Fresa", img: Tartadefresa },
-  { title: "Dona de Vainilla", img: Donadevainilla },
-  { title: "Brownie", img: Brownie },
-  { title: "Tarta de Manzana", img: Tartademanzana },
-  { title: "Cheesecake", img: Cheesecake },
+  { title: [t("Croissant")], img: Croissant },
+  { title: [t("Muffin de Chocolate")], img: Muffin },
+  { title: [t("Pan de Queso")], img: Pandequeso },
+  { title: [t("Tarta de Fresa")], img: Tartadefresa },
+  { title: [t("Dona de Vainilla")], img: Donadevainilla },
+  { title: [t("Brownie")], img: Brownie },
+  { title: [t("Tarta de Manzana")], img: Tartademanzana },
+  { title: [t("Cheesecake")], img: Cheesecake },
 ];
 
-const Inicio = () => (
+  return(
   <div>
     <Carousel autoplay>
       <div>
@@ -76,7 +82,7 @@ const Inicio = () => (
       }}
     >
       <h2 style={{ textAlign: "left", marginBottom: "30px" }}>
-        Productos Destacados
+        {t("Productos Destacados")}
       </h2>
       <Row gutter={[16, 16]} justify="center">
         {products.slice(0, 4).map((product, index) => (
@@ -87,7 +93,7 @@ const Inicio = () => (
             >
               <Card.Meta
                 title={product.title}
-                description="Delicioso y recién horneado"
+                description={t("Delicioso y recién horneado")}
               />
             </Card>
           </Col>
@@ -102,7 +108,7 @@ const Inicio = () => (
             >
               <Card.Meta
                 title={product.title}
-                description="Delicioso y recién horneado"
+                description={t("Delicioso y recién horneado")}
               />
             </Card>
           </Col>
@@ -110,6 +116,7 @@ const Inicio = () => (
       </Row>
     </div>
   </div>
-);
+  )
+};
 
 export default Inicio;

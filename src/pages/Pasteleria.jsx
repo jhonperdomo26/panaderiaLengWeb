@@ -98,21 +98,6 @@ const Pasteleria = () => {
             </Col>
         </Row>  
         
-        <Row gutter={[16, 16]} justify="center" style={{ marginTop: "30px" }}>
-          {products.slice(0, 4).map((product, index) => (
-            <Col span={4} key={index}>
-              <Card
-                hoverable
-                cover={<img alt={product.title} src={product.img} />}
-              >
-                <Card.Meta
-                  title={product.title}
-                  description={product.description}
-                />
-              </Card>
-            </Col>
-          ))}
-        </Row>
 
         {Array.from({ length: 4 }, (_, i) => (
                 <Row key={i} gutter={[16, 16]} justify="center" style={{ marginTop: "30px" }}>

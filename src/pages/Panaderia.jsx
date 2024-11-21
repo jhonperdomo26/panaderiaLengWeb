@@ -18,7 +18,10 @@ import PanAliñado from '../img/panaliñado.png';
 import MojiconQueso from '../img/mojiconconqueso.png';
 import PanBatido from '../img/panbatido.png';
 import FondoPan from '../img/FondoPan.webp'
+<<<<<<< HEAD
 import { useTranslation } from "react-i18next";
+=======
+>>>>>>> 970356f (Correcc precio tarjetas + Carrito funcional)
 
 
 const cajaDecoracion = {

@@ -121,8 +121,8 @@ const Eventos = () => {
   return(
 
   <>
-    <Layout>
-      <Content className='FondoPan'>
+    <Layout style={{backgroundColor:'#f0ecec'}}>
+      <Content>
         <Pan>
           <div className='PanOrigen'>
           </div>

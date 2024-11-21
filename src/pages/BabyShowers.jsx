@@ -3,23 +3,25 @@ import '../css/main.css/';
 import { Carousel } from 'antd';
 import { Layout, Flex, Row, Col } from 'antd';
 import { Card } from 'antd';
-import TortaVanilla from '../img/TortaVanilla.webp';
-import TortaChocolate from '../img/tortachoco.png';
-import TortaRedVelvet from '../img/TortaRedVelvet.webp';
-import TortaNaked from '../img/TortaNaked.webp';
-import TartaletasFrutas from '../img/TartaletasFrutas.webp';
-import Macarrones from '../img/Macarrones.webp';
-import BrowniesGourmet from '../img/BrowniesGourmet.webp';
-import CheesecakeVasito from '../img/CheesecakeVasito.webp';
-import CoctelChampagne from '../img/CoctelChampagne.webp';
-import LimonadaRomero from '../img/LimonadaRomero.webp';
-import AguaInfusionada from '../img/AguaInfusionada.webp';
-import MojitoSinAlcohol from '../img/MojitoSinAlcohol.webp';
+import TortaVanillaBabyShower from '../img/TortaVanillaBabyShower.webp';
+import TortaChocolateBaby from '../img/TortaChocolateBaby.webp';
+import TortaRosada from '../img/TortaRosada.webp';
+import TortaBabyNombre from '../img/TortaBabyNombre.webp';
 
-import MiniQuiches from '../img/MiniQuiches.webp';
-import Empanaditas from '../img/Empanaditas.webp';
-import CanapesSalmon from '../img/CanapesSalmon.webp';
-import RollitosJamon from '../img/RollitosJamon.webp';
+import CupcakesRA from '../img/CupcakesRA.webp';
+import GalletasBabyShower2 from '../img/GalletasBabyShower2.webp';
+import CakePops from '../img/CakePops.webp';
+import TartaletasCrema from '../img/TartaletasCrema.webp';
+
+import CoctelAzul from '../img/CoctelAzul.webp';
+import PinkLemonade from '../img/PinkLemonade.webp';
+import SmoothiesFrutas from '../img/SmoothiesFrutas.webp';
+import BatidoFresaPlatano from '../img/BatidoFresaPlatano.webp';
+
+import MiniSandwiches from '../img/MiniSandwiches.webp';
+import BocaditosQueso from '../img/BocaditosQueso.webp';
+import BrochetasFrutas from '../img/BrochetasFrutas.webp';
+import CanapesVariados from '../img/CanapesVariados.webp';
 
 const { Content } = Layout;
 const { Meta } = Card;
@@ -90,32 +92,32 @@ const contentStyle = {
   background: '#364d79',
 };
 
-const tortasDeBoda = [
-  { title: 'Torta Clásica de Vainilla', img: TortaVanilla, description: 'Elegancia en cada bocado, decorada con flores de azúcar.' },
-  { title: 'Torta de Chocolate y Frutas', img: TortaChocolate, description: 'Una combinación exquisita de chocolate y frutos rojos.' },
-  { title: 'Torta Red Velvet', img: TortaRedVelvet, description: 'El toque perfecto de sofisticación y dulzura.' },
-  { title: 'Torta Naked Almendras', img: TortaNaked, description: 'Un diseño moderno con sabor artesanal.' },
+const tortasDeBabyShower = [
+  { title: 'Torta Temática de Vainilla', img: TortaVanillaBabyShower, description: 'Suave y deliciosa, decorada con motivos de Baby Shower.' },
+  { title: 'Torta de Chocolate', img: TortaChocolateBaby, description: 'Perfecta para celebrar la llegada de un niño, con detalles encantadores.' },
+  { title: 'Torta Rosada', img: TortaRosada, description: 'Elegante y deliciosa, ideal para una temática femenina.' },
+  { title: 'Torta Personalizada', img: TortaBabyNombre, description: 'Un diseño moderno que destaca el nombre del bebé.' },
 ];
 
 const MesadePostres = [
-  { title: 'Mini Tartaletas de Frutas', img: TartaletasFrutas, description: 'Coloridas y deliciosas, perfectas para cualquier mesa.' },
-  { title: 'Macarrones Franceses', img: Macarrones, description: 'Un toque de elegancia con sabores variados.' },
-  { title: 'Brownies Gourmet', img: BrowniesGourmet, description: 'Un clásico irresistible con ingredientes premium.' },
-  { title: 'Cheesecake en Vasito', img: CheesecakeVasito, description: 'Portátiles y llenos de sabor, perfectos para tus invitados.' },
+  { title: 'Cupcakes Decorados', img: CupcakesRA, description: 'Diseñados con tiernos detalles en azul y rosa pastel.' },
+  { title: 'Galletas de Bebé', img: GalletasBabyShower2, description: 'Un dulce recuerdo con diseños de sonajeros, biberones y más.' },
+  { title: 'Cake Pops', img: CakePops, description: 'Pequeñas delicias fáciles de disfrutar para grandes y pequeños.' },
+  { title: 'Mini Tartaletas de Crema', img: TartaletasCrema, description: 'Perfectas para una mesa de postres encantadora.' },
 ];
 
 const Bebidas = [
-  { title: 'Coctel de Champagne', img: CoctelChampagne, description: 'Elegante y burbujeante, perfecto para brindar.' },
-  { title: 'Limonada con Romero', img: LimonadaRomero, description: 'Una combinación única de frescura y aroma.' },
-  { title: 'Agua Infusionada', img: AguaInfusionada, description: 'Refrescante y decorativa, con frutas y hierbas.' },
-  { title: 'Mojito Sin Alcohol', img: MojitoSinAlcohol, description: 'Fresco y cítrico, ideal para todos los invitados.' },
+  { title: 'Coctel Azul Brillante', img: CoctelAzul, description: 'Una bebida fresca y colorida para la ocasión.' },
+  { title: 'Pink Lemonade', img: PinkLemonade, description: 'Un toque rosado y refrescante, ideal para Baby Showers.' },
+  { title: 'Smoothies de Frutas', img: SmoothiesFrutas, description: 'Opciones saludables y llenas de sabor.' },
+  { title: 'Batido de Fresa y Plátano', img: BatidoFresaPlatano, description: 'Una combinación cremosa y dulce que encanta a todos.' },
 ];
 
 const Bocadillos = [
-  { title: 'Mini Quiches', img: MiniQuiches, description: 'Sabores variados, perfectos como entradas.' },
-  { title: 'Empanaditas Gourmet', img: Empanaditas, description: 'Crocantes y rellenas de ingredientes frescos.' },
-  { title: 'Canapés de Salmón', img: CanapesSalmon, description: 'Un toque de lujo en cada bocado.' },
-  { title: 'Rollitos Jamón y Queso', img: RollitosJamon, description: 'Clásicos y deliciosos, amados por todos.' },
+  { title: 'Mini Sándwiches', img: MiniSandwiches, description: 'Pequeños y decorados, perfectos para compartir.' },
+  { title: 'Bocaditos de Queso y Uva', img: BocaditosQueso, description: 'Sencillos, elegantes y deliciosos.' },
+  { title: 'Brochetas de Frutas', img: BrochetasFrutas, description: 'Coloridas y saludables, perfectas para los pequeños invitados.' },
+  { title: 'Canapés Variados', img: CanapesVariados, description: 'Sabores diversos en presentaciones encantadoras.' },
 ];
 
 
@@ -215,13 +217,13 @@ const BabyShowers = () => (
             <H2>Tortas de Boda</H2>
             <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
-                  {tortasDeBoda.slice(0, 4).map((tortasDeBoda, index) => (
+                  {tortasDeBabyShower.slice(0, 4).map((tortasDeBabyShower, index) => (
                     <Col span={6} key={index}>
                       <Card
                         hoverable
-                        cover={<img alt={tortasDeBoda.title} src={tortasDeBoda.img} style={{ width: '100%', height: '275px' }}/>}
+                        cover={<img alt={tortasDeBabyShower.title} src={tortasDeBabyShower.img} style={{ width: '100%', height: '275px' }}/>}
                       >
-                        <Card.Meta title={tortasDeBoda.title} description={tortasDeBoda.description} style={{ width: '100%', height: '100px'}}/>
+                        <Card.Meta title={tortasDeBabyShower.title} description={tortasDeBabyShower.description} style={{ width: '100%', height: '100px'}}/>
                       </Card>
                     </Col>
                   ))}

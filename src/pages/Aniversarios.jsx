@@ -101,24 +101,24 @@ const Aniversarios = () => {
   const {t} = useTranslation();
 
   const tortasDeAniversario = [
-    { title: 'Torta Chocolate/Avellanas', img: TortaAvellanas, description: 'Rica y cremosa, decorada con un elegante toque de avellanas.' },
-    { title: 'Torta Frutos Rojos', img: FrutosRojos, description: 'Ligera y delicada, con un diseño romántico para tu celebración.' },
-    { title: 'Torta Zanahoria Nueces', img: TortaZana, description: 'Un clásico irresistible con un sabor cálido y especiado.' },
-    { title: 'Torta de Tres Leches', img: TresLeches, description: 'Dulce y jugosa, perfecta para disfrutar en pareja o con invitados especiales.' },
+    { title: [t('Torta Chocolate/Avellanas')], img: TortaAvellanas, description: [t('DTorta Chocolate/Avellanas')] },
+    { title: [t('Torta Frutos Rojos')], img: FrutosRojos, description: [t('DDTorta Frutos Rojos')] },
+    { title: [t('Torta Zanahoria Nueces')], img: TortaZana, description: [t('DTorta Zanahoria Nueces')] },
+    { title: [t('Torta de Tres Leches')], img: TresLeches, description: [t('DDTorta de Tres Leches')] },
   ];
   
   const MesadePostres = [
-    { title: 'Mini Tartas de Chocolate', img: BrowniesGourmet, description: 'Deliciosas y sofisticadas, ideales para complementar tu celebración.' },
-    { title: 'Macarons Personalizados', img: Macarrones, description: 'Delicados y con colores temáticos para tu aniversario.' },
-    { title: 'Cheesecake de Maracuyá', img: Maracuya, description: 'Un postre refrescante con un toque tropical.' },
-    { title: 'Mini Éclairs', img: MiniEclair, description: 'Pequeñas delicias rellenas con sabores exquisitos.' },
+    { title: [t('Mini Tartas de Chocolate')], img: BrowniesGourmet, description: [t('DMini Tartas de Chocolate')] },
+    { title: [t('Macarons Personalizados')], img: Macarrones, description: [t('DMacarons Personalizados')] },
+    { title: [t('Cheesecake de Maracuyá')], img: Maracuya, description:  [t('DCheesecake de Maracuyá')] },
+    { title: [t('Mini Éclairs')], img: MiniEclair, description:  [t('DMini Éclairs')] },
   ];
   
   const Bebidas = [
-    { title: 'Coctel Bellini', img: Bellini, description: 'Un clásico elegante para brindar por el amor.' },
-    { title: 'Té Frío de Hibisco', img: Tefrio, description: 'Refrescante y con un color vibrante, ideal para celebraciones al aire libre.' },
-    { title: 'Espresso Martini', img: Martini, description: 'Un toque de café y glamour en cada sorbo.' },
-    { title: 'Limonada de Lavanda', img: LimonadaLavanda, description: 'Sofisticada y aromática, perfecta para acompañar tus momentos especiales.' },
+    { title: [t('Coctel Bellini')], img: Bellini, description: [t('DCoctel Bellini')] },
+    { title: [t('Té Frío de Hibisco')], img: Tefrio, description: [t('DTé Frío de Hibisco')] },
+    { title: [t('Espresso Martini')], img: Martini, description: [t('DEspresso Martini')] },
+    { title: [t('Limonada de Lavanda')], img: LimonadaLavanda, description: [t('DLimonada de Lavanda')] },
   ];
   
   const Bocadillos = [
@@ -220,7 +220,7 @@ const Aniversarios = () => {
           </Col>
 
           <Col span={16}>
-            <H2>Tortas de Aniversario</H2>
+            <H2>{t("Tortas de Aniversario")}</H2>
             <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
                   {tortasDeAniversario.slice(0, 4).map((tortasDeAniversario, index) => (
@@ -235,7 +235,7 @@ const Aniversarios = () => {
                   ))}
                 </Row>
               </div>
-              <H2>Mesa de Postres</H2>
+              <H2>{t("Mesa de Postres")}</H2>
               <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
                   {MesadePostres.slice(0, 4).map((MesadePostres, index) => (
@@ -250,7 +250,7 @@ const Aniversarios = () => {
                   ))}
                 </Row>
               </div>              
-              <H2>Bebidas</H2>
+              <H2>{t("Bebidas")}</H2>
               <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
                   {Bebidas.slice(0, 4).map((Bebidas, index) => (
@@ -265,7 +265,7 @@ const Aniversarios = () => {
                   ))}
                 </Row>
               </div>
-              <H2>Bocadillos</H2>
+              <H2>{t("Bocadillos")}</H2>
               <div style={{ padding: '20px 0px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
                 <Row gutter={[16, 16]} justify="center">
                   {Bocadillos.slice(0, 4).map((Bocadillos, index) => (

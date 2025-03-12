@@ -15,7 +15,7 @@ import Sevillana from '../img/Sevillana.webp';
 import FondoBeb from '../img/FondoBeb.webp';
 import { useTranslation } from "react-i18next";
 
-// Estilos en línea
+
 const cajaDecoracion = {
   display: 'flex',
   alignItems: 'center',

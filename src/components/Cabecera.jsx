@@ -7,7 +7,7 @@ import LogoSimple from '../img/LogoSimple.webp';
 import styled from '@emotion/styled';
 import { useTranslation } from "react-i18next";
 import shoppingcart from '../img/shoppingcart.png';
-import { useState } from 'react';  // Asegúrate de importar useState
+import { useState } from 'react';  
 
 const Imagen = styled.img`
   display: block;
@@ -21,9 +21,8 @@ const { Header } = Layout;
 
 const Cabecera = () => {
   const { t, i18n } = useTranslation();
-  const [isModalVisible, setIsModalVisible] = useState(false); // Estado para controlar la visibilidad del modal
-  const [cartItems, setCartItems] = useState([]); // Este estado almacena los productos en el carrito
-
+  const [isModalVisible, setIsModalVisible] = useState(false); 
+  const [cartItems] = useState([]); 
   const items = [
     {
       label: <Link to="/Panaderia">{t("Panadería")}</Link>,
@@ -55,21 +54,20 @@ const Cabecera = () => {
     <Menu>
       <Menu.Item onClick={() => handleLanguageChange('es')}>ES</Menu.Item>
       <Menu.Item onClick={() => handleLanguageChange('en')}>EN</Menu.Item>
-      <Menu.Item onClick={() => handleLanguageChange('fr')}>FR</Menu.Item>
     </Menu>
   );
 
-  // Función para abrir el modal del carrito
+
   const showModal = () => {
     setIsModalVisible(true);
   };
 
-  // Función para cerrar el modal del carrito
+  
   const handleCancel = () => {
     setIsModalVisible(false);
   };
 
-  // Este componente modal mostrará los productos del carrito
+  
   const CartModal = () => (
     <Modal
       title="Tu Carrito"

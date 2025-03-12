@@ -109,7 +109,7 @@ const Desayunos = () => {
       const newItem = { ...products[index], quantity: quantities[index] };
       setCart((prevCart) => [...prevCart, newItem]);
       setQuantities([...quantities.slice(0, index), 0, ...quantities.slice(index + 1)]);
-      setIsModalVisible(true); // Mostrar el modal al agregar el producto
+      setIsModalVisible(true); 
     }
   };
 
